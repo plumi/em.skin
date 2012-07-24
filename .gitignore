@@ -1,0 +1,7 @@
+em/skin/docs/_build/*
+*.egg-info
+*.pyc
+*.pyo
+*~
+.DS_Store
+dist
