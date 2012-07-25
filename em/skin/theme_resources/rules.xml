@@ -11,7 +11,7 @@
         <!-- Drop Plone's meta tags that define the content type and IE rendering mode.
              We set those explicitly in our theme. This allows us to copy the
              rest of the <meta> tags in one go. -->
-        <drop css:content="meta[http-equiv]" />
+
         <!-- Drop the viewport meta tag from Plone -->
         <drop css:content="meta[name=viewport]"/>
 
@@ -21,17 +21,11 @@
         <!-- Copy the <base> tag -->
         <copy attributes="href" content="/html/head/base" theme="/html/head/base" />
 
-
-        <!-- Drop the favicon, we use our own -->
-        <!-- <drop content="/html/head/link[@rel='shortcut icon']" /> -->
-
         <!-- Copy style and link tags in the order they appear in the content -->
         <after
             content="/html/head/style | /html/head/link"
             css:theme="#css"
             />
-        <!-- Drop the css target from the theme -->
-        <drop css:theme="#css" />
 
         <!-- Drop the "type" attribute from <script> tags. HTML5 doesn't mandate
              it and we can save a few bytes there. -->
@@ -68,11 +62,13 @@
 
 
         <!-- HEADER -->
+        <copy css:content="#portal-searchbox" css:theme="div.search" />
+
+
 
         <before css:content="#portal-personaltools-wrapper" css:theme="#mobile-menu" />
         <before css:content="#portal-logo" css:theme="#mobile-menu" />
         <after css:content="#portal-searchbox" css:theme="#mobile-menu" />
-        <after css:content="#portal-globalnav" css:theme="#mobile-menu" />
 
         <!-- Language chooser and quick links -->
         <copy css:content-children="#portal-top .toplinks" css:theme="#quicklinks" />
@@ -182,7 +178,7 @@
         
         <copy css:content-children=".siteelement-footertext .footertext" css:theme="#colophon" />
 
-        <replace css:content='#portal-column-one dl.portlet ul' css:theme='#lower-container ul' />
+        <replace content='/html/body/div/div[2]/div[2]/div/dl/dd/ul' theme='/html/body/div[4]/div[2]/div[2]/ul' />
 
 
     </rules>

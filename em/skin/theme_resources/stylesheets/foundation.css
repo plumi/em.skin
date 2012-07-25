@@ -67,7 +67,7 @@ div.row.header div.search {
   margin-top: -16px;
 }
 
-div.row.header div.search input#search-box {
+div.row.header div.search input#searchGadget {
   width: 100%;
   border: 1px solid #cfcfcf;
   padding: 5px;
@@ -79,12 +79,12 @@ div.row.header div.search input#search-box {
   color: rgba(0,0,0,0.3);
 }
 
-div.row.header div.search input#search-box:hover {
+div.row.header div.search input#searchGadget:hover {
   border: 1px solid #bbb;
   color: rgba(0,0,0,0.5);
 }
 
-div.row.header div.search input#search-box:focus {
+div.row.header div.search input#searchGadget:focus {
   border: 1px solid #bbb;
   color: #333;
 }
