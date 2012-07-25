@@ -158,6 +158,9 @@
         <replace css:content="#mobile-menu" css:theme="#mobile-menu" />
         <replace css:content="#mobile-page-settings" css:theme="#mobile-page-settings" />
 
+        <replace theme="//*[@id='featuredvideo']/div[1]" css:content="dl#featured-video video"/>
+
+
         <replace css:theme="#mid-container #latestvideos">
             <div class="row content">
             <xsl:for-each css:select="#featured-latest-videos dd.featuredItem">
