@@ -40,13 +40,13 @@ input:focus {
 }
 
 div.row.header, div.twelve.columns.header {
-  height: 130px;
+  height: 120px;
 }
 
 div.row.header .main-logo {
   background: url(images/main-logo.png) left center no-repeat;
   width: 90px;
-  height: 130px;
+  height: 120px;
 }
 
 div.row.header .main-title {
@@ -54,7 +54,7 @@ div.row.header .main-title {
 }
 
 div.row.header .main-title h2 {
-  margin: 34px 0 4px 0;
+  margin: 28px 0 4px 0;
 }
 
 div.row.header .main-title p {
@@ -163,24 +163,25 @@ div.news ul li a {
 
   /* Featured Content below Video */
 
-div.featured-content {
+div.featured-content, div.featured-filmmaker {
   background: #fdfdfe;
   padding: 12.5px;
-  height: 232px;
+  height: 282px;
   border-bottom: 2px solid #aaa;
 }
 
-div.featured-content .featured-image {
+div.featured-content .featured-image, div.featured-filmmaker .featured-image {
   position: absolute;
   top: 0px;
   left: 0px;
   height: 100%;
-  width: 172px;
+  width: 222px;
   background: #111;
 }
 
 div.featured-content .featured-text {
-  margin-left: 182px;
+  margin-left: 232px;
+  background: #fdfdfe;
 }
 
 div.featured-content .featured-text ul {
@@ -192,6 +193,43 @@ div.featured-content .featured-text ul li a {
   font-weight: bold;
 }
 
+/* Featured Content below Video */
+
+div.featured-filmmaker .featured-text {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 6px;
+  width: 100%;
+  background: #fdfdfe;
+  border-bottom: 2px solid #aaa;
+}
+
+div.featured-filmmaker .featured-image {
+  width: 100%;
+}
+
+div.featured-filmmaker .featured-text {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 6px;
+  width: 100%;
+  background: #fdfdfe;
+}
+
+div.featured-filmmaker .featured-text a {
+  color: #333;
+}
+
+div.featured-filmmaker .featured-text h5 {
+  margin: 3px 0;
+}
+
+  /* Latest Videos */
+div#latestvideos.row.content {
+  background: url(images/bg2.png) center repeat;
+}
 
 /* Lower Container ---------------------- */
 
@@ -442,12 +480,13 @@ abbr { text-transform: none; }
   -webkit-box-shadow: inset 0 0 1px white;
   box-shadow: inset 0 0 1px white;
   filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=snowfa,EndColorStr=#FFDCDCdc);
-  background-image: -moz-linear-gradient(top,#FAFAFA 0,gainsboro 100%);
-  background-image: -ms-linear-gradient(top,#FAFAFA 0,gainsboro 100%);
-  background-image: -o-linear-gradient(top,#FAFAFA 0,gainsboro 100%);
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#FAFAFA),color-stop(100%,gainsboro));
-  background-image: -webkit-linear-gradient(top,#FAFAFA 0,gainsboro 100%);
-  background-image: linear-gradient(to bottom,#FAFAFA 0,gainsboro 100%);
+  background: #efeff2;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efeff2), color-stop(100%, #dfdfe2));
+  background: -webkit-linear-gradient(#efeff2, #dfdfe2);
+  background: -ms-linear-gradient(#efeff2, #dfdfe2);
+  background: -moz-linear-gradient(#efeff2, #dfdfe2);
+  background: -o-linear-gradient(#efeff2, #dfdfe2);
+  background: linear-gradient(#efeff2, #dfdfe2);
   border: 1px solid #888;
   outline: 0;
   text-align: center;
@@ -476,6 +515,7 @@ abbr { text-transform: none; }
 
 .button.large {
   padding: 9px 11px;
+  font-size: 14px;
 }
 
 .button.small {
