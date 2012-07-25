@@ -162,6 +162,16 @@
         <replace css:content="#mobile-menu" css:theme="#mobile-menu" />
         <replace css:content="#mobile-page-settings" css:theme="#mobile-page-settings" />
 
+        <replace css:theme="#mid-container #latestvideos">
+            <div class="row content">
+            <xsl:for-each css:select="#featured-latest-videos dd.featuredItem">
+                <div class="three columns video">
+                        <xsl:copy-of css:select="a.featured-video-image"/>
+                    <div class="under"><h5><xsl:copy-of css:select="h4 a.featuredItemTitle"/></h5></div>
+                </div>
+            </xsl:for-each>
+            </div>
+        </replace>
 
 
         <!-- FOOTER -->
