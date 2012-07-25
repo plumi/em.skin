@@ -168,7 +168,8 @@
        <replace css:theme="div.news ul:nth-of-type(1)">
        <ul>
            <xsl:for-each select="//*[@id='portal-column-two']//dl[1]/dd">
-               <li><xsl:copy-of css:select="a"/></li>
+               <li><xsl:copy-of select="a" /> <br /> <xsl:value-of select="a/@title"/>               
+               </li>
            </xsl:for-each>
        </ul>
        </replace>
