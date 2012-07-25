@@ -70,12 +70,7 @@ div.row.header div.search {
 div.row.header div.search input#searchGadget {
   width: 100%;
   border: 1px solid #cfcfcf;
-  padding: 5px;
-  background: none;
   font-size: 16px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
   color: rgba(0,0,0,0.3);
 }
 
@@ -235,8 +230,14 @@ div.featured-content .featured-text ul li a {
   margin-bottom: 0.5em;
 }
 
-  /* Social Networks */
+  /* Newsletter */
 
+  input#newsletter-text, input#newsletter-submit {
+    display: block;
+    float: left;
+  }
+
+  /* Social Networks */
 
   #lower-container div.twitter {
     width: 32px;
@@ -453,7 +454,24 @@ abbr { text-transform: none; }
 }
 
 .button.small {
-  padding: 6px 8px;
+  padding: 4px 8px;
+}
+
+/* Inputs -------------------- */
+
+input.text-input {
+  border: 1px solid #888;
+  padding: 5px;
+  background: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #333;
+}
+
+input.text-input:focus {
+  border: 1px solid #666;
+  color: #222;
 }
 
 /* "Load more" section under the videos ---------------------- */
