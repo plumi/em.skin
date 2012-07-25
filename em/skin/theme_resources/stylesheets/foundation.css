@@ -23,7 +23,7 @@ input:focus {
 /* Upper Container ---------------------- */
 
 #upper-container {
-  border-bottom: 2px solid #f2f2f3;
+  border-bottom: 2px solid #ccc;
   background: url(images/waves.png) center top repeat-x;
   -moz-box-shadow: inset 0 -2px 4px rgba(0,0,0,0.18);
   -ms-box-shadow: inset 0 -2px 4px rgba(0,0,0,0.18);
@@ -106,12 +106,13 @@ div.row.header div.menu {
 }
 
 .header-menu-item.header-button.user:hover {
-  background: url(images/user-down.png) right center no-repeat, -moz-linear-gradient(top,#FAFAFA 0,gainsboro 100%);
-  background: url(images/user-down.png) right center no-repeat, -ms-linear-gradient(top,#FAFAFA 0,gainsboro 100%);
-  background: url(images/user-down.png) right center no-repeat, -o-linear-gradient(top,#FAFAFA 0,gainsboro 100%);
-  background: url(images/user-down.png) right center no-repeat, -webkit-gradient(linear,left top,left bottom,color-stop(0,#FAFAFA),color-stop(100%,gainsboro));
-  background: url(images/user-down.png) right center no-repeat, -webkit-linear-gradient(top,#FAFAFA 0,gainsboro 100%);
-  background: url(images/user-down.png) right center no-repeat, linear-gradient(to bottom,#FAFAFA 0,gainsboro 100%);
+  background: #efeff2;
+  background: url(images/user-down.png) right center no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f3f3f5), color-stop(100%, #dfdfe2));
+  background: url(images/user-down.png) right center no-repeat, -ms-linear-gradient(#f3f3f5, #dfdfe2);
+  background: url(images/user-down.png) right center no-repeat, -moz-linear-gradient(#f3f3f5, #dfdfe2);
+  background: url(images/user-down.png) right center no-repeat, -o-linear-gradient(#f3f3f5, #dfdfe2);
+  background: url(images/user-down.png) right center no-repeat, -webkit-linear-gradient(top,#f3f3f5 0,#dfdfe2 100%);
+  background: url(images/user-down.png) right center no-repeat, linear-gradient(#f3f3f5, #dfdfe2);
 }
 
 .header-menu-item.header-button.language {
@@ -153,7 +154,7 @@ div.news ul {
 
 div.news ul li {
   padding: 14px;
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid #ccc;
 }
 
 div.news ul li a {
@@ -229,6 +230,7 @@ div.featured-filmmaker .featured-text h5 {
   /* Latest Videos */
 div#latestvideos.row.content {
   background: url(images/bg2.png) center repeat;
+  border-top: 1px solid #aaaaad;
 }
 
 /* Lower Container ---------------------- */
@@ -428,10 +430,10 @@ div.column-title {
 
 div.row-title {
   margin: 0 auto;
-  -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.18);
-  -ms-box-shadow: inset 0 2px 4px rgba(0,0,0,0.18);
-  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.18);
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.18);
+  -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.22);
+  -ms-box-shadow: inset 0 2px 4px rgba(0,0,0,0.22);
+  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.22);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.22);
   filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=snowfa,EndColorStr=#FFDCDCdc);
   background: -moz-linear-gradient(top,#353a45 0,#27272f 100%);
   background: -ms-linear-gradient(top,#353a45 0,#27272f 100%);
@@ -530,7 +532,7 @@ abbr { text-transform: none; }
   position: relative;
   top: -7px;
   margin-left: 14px;
-  border: 1px solid #ccc;
+  border: 1px solid #d5d5d5;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -546,12 +548,14 @@ abbr { text-transform: none; }
   -webkit-box-shadow:  0 1px 3px  rgba(0,0,0,0.13);
   box-shadow:  0 1px 3px  rgba(0,0,0,0.13);
   color: #111;
-  background: -moz-linear-gradient(top,#FAFAFA 0,gainsboro 100%);
-  background: -ms-linear-gradient(top,#FAFAFA 0,gainsboro 100%);
-  background: -o-linear-gradient(top,#FAFAFA 0,gainsboro 100%);
-  background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#FAFAFA),color-stop(100%,gainsboro));
-  background: -webkit-linear-gradient(top,#FAFAFA 0,gainsboro 100%);
-  background: linear-gradient(to bottom,#FAFAFA 0,gainsboro 100%);
+  background: #efeff2;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efeff2), color-stop(100%, #dfdfe2));
+  background: -webkit-linear-gradient(#efeff2, #dfdfe2);
+  background: -ms-linear-gradient(#efeff2, #dfdfe2);
+  background: -moz-linear-gradient(#efeff2, #dfdfe2);
+  background: -o-linear-gradient(#efeff2, #dfdfe2);
+  background: linear-gradient(#efeff2, #dfdfe2);
+  border: 1px solid #aaa;
 }
 
 /* Inputs -------------------- */
@@ -574,7 +578,7 @@ input.text-input:focus {
 /* "Load more" section under the videos ---------------------- */
 
 div.column.centered.load-more {
-  width: 220px;
+  width: 280px;
   padding: 10px 10px 5px 0;
 }
 
@@ -602,7 +606,7 @@ div.column.centered.load-more {
   border-right: 1px solid #444;
   border-bottom: 1px solid #222224;
   background-color: #E0E0E0;
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=snowfa,EndColorStr=#FFDCDCdc);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#545456,EndColorStr=#3a3a3c);
   background-image: -moz-linear-gradient(top,#545456 0,#3a3a3c 100%);
   background-image: -ms-linear-gradient(top,#545456 0,#3a3a3c 100%);
   background-image: -o-linear-gradient(top,#545456 0,#3a3a3c 100%);
@@ -649,12 +653,24 @@ div.column.centered.load-more {
 }
 
 .video div.under div.video-actions a {
-  margin-left: 14px;
   padding-left: 14px;
+  padding-right: 14px;
   height: 100%;
   float: right;
   border-left: 1px solid #333;
   color: #efeff1;
+}
+
+.video div.under div.video-actions a:hover {
+  color: #fff;
+  text-shadow: #111 0 2px;
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#646466,EndColorStr=#4a4a4c);
+  background-image: -moz-linear-gradient(top,#646466 0,#4a4a4c 100%);
+  background-image: -ms-linear-gradient(top,#646466 0,#4a4a4c 100%);
+  background-image: -o-linear-gradient(top,#646466 0,#4a4a4c 100%);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#646466),color-stop(100%,#4a4a4c));
+  background-image: -webkit-linear-gradient(top,#646466 0,#4a4a4c 100%);
+  background-image: linear-gradient(to bottom,#646466 0,#4a4a4c 100%);
 }
 
 .video div.under .video-actions a span {
@@ -662,10 +678,6 @@ div.column.centered.load-more {
   position: relative;
   top: 50%;
   margin-top: -8px;
-}
-
-.video div.under .video-actions a:first-child {
-  padding-right: 14px;
 }
 
 /* Print styles.  Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/ Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
@@ -694,7 +706,7 @@ div.column.centered.load-more {
 
 /* The Grid ---------------------- */
 
-.row { width: 986px; max-width: 100%; min-width: 768px; margin: 0 auto; padding-left: 8px; padding-right: 8px; }
+.row { width: 986px; margin: 0 auto; padding-left: 8px; padding-right: 8px; }
 .column, .columns { float: left; min-height: 1px; padding: 0 8px 0 8px; position: relative; }
 
 .row.nest {padding: 0; width: 100%; min-width: 0;}
@@ -796,7 +808,7 @@ img { -ms-interpolation-mode: bicubic; }
 .row:after { clear: both; }
 
 /* Mobile Grid and Overrides ---------------------- */
-@media only screen and (max-width: 767px) { body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
+@media only screen and (max-width: 985px) { body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
   .row { width: auto; min-width: 0; margin-left: 0; margin-right: 0; }
   .column, .columns { width: auto !important; float: none; }
   .column:last-child, .columns:last-child { float: none; }
