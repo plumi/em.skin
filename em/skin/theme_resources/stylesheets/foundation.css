@@ -93,6 +93,7 @@ div.row.header div.menu {
 }
 
 .header-menu-item {
+  display: block;
   float: right;
   margin-left: 16px;
   font-size: 18px;
@@ -111,6 +112,14 @@ div.row.header div.menu {
   background: url(images/user-down.png) right center no-repeat, -webkit-gradient(linear,left top,left bottom,color-stop(0,#FAFAFA),color-stop(100%,gainsboro));
   background: url(images/user-down.png) right center no-repeat, -webkit-linear-gradient(top,#FAFAFA 0,gainsboro 100%);
   background: url(images/user-down.png) right center no-repeat, linear-gradient(to bottom,#FAFAFA 0,gainsboro 100%);
+}
+
+.header-menu-item.header-button.language {
+  padding: 6px 4px;
+}
+
+.header-menu-item.header-button.language img {
+  vertical-align: top;
 }
 
 /* Mid Container ---------------------- */
