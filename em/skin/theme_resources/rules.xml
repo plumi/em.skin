@@ -172,6 +172,9 @@
         
         <copy css:content-children=".siteelement-footertext .footertext" css:theme="#colophon" />
 
+        <replace css:content='#portal-column-one dl.portlet ul' css:theme='#lower-container ul' />
+
+
     </rules>
 
 </rules>
