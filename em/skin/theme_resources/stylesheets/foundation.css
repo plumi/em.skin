@@ -19,21 +19,38 @@ body {
 /* Upper Container ---------------------- */
 
 #upper-container {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #f2f2f3;
+  background: url(images/waves.png) center top repeat-x;
+  -moz-box-shadow: inset 0 -2px 4px rgba(0,0,0,0.18);
+  -ms-box-shadow: inset 0 -2px 4px rgba(0,0,0,0.18);
+  -webkit-box-shadow: inset 0 -2px 4px rgba(0,0,0,0.18);
+  box-shadow: inset 0 -2px 4px rgba(0,0,0,0.18);
+}
+
+#upper-container div.row.header {
+  -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.22);
+  -ms-box-shadow: 0 2px 5px rgba(0,0,0,0.22);
+  -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.22);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.22);
+  background: rgba(248,248,248,0.96);
 }
 
 div.row.header .main-logo {
   background: url(images/main-logo.png) left center no-repeat;
-  width: 120px;
+  width: 90px;
   height: 130px;
 }
 
 div.row.header .main-title {
-  margin-left: 10px;
+  margin-left: 4px;
 }
 
 div.row.header .main-title h2 {
-  margin: 34px 0 5px 0;
+  margin: 34px 0 4px 0;
+}
+
+div.row.header .main-title p {
+  line-height: 16px;
 }
 
 div.row.header, div.twelve.columns.header {
@@ -44,8 +61,8 @@ div.header div.menu {
   position: absolute;
   top: 50%;
   right: 0;
-  height: 24px;
-  margin-top: -12px;
+  height: 20px;
+  margin-top: -8px;
 }
 
 .header-menu-item {
@@ -377,14 +394,22 @@ abbr { text-transform: none; }
   padding: 6px 8px;
 }
 
-/* Load more section under the videos ---------------------- */
+/* "Load more" section under the videos ---------------------- */
 
 div.column.centered.load-more {
   width: 220px;
-  padding: 20px 10px 5px 0;
+  padding: 10px 10px 5px 0;
 }
 
 /* Video ---------------------- */
+
+.video {
+  margin-bottom: 16px;
+}
+
+.video.featured {
+  margin-bottom: 0;
+}
 
 .video div {
   max-width: 100%;
@@ -392,7 +417,8 @@ div.column.centered.load-more {
 }
 
 .video div.under {
-  padding: 12px 8px;
+  overflow: auto;
+  position: relative;
   color: #fff;
   border-top: 1px solid #a0a0a4;
   border-left: 1px solid #777;
@@ -423,15 +449,46 @@ div.column.centered.load-more {
 }
 
 .video.featured div.under {
-  padding: 12px;
   border-bottom: 2px solid #4a4a4c;
 }
 
 
 .video div.under h3, .video div.under h4, .video div.under h5 {
-  padding: 0px;
+  padding: 10px 8px;
   margin: 0px;
   text-shadow: #111 0 1px;
+  float: left;
+}
+
+.video.featured div.under h3, .video.featured div.under h4, .video.featured div.under h5 {
+  padding: 10px;
+}
+
+.video div.under div.video-actions {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+
+.video div.under div.video-actions a {
+  margin-left: 14px;
+  padding-left: 14px;
+  height: 100%;
+  float: right;
+  border-left: 1px solid #333;
+  color: #efeff1;
+}
+
+.video div.under .video-actions a span {
+  display: block;
+  position: relative;
+  top: 50%;
+  margin-top: -8px;
+}
+
+.video div.under .video-actions a:first-child {
+  padding-right: 14px;
 }
 
 /* Print styles.  Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/ Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
@@ -460,13 +517,13 @@ div.column.centered.load-more {
 
 /* The Grid ---------------------- */
 
-.row { width: 986px; max-width: 100%; min-width: 768px; margin: 0 auto; padding-left: 16px; }
-.column, .columns { float: left; min-height: 1px; padding: 0 16px 0 0; position: relative; }
+.row { width: 986px; max-width: 100%; min-width: 768px; margin: 0 auto; padding-left: 8px; padding-right: 8px; }
+.column, .columns { float: left; min-height: 1px; padding: 0 8px 0 8px; position: relative; }
 
 .row.nest {padding: 0; width: 100%; min-width: 0;}
 .row.nest + .row.nest {margin-top: 16px;}
-.row.nest .column, .row.nest .columns {padding: 0 0 0 16px;}
-.row.nest .column:first-child, .row.nest .columns:first-child {padding: 0;}
+.row.nest .column, .row.nest .columns {padding: 0 0 0 8px;}
+.row.nest .column:first-child, .row.nest .columns:first-child {padding: 0 8px 0 0;}
 
 .column.centered, .columns.centered { float: none; clear: both; margin: 0 auto; }
 
