@@ -41,8 +41,13 @@
                     <h2>EngageMedia</h2>
                     <p>Social justice and environmental video from the Asia Pacific</p>
                 </div>
+<<<<<<< HEAD
                 <div class="three columns offset-by-one search">
+                    <input type="text" id="search-box" name="search-box" value="Search EnagageMedia">
+=======
+                <div class="three columns search">
                     <input type="text" id="search-box" name="searchGadget" value="Search EnagageMedia">
+>>>>>>> 446533a5dd11b65d2f6268c399f53f1b2b880705
                 </div>
                 <div class="four columns menu">
                     <a href="#" class="header-menu-item user">User</a>
