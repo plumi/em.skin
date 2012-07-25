@@ -167,7 +167,7 @@ div.featured-content {
   background: #fdfdfe;
   padding: 12.5px;
   height: 232px;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 2px solid #aaa;
 }
 
 div.featured-content .featured-image {
@@ -199,14 +199,19 @@ div.featured-content .featured-text ul li a {
   border-top: 1px solid #888;
   border-bottom: 20px solid #444;
   background: #dbdbdb;
-  padding: 10px 0 36px 0;
+}
+
+div.row.footer + div.row.footer {
+  border-top: 1px solid #bbb;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #lower-container div.logo {
   background: url(images/logo-footer.png) center no-repeat;
   width: 280px;
   height: 70px;
-  margin-bottom: 12px;
+  margin: 12px 0;
 }
 
 #lower-container .columns h5 {
@@ -232,19 +237,43 @@ div.featured-content .featured-text ul li a {
 
   /* Social Networks */
 
-  #lower-container div.twitter {
+  #lower-container span.social-title {
+    display: block;
+  }
+
+  #lower-container span.twitter {
     width: 32px;
     height: 32px;
+    margin-top: 3px;
     background: url(images/twitter.png) no-repeat;
     float: left;
   }
 
-    #lower-container div.fb {
+    #lower-container span.fb {
     width: 32px;
     height: 32px;
     margin-right: 6px;
+    margin-top: 3px;
     background: url(images/facebook.png) no-repeat;
     float: left;
+  }
+
+  #lower-container .colophon {
+    margin: 10px 0;
+  }
+
+  #lower-container .colophon a {
+    color: #333;
+  }
+
+  #lower-container .colophon span.plumi-logo {
+    display: inline-block;
+    height: 20px;
+    width: 47px;
+    background: url(images/plumi.png) center no-repeat;
+    position: relative;
+    top: 5px;
+    left: -4px;
   }
 
 /* Links ---------------------- */
@@ -342,18 +371,21 @@ div.column-title {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background: #396;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #396), color-stop(100%, #31654B));
-  background: -webkit-linear-gradient(#396, #31654B);
-  background: -moz-linear-gradient(#396, #31654B);
-  background: -o-linear-gradient(#396, #31654B);
-  background: linear-gradient(#396, #31654B);
+  color: #333;
+  background: #efeff2;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efeff2), color-stop(100%, #dfdfe2));
+  background: -webkit-linear-gradient(#efeff2, #dfdfe2);
+  background: -moz-linear-gradient(#efeff2, #dfdfe2);
+  background: -o-linear-gradient(#efeff2, #dfdfe2);
+  background: linear-gradient(#efeff2, #dfdfe2);
   -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.18);
   -ms-box-shadow: 0 2px 4px rgba(0,0,0,0.18);
   -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.18);
   box-shadow: 0 2px 4px rgba(0,0,0,0.18);
   position: relative;
   top: 2px;
+  text-shadow: 0 1px 0 white;
+  border-bottom: 1px solid #c3c3c3;
 }
 
 div.row-title {
