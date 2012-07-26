@@ -102,12 +102,13 @@ World Press Freedom Day: The Ultimate Faq</a><br />International Freedom of Expr
             </div>
 
             <div class="three columns news">
+<<<<<<< HEAD
                 <div class="news-section shade">
                     <div class="column-title">
                         <span class="column-title-icon"></span>
                         <h4>News & Events</h4>
                     </div>
-                    <ul id="news-right-portlet">
+                    <ul>
                         <li><a href="#">Competition: Bhinneka Tinggal Duka</a><br />Bhinneka Tinggal Duka? Kompetisi Video Online (in)toleransi di Indonesia ini terbuka untuk publik!</li>
                                         <li><a href="#">
     Engagemedia, Malaysiakini, Cjmy, And The Online Citizen Host First Citizen Journalism</a><br />Report on the first ever citizen journalism and online subtitling workshop in Singapore.</li>
@@ -118,7 +119,7 @@ World Press Freedom Day: The Ultimate Faq</a><br />International Freedom of Expr
                         <span class="column-title-icon"></span>
                         <h4>EngageMedia Blog</h4>
                     </div>
-                    <ul id="blogs-right-portlet">
+                    <ul>
                         <li><a href="#">Engagemedia Ventures Into Thailand, Sprouting Projects And Partnerships</a><br />Over 2 weeks in early July, I traveled across 3 provinces in the conflict zone of Southern Thailand, and to the capital city of Bangkok.</li>
                     </ul>
                     </div>
@@ -128,7 +129,7 @@ World Press Freedom Day: The Ultimate Faq</a><br />International Freedom of Expr
                         <span class="column-title-icon"></span>
                         <h4>Latest Comments</h4>
                     </div>
-                    <ul id="comments-right-portlet">
+                    <ul>
                         <li><a href="#"> philippe on Trou et Construction Citerne de récupération de l'eau de Pluie en Ferrociment</a><br />Super,je suis content que j'ai servi d'inspiration.</li>
                     </ul>
                 </div>
@@ -137,6 +138,22 @@ World Press Freedom Day: The Ultimate Faq</a><br />International Freedom of Expr
                     <div class="fb"></div>
                     <div class="twitter"></div>
                 </div>
+=======
+                <div class="column-title"><h4>News & Events</h4></div>
+                <ul id="news-right-portlet">
+                    <li><a href="#">Competition: Bhinneka Tinggal Duka</a><br />Bhinneka Tinggal Duka? Kompetisi Video Online (in)toleransi di Indonesia ini terbuka untuk publik!</li>
+                                    <li><a href="#">
+Engagemedia, Malaysiakini, Cjmy, And The Online Citizen Host First Citizen Journalism</a><br />Report on the first ever citizen journalism and online subtitling workshop in Singapore.</li>
+                </ul>
+                <div class="column-title"><h4>EngageMedia Blog</h4></div>
+                <ul id="blogs-right-portlet">
+                    <li><a href="#">Engagemedia Ventures Into Thailand, Sprouting Projects And Partnerships</a><br />Over 2 weeks in early July, I traveled across 3 provinces in the conflict zone of Southern Thailand, and to the capital city of Bangkok.</li>
+                </ul>
+                <div class="column-title"><h4>Latest Comments</h4></div>
+                <ul id="comments-right-portlet">
+                    <li><a href="#"> philippe on Trou et Construction Citerne de récupération de l'eau de Pluie en Ferrociment</a><br />Super,je suis content que j'ai servi d'inspiration.</li>
+                </ul>
+>>>>>>> 97c12c6e42e9bc2dd8c0fbe8837a9a969e3dde6f
             </div>
         </div>
         <div class="row row-title"><h4>Latest Videos</h4></div>
