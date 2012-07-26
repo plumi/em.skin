@@ -64,13 +64,13 @@ div.row.header .main-title p {
 div.row.header div.search {
   position: relative;
   top: 50%;
-  margin-top: -16px;
+  margin-top: -14px;
 }
 
 div.row.header div.search input#searchGadget {
   width: 100%;
   border: 1px solid #cfcfcf;
-  font-size: 16px;
+  font-size: 14px;
   color: rgba(0,0,0,0.3);
 }
 
@@ -96,7 +96,7 @@ div.row.header div.menu {
   display: block;
   float: right;
   margin-left: 16px;
-  font-size: 18px;
+  font-size: 16px;
   color: #333;
 }
 
@@ -125,14 +125,18 @@ img {
 
 /* Mid Container ---------------------- */
 
-div.row.content {
+div.row.content, .row.text-content {
   padding-top: 1em;
   padding-bottom: 1em;
 }
 
-div.row.content + div.row.content {
+div.row.content + div.row.content, div.row.text-content + div.row.text-content {
   padding-top: 0;
   padding-bottom: 1em;
+}
+
+div.row.content.no-padding, div.row.text-content.no-padding {
+  padding: 0;
 }
 
 #mid-container {
@@ -141,6 +145,10 @@ div.row.content + div.row.content {
 
 #mid-container .row.content {
   background: #ccc;
+}
+
+#mid-container .row.text-content {
+  background: #f0f0f2;
 }
 
   /* News */
@@ -729,6 +737,24 @@ div.column.centered.load-more {
   margin-top: -8px;
 }
 
+/* Rollover */
+
+.video div.rollover {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 8px;
+  margin-right: 8px;
+  bottom: 40px;
+  padding: 8px;
+  overflow: hidden;
+  background: #efeff1;
+}
+
+.video:hover div.rollover {
+  display: block;
+}
+
 /* Universal Subtitles Container */
 
 div.unisub {
@@ -942,12 +968,38 @@ that IE7/8 do not support :nth-child.
 /* -------------------------------------------------- Table of Contents
 -----------------------------------------------------
 :: Shared Styles
-:: Page Name 1
+:: Plain Text Page
 :: Page Name 2
 */
 /* ----------------------------------------- Shared Styles
 ----------------------------------------- */
-/* ----------------------------------------- Page Name 1
+
+/* ----------------------------------------- Plain Text Page
 ----------------------------------------- */
+
+#post-header .row.text-content {
+  border-bottom: 1px solid #bbb;
+  background: #e5e5e7;
+}
+
+#post-content .row.text-content {
+  border-top: 1px solid #f9f9fa;
+  border-bottom: 1px solid #bbb;
+}
+
+#post-comments .row.text-content {
+  border-top: 1px solid #f9f9fa;
+}
+
+#post-header .row.text-content .post-title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 28px;
+}
+
+#post-header .row.text-content .post-author {
+  font-weight: bold;
+}
+
 /* ----------------------------------------- Page Name 2
 ----------------------------------------- */
