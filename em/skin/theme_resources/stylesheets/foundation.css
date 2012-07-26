@@ -184,6 +184,13 @@ div.news div.social-networks {
     padding: 8px;
   }
 
+  div.news div.social-networks span {
+    display: block;
+    float: left;
+    padding-top: 14px;
+    font-weight: bold;
+  }
+
 div.news div.twitter {
     width: 28px;
     height: 28px;
@@ -205,15 +212,13 @@ div.news div.fb {
 div.featured-content {
   background: #fdfdfe;
   padding: 0;
-  height: 307px;
   border-bottom: 2px solid #aaa;
+  overflow: auto;
 }
 
 div.featured-content .featured-image {
   display: block;
   float: left;
-  height: 305px;
-  width: auto;
   background: #111;
 }
 
