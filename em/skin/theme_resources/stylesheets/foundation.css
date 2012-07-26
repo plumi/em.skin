@@ -362,15 +362,10 @@ h1, h2, h3, h4, h5, h6 { text-rendering: optimizeLegibility; line-height: 1.1; m
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #888; line-height: 0; }
 
 h1 { font-size: 48px; }
-
 h2 { font-size: 34px; }
-
 h3 { font-size: 24px; }
-
 h4 { font-size: 14px; }
-
 h5 { font-size: 14px; }
-
 h6 { font-size: 14px; font-weight: normal; }
 
 hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 22px 0 21px; height: 0; }
@@ -456,13 +451,9 @@ ul, ol { font-size: 14px; line-height: 1.44; margin-bottom: 17px; list-style-pos
 
 /* Blockquotes ---------------------- */
 blockquote, blockquote p { line-height: 1.5; color: #777; }
-
 blockquote { margin: 0 0 17px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
-
 blockquote cite { display: block; font-size: 13px; color: #555; }
-
 blockquote cite:before { content: "\2014 \0020"; }
-
 blockquote cite a, blockquote cite a:visited { color: #555; }
 
 abbr, acronym { text-transform: uppercase; font-size: 90%; color: #222; border-bottom: 1px solid #ddd; cursor: help; }
@@ -523,7 +514,6 @@ abbr { text-transform: none; }
 .button.small {
   padding: 4px 8px;
 }
-
 
   /* Header Buttons */
 
@@ -592,7 +582,7 @@ div.column.centered.load-more {
   margin-bottom: 0;
 }
 
-.video div {
+.video div.viewport {
   max-width: 100%;
   height: auto;
 }
@@ -680,6 +670,18 @@ div.column.centered.load-more {
   margin-top: -8px;
 }
 
+/* Universal Subtitles Container */
+
+div.unisub {
+  height: 29px;
+  background: url(images/bg-unisub.png) top left repeat-x;
+}
+
+div.unisub-proxy {
+  height: 29px;
+  background: url(../images/unisub.png) left center no-repeat;
+}
+
 /* Print styles.  Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/ Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
 */
 .print-only { display: none !important; }
@@ -717,83 +719,46 @@ div.column.centered.load-more {
 .column.centered, .columns.centered { float: none; clear: both; margin: 0 auto; }
 
 .row .one { width: 8.333%; }
-
 .row .two { width: 16.667%; }
-
 .row .three { width: 25%; }
-
 .row .four { width: 33.333%; }
-
 .row .five { width: 41.667%; }
-
 .row .six { width: 50%; }
-
 .row .seven { width: 58.333%; }
-
 .row .eight { width: 66.667%; }
-
 .row .nine { width: 75%; }
-
 .row .ten { width: 83.333%; }
-
 .row .eleven { width: 91.667%; }
-
 .row .twelve { width: 100%; }
 
 .row .offset-by-one { margin-left: 8.333%; }
-
 .row .offset-by-two { margin-left: 16.667%; }
-
 .row .offset-by-three { margin-left: 25%; }
-
 .row .offset-by-four { margin-left: 33.333%; }
-
 .row .offset-by-five { margin-left: 41.667%; }
-
 .row .offset-by-six { margin-left: 50%; }
-
 .row .offset-by-seven { margin-left: 58.333%; }
-
 .row .offset-by-eight { margin-left: 66.667%; }
-
 .row .offset-by-nine { margin-left: 75%; }
-
 .row .offset-by-ten { margin-left: 83.333%; }
 
 .push-two { left: 16.667%; }
-
 .pull-two { right: 16.667%; }
-
 .push-three { left: 25%; }
-
 .pull-three { right: 25%; }
-
 .push-four { left: 33.333%; }
-
 .pull-four { right: 33.333%; }
-
 .push-five { left: 41.667%; }
-
 .pull-five { right: 41.667%; }
-
 .push-six { left: 50%; }
-
 .pull-six { right: 50%; }
-
 .push-seven { left: 58.333%; }
-
 .pull-seven { right: 58.333%; }
-
 .push-eight { left: 66.667%; }
-
 .pull-eight { right: 66.667%; }
-
 .push-nine { left: 75%; }
-
 .pull-nine { right: 75%; }
-
 .push-ten { left: 83.333%; }
-
 .pull-ten { right: 83.333%; }
 
 img, object, embed { max-width: 100%; height: auto; }
@@ -807,7 +772,7 @@ img { -ms-interpolation-mode: bicubic; }
 .row:before, .row:after { content: ""; display: table; }
 .row:after { clear: both; }
 
-/* Mobile Grid and Overrides ---------------------- */
+/* Tablet & Mobile Grid Overrides ---------------------- */
 @media only screen and (max-width: 985px) { body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
   .row { width: auto; min-width: 0; margin-left: 0; margin-right: 0; }
   .column, .columns { width: auto !important; float: none; }
@@ -818,6 +783,42 @@ img { -ms-interpolation-mode: bicubic; }
   .no-left-margin, .offset-by-one, .offset-by-two, .offset-by-three, .offset-by-four, .offset-by-five, .offset-by-six, .offset-by-seven, .offset-by-eight, .offset-by-nine, .offset-by-ten { margin-left: 0 !important; }
   .left-auto, .push-two, .push-three, .push-four, .push-five, .push-six, .push-seven, .push-eight, .push-nine, .push-ten { left: auto; }
   .right-auto, .pull-two, .pull-three, .pull-four, .pull-five, .pull-six, .pull-seven, .pull-eight, .pull-nine, .pull-ten { right: auto; }
+
+/* Tablet Grid ---------------------- */
+@media only screen and (max-width: 985px) and (min-width: 768px) { body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
+  /* Tablet 6-column Grid */
+  .row .tablet-one { width: 16.667% !important; float: left; padding: 0 12.5px; }
+  .row .tablet-one:last-child { float: right; }
+  .row.collapse .tablet-one { padding: 0; }
+  .row .tablet-two { width: 33.333% !important; float: left; padding: 0 12.5px; }
+  .row .tablet-two:last-child { float: right; }
+  .row.collapse .tablet-two { padding: 0; }
+  .row .tablet-three { width: 50% !important; float: left; padding: 0 12.5px; }
+  .row .tablet-three:last-child { float: right; }
+  .row.collapse .tablet-three { padding: 0; }
+  .row .tablet-four { width: 66.667% !important; float: left; padding: 0 12.5px; }
+  .row .tablet-four:last-child { float: right; }
+  .row.collapse .tablet-four { padding: 0; }
+  .row .tablet-five { width: 83.333% !important; float: left; padding: 0 12.5px; }
+  .row .tablet-five:last-child { float: right; }
+  .row.collapse .tablet-five { padding: 0; }
+  .row .tablet-six { width: 100% !important; float: left; padding: 0 12.5px; }
+  .row .tablet-six:last-child { float: right; }
+  .row.collapse .tablet-six { padding: 0; }
+  .push-one-tablet { left: 16.667%; }
+  .pull-one-tablet { right: 16.667%; }
+  .push-two-tablet { left: 33.333%; }
+  .pull-two-tablet { right: 33.333%; }
+  .push-three-tablet { left: 50%; }
+  .pull-three-tablet { right: 50%; } }
+  .push-four-tablet { left: 66.667%; }
+  .pull-four-tablet { right: 66.667%; } }
+  .push-five-tablet { left: 83.333%; }
+  .pull-five-tablet { right: 83.333%; } }
+
+
+/* Mobile Grid ---------------------- */
+@media only screen and (max-width: 767px) { body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
   /* Mobile 4-column Grid */
   .row .mobile-one { width: 25% !important; float: left; padding: 0 12.5px; }
   .row .mobile-one:last-child { float: right; }
@@ -836,7 +837,8 @@ img { -ms-interpolation-mode: bicubic; }
   .push-two-mobile { left: 50%; }
   .pull-two-mobile { right: 50%; }
   .push-three-mobile { left: 75%; }
-  .pull-three-mobile { right: 75%; } }
+  .pull-three-mobile { right: 75%; } 
+}
 /* Block Grids ---------------------- */
 /* These are 2-up, 3-up, 4-up and 5-up ULs, suited
 for repeating blocks of content. Add 'mobile' to
@@ -871,9 +873,13 @@ that IE7/8 do not support :nth-child.
 .block-grid.five-up > li { width: 20%; padding: 0 8px 8px; }
 
 /*  .block-grid.five-up>li:nth-child(5n+1) {clear: left;} */
-/* Mobile Block Grids */
-@media only screen and (max-width: 767px) { .block-grid.mobile { margin-left: 0; }
-  .block-grid.mobile > li { float: none; width: 100%; margin-left: 0; } }
+
+/* Tablet & Mobile Block Grids */
+@media only screen and (max-width: 985px) { 
+  .block-grid.mobile { margin-left: 0; }
+  .block-grid.mobile > li { float: none; width: 100%; margin-left: 0; } 
+}
+
 /* -------------------------------------------------- Table of Contents
 -----------------------------------------------------
 :: Shared Styles
