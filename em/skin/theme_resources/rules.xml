@@ -167,6 +167,8 @@
 
        <!-- the right portlet column should contain News, Blog, Comments for this to work-->
        <!-- News -->
+
+       <replace content="//*[@id='portal-column-two']/div/div[1]/dl[1]/dt/span[2]" theme="//h4[@id='news-title']" />
        <replace css:theme="#news-right-portlet">
        <ul id="news-right-portlet">
            <xsl:for-each select="//*[@id='portal-column-two']/div/div[1]/dl[1]/dd">
@@ -177,6 +179,7 @@
        </replace>
 
        <!-- Blogs -->
+       <replace content="//*[@id='portal-column-two']/div/div[2]/dl[1]/dt/a" theme="//h4[@id='blogs-title']" />
        <replace css:theme="#blogs-right-portlet">
        <ul id="blogs-right-portlet">
            <xsl:for-each select="//*[@id='portal-column-two']/div/div[2]/dl[1]/dd">
@@ -187,6 +190,7 @@
        </replace>
 
        <!-- Comments -->
+       <replace content="//*[@id='portal-column-two']/div/div[3]/dl[1]/dt/a" theme="//h4[@id='comments-title']" />
        <replace css:theme="#comments-right-portlet">
        <ul id="comments-right-portlet">
            <xsl:for-each select="//*[@id='portal-column-two']/div/div[3]/dl[1]/dd">
