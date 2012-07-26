@@ -165,11 +165,11 @@
 
         <replace theme="//*[@id='featuredvideo']/div[1]" css:content="dl#featured-video video"/>
 
-
+       <!-- the right portlet column should contain News, Blog, Comments for this to work-->
        <!-- News -->
        <replace css:theme="#news-right-portlet">
        <ul id="news-right-portlet">
-           <xsl:for-each select="//*[@id='portal-column-two']//dl[1]/dd">
+           <xsl:for-each select="//*[@id='portal-column-two']/div/div[1]/dl[1]/dd">
                <li><xsl:copy-of select="a" /> <br /> <xsl:value-of select="a/@title"/>               
                </li>
            </xsl:for-each>
@@ -177,12 +177,19 @@
        </replace>
 
        <!-- Blogs -->
-        <replace content='/html/body/div/table/tbody/tr/td/div/div[6]/dl' theme='//*[@id="blogs-right-portlet"]' />
+       <replace css:theme="#blogs-right-portlet">
+       <ul id="blogs-right-portlet">
+           <xsl:for-each select="//*[@id='portal-column-two']/div/div[2]/dl[1]/dd">
+               <li><xsl:copy-of select="a" /> <br /> <xsl:value-of select="a/@title"/>
+               </li>
+           </xsl:for-each>
+       </ul>
+       </replace>
 
-       <!-- comments -->
+       <!-- Comments -->
        <replace css:theme="#comments-right-portlet">
        <ul id="comments-right-portlet">
-           <xsl:for-each select="//*[@id='portal-column-two']//dl[2]/dd">
+           <xsl:for-each select="//*[@id='portal-column-two']/div/div[3]/dl[1]/dd">
                <li><xsl:copy-of select="a" /> <br /> <xsl:value-of select="a/@title"/>
                </li>
            </xsl:for-each>
