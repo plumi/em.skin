@@ -166,7 +166,7 @@
         <replace theme="//*[@id='featuredvideo']/div[1]" css:content="dl#featured-video video"/>
 
 <!-- News -->
-       <replace css:theme="div.news ul:nth-of-type(1)">
+       <replace css:theme="#newsrightportlet">
        <ul>
            <xsl:for-each select="//*[@id='portal-column-two']//dl[1]/dd">
                <li><xsl:copy-of select="a" /> <br /> <xsl:value-of select="a/@title"/>               
@@ -176,7 +176,7 @@
        </replace>
 
 <!-- Blogs -->
-       <replace css:theme="div.news ul:nth-of-type(2)">
+       <replace css:theme="#blogsrightportlet">
        <ul>
            <xsl:for-each select="//*[@id='portal-column-one']//dl[2]/dd">
                <li><xsl:copy-of select="a" /> <br /> <xsl:value-of select="a/@title"/>               
@@ -186,8 +186,7 @@
        </replace>
 
 <!-- comments -->
-
-      <replace css:theme="div.news ul:nth-of-type(3)">
+       <replace css:theme="#commentsrightportlet">
        <ul>
            <xsl:for-each select="//*[@id='portal-column-two']//dl[2]/dd">
                <li><xsl:copy-of select="a" /> <br /> <xsl:value-of select="a/@title"/>
