@@ -145,11 +145,16 @@ div.row.content + div.row.content {
 
   /* News */
 
+div.news-section {
+  overflow: auto;
+  margin-bottom: 14.5px;
+}
+
 div.news ul {
   list-style: none;
   background: #fdfdfe;
   border-bottom: 2px solid #999;
-  margin-bottom: 14.5px;
+  margin-bottom: 0px;
 }
 
 div.news ul li {
@@ -164,6 +169,31 @@ div.news ul li a {
   color: #222;
   font-weight: bold;
 }
+
+  /* Social Networks */
+
+div.news div.social-networks {
+    padding-top: 10px;
+    margin-bottom: 0px;
+    background: #efeff1;
+    padding: 8px;
+  }
+
+div.news div.twitter {
+    width: 28px;
+    height: 28px;
+    margin: 4px 0 0 4px;
+    background: url(images/twitter.png) center no-repeat;
+    float: right;
+  }
+
+div.news div.fb {
+    width: 28px;
+    height: 28px;
+    margin: 4px 0 0 4px;
+    background: url(images/facebook.png) center no-repeat;
+    float: right;
+  }
 
   /* Featured Content below Video */
 
@@ -584,7 +614,6 @@ input.text-input:focus {
 /* "Load more" section under the videos ---------------------- */
 
 div.column.centered.load-more {
-  width: 280px;
   padding: 10px 10px 5px 0;
 }
 
