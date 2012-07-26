@@ -165,6 +165,7 @@
 
         <replace theme="//*[@id='featuredvideo']/div[1]" css:content="dl#featured-video video"/>
 
+
        <!-- News -->
        <replace css:theme="#news-right-portlet">
        <ul id="news-right-portlet">
@@ -176,14 +177,7 @@
        </replace>
 
        <!-- Blogs -->
-       <replace css:theme="#blogs-right-portlet">
-       <ul id="blogs-right-portlet">
-           <xsl:for-each select="//*[@id='portal-column-one']//dl[2]/dd">
-               <li><xsl:copy-of select="a" /> <br /> <xsl:value-of select="a/@title"/>               
-               </li>
-           </xsl:for-each>
-       </ul>
-       </replace>
+        <replace content='/html/body/div/table/tbody/tr/td/div/div[6]/dl' theme='//*[@id="blogs-right-portlet"]' />
 
        <!-- comments -->
        <replace css:theme="#comments-right-portlet">
