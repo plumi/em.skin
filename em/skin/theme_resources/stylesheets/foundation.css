@@ -165,14 +165,17 @@ div.news ul {
   margin-bottom: 0px;
 }
 
-div.news ul li {
-  padding: 14px;
-  
-}
 
 div.news ul li a {
+  display: block;
   color: #333;
   font-size: 12px;
+  padding: 14px;
+}
+
+div.news ul li a:hover {
+  background: #f5f5f6;
+  color: #111;
 }
 
 div.news ul li + li {
@@ -228,46 +231,53 @@ div.featured-content {
   overflow: auto;
 }
 
-div.featured-content .featured-image {
+div.featured-content a .featured-image {
   display: block;
   float: left;
   background: #111;
 }
 
-div.featured-content .featured-text {
-  width: 225px;
-  padding: 12.5px;
+div.featured-content a .featured-text {
   float: left;
+  display: block;
+  color: #222;
+  padding: 12.5px;
+  width: 225px;
+  height: 225px;
   background: #fdfdfe;
 }
 
-div.featured-content .featured-text a {
-  color: #222;
+div.featured-content:hover a .featured-text {
+  background: #f8f8f9;
+  color: #111;
 }
 
-div.featured-content .featured-text h5 {
+div.featured-content a .featured-text h5 {
   font-weight: bold;
 }
 
 /* Featured Filmmaker below Video */
 
-div.featured-filmmaker .featured-image {
+div.featured-filmmaker a .featured-image {
   width: 100%;
   height: auto;
 }
 
-div.featured-filmmaker .featured-text {
-  padding: 6px;
+div.featured-filmmaker a .featured-text {
+  display: block;
+  padding: 9px;
   background: #fdfdfe;
   border-bottom: 2px solid #999;
-}
-
-div.featured-filmmaker .featured-text a {
   color: #333;
 }
 
-div.featured-filmmaker .featured-text h5 {
-  margin: 3px 0;
+div.featured-filmmaker:hover a .featured-text {
+  background: #f8f8f9;
+  color: #111;
+}
+
+div.featured-filmmaker a .featured-text h5 {
+  margin: 0;
 }
 
   /* Latest Videos */
