@@ -165,41 +165,58 @@
 
         <replace theme="//*[@id='featuredvideo']/div[1]" css:content="dl#featured-video video"/>
 
-       <!-- the right portlet column should contain News, Blog, Comments for this to work-->
-       <!-- News -->
-
-       <replace content="//*[@id='portal-column-two']/div/div[1]/dl[1]/dt[1]/a" theme="//h4[@id='news-title']" />
-       <replace css:theme="#news-right-portlet">
-       <ul id="news-right-portlet">
+        <!-- the right portlet column should contain News, Blog, Comments for this to work-->
+        <!-- News -->
+        <replace content="//*[@id='portal-column-two']/div/div[1]/dl[1]/dt[1]/a" theme="//h4[@id='news-title']" />
+        <replace css:theme="#news-right-portlet">
+        <ul id="news-right-portlet">
            <xsl:for-each select="//*[@id='portal-column-two']/div/div[1]/dl[1]/dd">
                <li><xsl:copy-of select="a" /> <br /> <xsl:value-of select="a/@title"/>               
                </li>
            </xsl:for-each>
-       </ul>
-       </replace>
+        </ul>
+        </replace>
 
-       <!-- Blogs -->
-       <replace content="//*[@id='portal-column-two']/div/div[2]/dl[1]/dt/a" theme="//h4[@id='blogs-title']" />
-       <replace css:theme="#blogs-right-portlet">
-       <ul id="blogs-right-portlet">
+        <!-- Blogs -->
+        <replace content="//*[@id='portal-column-two']/div/div[2]/dl[1]/dt/a" theme="//h4[@id='blogs-title']" />
+        <replace css:theme="#blogs-right-portlet">
+        <ul id="blogs-right-portlet">
            <xsl:for-each select="//*[@id='portal-column-two']/div/div[2]/dl[1]/dd">
                <li><xsl:copy-of select="a" /> <br /> <xsl:value-of select="a/@title"/>
                </li>
            </xsl:for-each>
-       </ul>
-       </replace>
+        </ul>
+        </replace>
 
-       <!-- Comments -->
-       <replace content="//*[@id='portal-column-two']/div/div[3]/dl[1]/dt/a" theme="//h4[@id='comments-title']" />
-       <replace css:theme="#comments-right-portlet">
-       <ul id="comments-right-portlet">
+        <!-- Comments -->
+        <replace content="//*[@id='portal-column-two']/div/div[3]/dl[1]/dt/a" theme="//h4[@id='comments-title']" />
+        <replace css:theme="#comments-right-portlet">
+        <ul id="comments-right-portlet">
            <xsl:for-each select="//*[@id='portal-column-two']/div/div[3]/dl[1]/dd">
                <li><xsl:copy-of select="a" /> <br /> <xsl:value-of select="a/@title"/>
                </li>
            </xsl:for-each>
-       </ul>
-       </replace>
+        </ul>
+        </replace>
 
+        <!-- Featured items. Right portlets 4 and 5 -->
+        <replace css:theme=".featured-filmmaker">
+          <div class="featured-filmmaker">
+              <xsl:copy-of select="//*[@id='portal-column-two']/div/div[4]/dl[1]/dd"/>
+          </div>
+        </replace>
+
+        <replace css:theme=".featured-filmmaker">
+          <div class="featured-filmmaker">
+              <xsl:copy-of select="//*[@id='portal-column-two']/div/div[4]/dl[1]/dd"/>
+          </div>
+        </replace>
+
+       <replace css:theme=".featured-content">
+          <div class="featured-content">
+              <xsl:copy-of select="//*[@id='portal-column-two']/div/div[5]/dl[1]/dd"/>
+          </div>
+        </replace>
 
         <replace css:theme="#mid-container #latestvideos">
             <div class="row content">
