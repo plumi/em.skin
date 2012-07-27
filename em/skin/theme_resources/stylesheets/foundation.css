@@ -144,7 +144,7 @@ div.row.content.no-padding, div.row.text-content.no-padding {
 }
 
 #mid-container .row.content {
-  background: #b5cfe0;
+  background: #b8c8d6;
 }
 
 #mid-container .row.text-content {
@@ -656,10 +656,6 @@ div.column.centered.load-more {
   margin-bottom: 16px;
 }
 
-.video.featured {
-  margin-bottom: 0;
-}
-
 .video div.viewport {
   max-width: 100%;
   height: auto;
@@ -668,6 +664,7 @@ div.column.centered.load-more {
 .video div.viewport img {
   width: 100%;
   height: auto;
+
 }
 
 .video div.under {
@@ -702,11 +699,6 @@ div.column.centered.load-more {
   box-shadow: 0 2px 4px rgba(0,0,0,0.18);
 }
 
-.video.featured div.under {
-  border-bottom: 2px solid #222224;
-}
-
-
 .video div.under h3, .video div.under h4, .video div.under h5 {
   padding: 10px 8px;
   margin: 0px;
@@ -714,21 +706,10 @@ div.column.centered.load-more {
   float: left;
 }
 
-.video.featured div.under h3, .video.featured div.under h4, .video.featured div.under h5 {
-  padding: 10px;
-}
-
-.video div.under div.video-actions {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-}
 
 .video div.under div.video-actions a {
   padding-left: 14px;
   padding-right: 14px;
-  height: 100%;
   float: right;
   border-left: 2px solid #333;
   color: #efeff1;
@@ -751,6 +732,83 @@ div.column.centered.load-more {
   position: relative;
   top: 50%;
   margin-top: -8px;
+}
+
+/* Fetured */
+
+.video.featured {
+  position: relative;
+  overflow: auto;
+  margin-bottom: 0;
+  border-bottom: 2px solid #222224;
+  -moz-border-radius-topleft: 2px;
+  -webkit-border-top-left-radius: 2px;
+  -o-border-top-left-radius: 2px;
+  -ms-border-top-left-radius: 2px;
+  border-top-left-radius: 2px;
+  -moz-border-radius-bottomleft: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -o-border-bottom-left-radius: 2px;
+  -ms-border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.22);
+  -ms-box-shadow: 0 2px 5px rgba(0,0,0,0.22);
+  -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.22);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.22);
+}
+
+.video.featured div.viewport {
+  width: 70%;
+  display: block;
+  float: right;
+}
+
+.video.featured div.description {
+  -moz-border-radius-topleft: 2px;
+  -webkit-border-top-left-radius: 2px;
+  -o-border-top-left-radius: 2px;
+  -ms-border-top-left-radius: 2px;
+  border-top-left-radius: 2px;
+  background-image: -moz-linear-gradient(top,#444446 0,#39393b 100%);
+  background-image: -ms-linear-gradient(top,#444446 0,#39393b 100%);
+  background-image: -o-linear-gradient(top,#444446 0,#39393b 100%);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#444446),color-stop(100%,#39393b));
+  background-image: -webkit-linear-gradient(top,#444446 0,#39393b 100%);
+  background-image: linear-gradient(to bottom,#444446 0,#39393b 100%);
+  width: 34%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.video.featured div.description h3, .video.featured div.description h4, .video.featured div.description h5 {
+  padding: 12px;
+  margin: 0;
+  color: #f7f7f8;
+  width: 100%;
+  border-bottom: 1px solid #777;
+}
+
+.video div.description p, .video div.description div.video-actions {
+  padding: 12px;
+  color: #efeff1;
+}
+
+.video div.description div.video-actions {
+  position: absolute;
+  bottom: 0px;
+}
+
+.video div.description div.video-actions a {
+  margin-right: 12px;
+  float: left;
+  color: #efeff1;
+  font-weight: bold;
+}
+
+.video div.description div.video-actions a:hover {
+  text-decoration: underline;
 }
 
 /* Rollover */
@@ -781,7 +839,7 @@ div.unisub {
 
 div.unisub-proxy {
   height: 29px;
-  background: url(../images/unisub.png) left center no-repeat;
+  background: url(../images/unisub.png) right center no-repeat;
 }
 
 /* Print styles.  Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/ Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
