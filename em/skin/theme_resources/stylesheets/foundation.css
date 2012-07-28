@@ -106,6 +106,14 @@ div.row.header div.menu {
   color: #333;
 }
 
+a.header-menu-item {
+  font-weight: bold;
+}
+
+a.header-menu-item:hover {
+  color: #3179a8;
+}
+
 .header-button .user {
   padding-right: 30px;
   background: url(images/user-down.png) right center no-repeat;
@@ -116,11 +124,28 @@ div.row.header div.menu {
   background: url(images/user-down-white.png) right center no-repeat;
 }
 
-.header-menu-item .language.english {
-  background: url(images/uk.png) center no-repeat;
+.header-menu-item .language {
   display: block;
-  width: 32px;
   height: 32px;
+  width: 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.row.header ul.dropdown li a.language {
+  display: block;
+  height: 32px;
+  width: auto;
+  padding-left: 34px;
+  background-position: 10px center;
+}
+
+.header-menu-item .language.english {
+  background-image: url(images/uk.png);
+}
+
+.header-menu-item .language.indonesian {
+  background-image: url(images/in.png);
 }
 
   /* Header dropdowns */
@@ -144,18 +169,20 @@ div.row.header div.menu {
 
 .row.header ul.dropdown li a {
   display: block;
+  border-top: 1px solid #555;
   padding: 8px 14px;  
   color: #efeff1;
   font-weight: bold;
   font-size: 12px;
 }
 
-ul.dropdown li {
-  border-top: 1px solid #555;
+.row.header ul.dropdown li:first-child a {
+  border-top: none;
 }
 
-ul.dropdown li:first-child {
-  border-top: none;
+.row.header ul.dropdown li a:hover {
+  background-color: #555;
+  color: #fff;
 }
 
 /* Mid Container ---------------------- */
@@ -179,7 +206,7 @@ div.row.content.no-padding, div.row.text-content.no-padding {
 }
 
 #mid-container .row.content {
-  background: #b8c8d6;
+  background: #a8b8c1;
 }
 
 #mid-container .row.text-content {
@@ -196,7 +223,7 @@ div.news-section {
 div.news ul {
   list-style: none;
   background: #fdfdfe;
-  border-bottom: 2px solid #999;
+  border-bottom: 2px solid #777;
   margin-bottom: 0px;
 }
 
@@ -262,7 +289,7 @@ div.news div.fb {
 div.featured-content {
   background: #fdfdfe;
   padding: 0;
-  border-bottom: 2px solid #999;
+  border-bottom: 2px solid #777;
   overflow: auto;
 }
 
@@ -302,7 +329,7 @@ div.featured-filmmaker a .featured-text {
   display: block;
   padding: 9px;
   background: #fdfdfe;
-  border-bottom: 2px solid #999;
+  border-bottom: 2px solid #777;
   color: #333;
 }
 
@@ -927,8 +954,9 @@ div.unisub-proxy {
 
 .row.nest {padding: 0; width: 100%; min-width: 0;}
 .row.nest + .row.nest {margin-top: 16px;}
-.row.nest .column, .row.nest .columns {padding: 0 0 0 8px;}
+.row.nest .column, .row.nest .columns {padding: 0 8px 0 8px;}
 .row.nest .column:first-child, .row.nest .columns:first-child {padding: 0 8px 0 0;}
+.row.nest .column:last-child, .row.nest .columns:last-child {padding: 0 0 0 8px;}
 
 .column.centered, .columns.centered { float: none; clear: both; margin: 0 auto; }
 
