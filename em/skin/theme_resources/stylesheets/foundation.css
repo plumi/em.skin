@@ -58,7 +58,7 @@ div.row.header .main-title {
 }
 
 div.row.header .main-title h2 {
-  margin: 28px 0 4px 0;
+  margin: 24px 0 4px 0;
 }
 
 div.row.header .main-title p {
@@ -66,8 +66,9 @@ div.row.header .main-title p {
 }
 
 div.row.header div.search {
-  position: relative;
-  top: 50%;
+  position: absolute;
+  top: 32%;
+  right: 0px;
   margin-top: -14px;
 }
 
@@ -90,7 +91,7 @@ div.row.header div.search input#searchGadget:focus {
 
 div.row.header div.menu {
   position: absolute;
-  top: 50%;
+  top: 68%;
   right: 0;
   height: 20px;
   margin-top: -8px;
@@ -132,14 +133,6 @@ a.header-menu-item:hover {
   background-repeat: no-repeat;
 }
 
-.row.header ul.dropdown li a.language {
-  display: block;
-  height: 32px;
-  width: auto;
-  padding-left: 34px;
-  background-position: 10px center;
-}
-
 .header-menu-item .language.english {
   background-image: url(images/uk.png);
 }
@@ -161,10 +154,19 @@ a.header-menu-item:hover {
   border-radius: 3px;
   background-color: #444;
   z-index: 999;
+  min-width: 120px;
 }
 
 .row.header .header-menu-item:hover ul.dropdown {
   display: block;
+}
+
+.row.header ul.dropdown li a.language {
+  display: block;
+  height: 32px;
+  width: auto;
+  padding-left: 34px;
+  background-position: 10px center;
 }
 
 .row.header ul.dropdown li a {
