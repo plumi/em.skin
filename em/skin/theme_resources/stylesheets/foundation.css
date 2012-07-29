@@ -205,7 +205,6 @@ a.header-menu-item:hover {
 
 div.news div.social-networks {
     padding-top: 10px;
-    margin-bottom: 0px;
     background: #efeff1;
     border-bottom: 1px solid #bbb;
     padding: 8px;
@@ -293,8 +292,8 @@ div.featured-filmmaker a .featured-text h5 {
 }
 
   /* Latest Videos */
-div#latestvideos.row.content {
-  background: url(images/bg2.png) center repeat;
+div#latestvideos.row {
+  background: #efeff1;
   border-top: 1px solid #aaaaad;
 }
 
@@ -956,10 +955,9 @@ div.unisub-proxy {
 
 /* The Grid ---------------------- */
 
-.row { width: 986px; margin: 0 auto; padding: 1em 8px; }
+.row { width: 986px; margin: 0 auto; padding: 1em 8px; position: relative; }
+.row .row { max-width: 100%; }
 .column, .columns { float: left; min-height: 1px; padding: 0 8px; position: relative; }
-
-.row.full {padding-left: 0; padding-right: 0; max-width: 100%; min-width: 0; margin: 0 auto;}
 
 /* no top padding for normal rows preceded by normal rows */
 .row + .row {padding-top: 0;}
@@ -971,9 +969,18 @@ div.unisub-proxy {
 .row.no-top-padding {padding-top: 0;}
 .row.no-bottom-padding {padding-bottom: 0;}
 .row.no-v-padding {padding-top: 0; padding-bottom: 0;}
+
+/* Full row - Useful for full-width rows (no left or right padding)
+   with a single row of elements. */
+.row.full {padding-left: 0; padding-right: 0; max-width: 100%; min-width: 0; margin: 0 auto;}
 .row.full .column, .row.full .columns {padding: 0 8px 0 8px;}
 .row.full .column:first-child, .row.full .columns:first-child {padding: 0 8px 0 0;}
 .row.full .column:last-child, .row.full .columns:last-child {padding: 0 0 0 8px;}
+
+/* Full-multi row - Useful for full-width rows (no left or right padding)
+  with multiple rows of elements; makes use of a geometrical trick to essentially widen
+  the row and then move it into position */
+/* TODO: Implement; */
 
 .column.centered, .columns.centered { float: none; clear: both; margin: 0 auto; }
 
