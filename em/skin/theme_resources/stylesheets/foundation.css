@@ -189,71 +189,19 @@ a.header-menu-item:hover {
 
 /* Mid Container ---------------------- */
 
-div.row.content, .row.text-content {
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-
-div.row.content + div.row.content, div.row.text-content + div.row.text-content {
-  padding-top: 0;
-  padding-bottom: 1em;
-}
-
-div.row.content.no-padding, div.row.text-content.no-padding {
-  padding: 0;
-}
-
 #mid-container {
-  background: #fff;
+  background: #f9f9f9;
 }
 
 #mid-container .row.content {
-  background: #a8b8c1;
+  background: #c9ccd1;
 }
 
 #mid-container .row.text-content {
   background: #f0f0f2;
 }
 
-  /* News */
-
-div.news-section {
-  overflow: auto;
-  margin-bottom: 14.5px;
-}
-
-div.news ul {
-  list-style: none;
-  background: #fdfdfe;
-  border-bottom: 2px solid #777;
-  margin-bottom: 0px;
-}
-
-
-div.news ul li a {
-  display: block;
-  color: #333;
-  font-size: 12px;
-  padding: 14px;
-}
-
-div.news ul li a:hover {
-  background: #f5f5f6;
-  color: #111;
-}
-
-div.news ul li + li {
-  border-top: 1px solid #ccc;
-}
-
-div.news ul li h5 {
-  margin: 0px;
-  color: #222;
-  font-weight: bold;
-  font-size: 12px;
-}
-
-  /* Social Networks */
+  /* Social Networks in News */
 
 div.news div.social-networks {
     padding-top: 10px;
@@ -475,7 +423,13 @@ p a, p a:visited { line-height: inherit; }
   -ms-box-shadow: 0 2px 4px rgba(0,0,0,0.21);
   -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.21);
   box-shadow: 0 2px 4px rgba(0,0,0,0.21);
+}
 
+.light-shade {
+  -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.17);
+  -ms-box-shadow: 0 1px 4px rgba(0,0,0,0.17);
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.17);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.17);
 }
 
 /* Base Type Styles Using Modular Scale ---------------------- */
@@ -513,11 +467,13 @@ code { font-weight: bold; background: #ffff99; }
 /* Separator ------------------------- */
 
 div.separate {
+  padding: 0px;
   border-bottom: 1px solid #fff;
   border-top: 1px solid #bbb;
 }
 
 div.separate-thick {
+  padding: 0px;
   border-bottom: 5px solid #555;
 }
 
@@ -532,15 +488,21 @@ div.column-title, div.row-title {
   color: #efeff2;
 }
 
+div.column-title a, div.row-title a {
+  overflow: auto;
+  display: block;
+  color: #333;
+}
+
 div.column-title {
   color: #333;
   background: #efeff2;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efeff2), color-stop(100%, #dfdfe2));
-  background: -webkit-linear-gradient(#efeff2, #dfdfe2);
-  background: -ms-linear-gradient(#efeff2, #dfdfe2);
-  background: -moz-linear-gradient(#efeff2, #dfdfe2);
-  background: -o-linear-gradient(#efeff2, #dfdfe2);
-  background: linear-gradient(#efeff2, #dfdfe2);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efeff2), color-stop(100%, #e5e5e7));
+  background: -webkit-linear-gradient(#efeff2, #e5e5e7);
+  background: -ms-linear-gradient(#efeff2, #e5e5e7);
+  background: -moz-linear-gradient(#efeff2, #e5e5e7);
+  background: -o-linear-gradient(#efeff2, #e5e5e7);
+  background: linear-gradient(#efeff2, #e5e5e7);
   position: relative;
   top: 2px;
   border-bottom: 1px solid #c3c3c3;
@@ -581,6 +543,49 @@ div.column-title .column-title-icon {
   background: -webkit-linear-gradient(top,#f22 0,#e11 100%);
   background: linear-gradient(to bottom,#f22 0,#e11 100%);
   /* background: #2289f5; */
+}
+
+/* Sidebar ------------------------- */
+
+div.sidebar ul {
+  list-style: none;
+  background: #fdfdfe;
+  border-bottom: 2px solid #777;
+  margin-bottom: 0px;
+}
+
+div.sidebar-section {
+  overflow: auto;
+  margin-bottom: 14.5px;
+}
+
+div.sidebar ul li a {
+  display: block;
+}
+
+div.sidebar ul li a:hover {
+  background: #f5f5f6;
+  color: #111;
+}
+
+div.sidebar ul li + li {
+  border-top: 1px solid #ccc;
+}
+
+div.sidebar ul li h5 {
+  margin: 0px;
+  color: #222;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 10px;
+}
+
+div.sidebar ul li p.date {
+  display: block;
+  margin: 0px;
+  color: #333;
+  font-size: 12px;
+  padding: 10px 10px 0 10px;
 }
 
 /* Lists ---------------------- */
@@ -951,14 +956,24 @@ div.unisub-proxy {
 
 /* The Grid ---------------------- */
 
-.row { width: 986px; margin: 0 auto; padding-left: 8px; padding-right: 8px; }
-.column, .columns { float: left; min-height: 1px; padding: 0 8px 0 8px; position: relative; }
+.row { width: 986px; margin: 0 auto; padding: 1em 8px; }
+.column, .columns { float: left; min-height: 1px; padding: 0 8px; position: relative; }
 
-.row.nest {padding: 0; width: 100%; min-width: 0;}
-.row.nest + .row.nest {margin-top: 16px;}
-.row.nest .column, .row.nest .columns {padding: 0 8px 0 8px;}
-.row.nest .column:first-child, .row.nest .columns:first-child {padding: 0 8px 0 0;}
-.row.nest .column:last-child, .row.nest .columns:last-child {padding: 0 0 0 8px;}
+.row.full {padding-left: 0; padding-right: 0; max-width: 100%; min-width: 0; margin: 0 auto;}
+
+/* no top padding for normal rows preceded by normal rows */
+.row + .row {padding-top: 0;}
+.row + .row.no-v-padding {padding-bottom: 0;}
+/* 1 em top padding for normal rows preceded by no-padding rows */
+.row.no-v-padding + .row {padding-top: 1em;}
+.row.no-v-padding + .row.no-v-padding {padding-top: 0;}
+
+.row.no-top-padding {padding-top: 0;}
+.row.no-bottom-padding {padding-bottom: 0;}
+.row.no-v-padding {padding-top: 0; padding-bottom: 0;}
+.row.full .column, .row.full .columns {padding: 0 8px 0 8px;}
+.row.full .column:first-child, .row.full .columns:first-child {padding: 0 8px 0 0;}
+.row.full .column:last-child, .row.full .columns:last-child {padding: 0 0 0 8px;}
 
 .column.centered, .columns.centered { float: none; clear: both; margin: 0 auto; }
 

@@ -1,0 +1,43 @@
+.row.video-content {
+	background: #c9ccd1;
+}
+
+.under .video-actions a {
+	display: block;
+	float: right;
+	padding: 16px 0 10px 0;
+}
+
+#video-title {
+	padding: 16px 12px;
+	font-size: 24px;
+	font-weight: bold;
+	background: #f3f3f5;
+	color: #333;
+}
+
+ /* Video Item */
+
+ul.video-list {
+	list-style-type: none;
+}
+
+ul.video-list li.video-item {
+	overflow: auto;
+	margin: 0;
+}
+
+ul.video-list li.video-item a {
+	overflow: auto;
+}
+
+ul.video-list li.video-item img.video-thumb {
+	display: block;
+	float: left;
+	width: 60%;
+	height: auto;
+}
+
+ul.video-list li.video-item h5 {
+  float: left;
+}
