@@ -12,13 +12,14 @@
     
     <!-- ALL PAGES -->
     <rules>
-        <!-- Drop Plone's meta tags that define the content type and IE rendering mode.
-             We set those explicitly in our theme. This allows us to copy the
-             rest of the <meta> tags in one go. -->
 
         <!-- Drop the viewport meta tag from Plone -->
         <drop css:content="meta[name=viewport]"/>
+        
+        <!-- Copy all meta tags -->
         <before content="/html/head/meta" css:theme="#css" />
+        
+        <!-- Get page title -->
         <replace content="/html/head/title" theme="/html/head/title"/>
 
         <!-- Copy the <base> tag -->
@@ -64,8 +65,13 @@
         <merge attributes="class" css:content="body" css:theme="body" />
         <copy attributes="id dir" css:content="body" css:theme="body" />
 
+
         <!-- HEADER -->
+        
+        <!-- Copy search box -->
         <copy css:content="#portal-searchbox" css:theme="div.search" />
+        
+        <!-- copy user menu -->
         <rules css:if-content="a#user-name">
             <copy css:content-children="dl#portal-personaltools dd.actionMenuContent > ul" css:theme="#user-menu ul.dropdown" />
             <copy css:content-children="a#user-name" css:theme="li.header-button > a.user" />
@@ -75,10 +81,12 @@
             <drop css:theme="#user-menu ul.dropdown" />
         </rules>
 
+        <!-- copy language selector -->
         <copy css:content-children="ul#portal-languageselector li.currentLanguage" css:theme="ul#language-menu > li a" />
         <copy css:content-children="ul#portal-languageselector" css:theme="#language-menu ul.dropdown" />
 
-        <!-- FOOTER -->
+
+        <!-- FOOTER ?? -->
         
         <!-- Content footer is for siteelement doormat, so update this rule if
              doormat is needed for the theme -->
@@ -86,6 +94,7 @@
         <copy css:content-children=".siteelement-footertext .footertext" css:theme="#colophon" />
         <replace content='/html/body/div/div[2]/div[2]/div/dl/dd/ul' theme='/html/body/div[4]/div[2]/div[2]/ul' />
     </rules>
+
 
     <!-- HOMEPAGE -->
     <rules css:if-content="body.template-featured_videos_homepage">
