@@ -22,7 +22,7 @@
         <replace content="/html/head/title" theme="/html/head/title"/>
 
         <!-- Copy the <base> tag -->
-        <copy attributes="href" content="/html/head/base" theme="/html/head/base" />
+        <copy content="/html/head/base" theme="/html/head/base" />
 
         <!-- copy body attrs -->
         <prepend theme="/html/body" content="/html/body/@class" />
@@ -30,10 +30,7 @@
         <prepend theme="/html/body" content="/html/body/@dir" />
 
         <!-- Copy style and link tags in the order they appear in the content -->
-        <after
-            content="/html/head/style | /html/head/link"
-            css:theme="#css"
-            />
+        <after content="/html/head/style | /html/head/link" css:theme="#css" />
 
         <!-- Drop the "type" attribute from <script> tags. HTML5 doesn't mandate
              it and we can save a few bytes there. -->
@@ -160,14 +157,14 @@
     
     <!-- VIDEO VIEW PAGE -->
     <rules css:if-content="body.template-video_view">
+
+    <copy css:content="#content h1.documentFirstHeading" css:theme="#video-title" /> 
         
     </rules>
     
     <rules css:if-content="#visual-portal-wrapper">
-        <copy css:content="#content-core" css:theme="#post-content div.offset-by-three" />
-        <copy css:content-children="#parent-fieldname-title" css:theme="div.post-title" />
-        <copy css:content="span.documentAuthor" css:theme="div.post-author" />
-        <copy css:content="span.documentModified" css:theme="div.post-date" />
+        <copy css:content="#portal-column-content" css:theme="#post-content > div.text-content" /> 
+        <drop css:content="#portal-breadcrumbs" />
         <drop css:content="span.documentModified > span" />
     </rules> 
     

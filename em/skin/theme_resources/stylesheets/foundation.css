@@ -1189,3 +1189,8 @@ that IE7/8 do not support :nth-child.
 div.searchSection, input.searchButton {
     display: none;
 }
+
+#edit-bar {
+    min-height: 30px !important;
+    border-top: 3px solid #75AD0A !important;
+}
