@@ -75,7 +75,8 @@
             <drop css:theme="#user-menu ul.dropdown" />
         </rules>
 
-        <copy css:content="ul#portal-languageselector" css:theme="#language-menu ul.dropdown" />
+        <copy css:content-children="ul#portal-languageselector li.currentLanguage" css:theme="ul#language-menu > li a" />
+        <copy css:content-children="ul#portal-languageselector" css:theme="#language-menu ul.dropdown" />
 
         <!-- FOOTER -->
         

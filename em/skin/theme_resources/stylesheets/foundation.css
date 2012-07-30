@@ -135,6 +135,7 @@ a.header-menu-item:hover {
 
 .header-menu-item .language.english {
   background-image: url(images/uk.png);
+  display: none;
 }
 
 .header-menu-item .language.indonesian {
