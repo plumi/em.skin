@@ -69,8 +69,17 @@
 
         <!-- HEADER -->
         <copy css:content="#portal-searchbox" css:theme="div.search" />
-        <copy css:content="dl#portal-personaltools dd.actionMenuContent > ul" css:theme="#user-menu ul.dropdown" />
-        <copy css:content="a#user-name" css:theme="li.header-button > a.user" />
+        <rules css:if-content="a#user-name">
+            <copy css:content="dl#portal-personaltools dd.actionMenuContent > ul" css:theme="#user-menu ul.dropdown" />
+            <copy css:content="a#user-name" css:theme="li.header-button > a.user" />
+        </rules>
+        <rules css:if-content="ul#portal-personaltools > li#anon-personalbar">
+            <copy css:content="a#personaltools-login" css:theme="ul#user-menu" />
+            <drop css:theme="#user-menu ul.dropdown" />
+        </rules>
+
+        
+        <!--copy css:content="ul#portal-languageselector" css:theme="#language-menu ul.dropdown" /-->
 
         <!-- FOOTER -->
         
