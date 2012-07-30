@@ -153,7 +153,11 @@
     </rules>
     
     <rules css:if-content="#visual-portal-wrapper">
-        <copy css:content="#content-core" css:theme="div.text-content" />
+        <copy css:content="#content-core" css:theme="#post-content div.offset-by-three" />
+        <copy css:content-children="#parent-fieldname-title" css:theme="div.post-title" />
+        <copy css:content="span.documentAuthor" css:theme="div.post-author" />
+        <copy css:content="span.documentModified" css:theme="div.post-date" />
+        <drop css:content="span.documentModified > span" />
     </rules> 
     
 </rules>
