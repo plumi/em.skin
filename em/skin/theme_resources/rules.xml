@@ -69,6 +69,8 @@
 
         <!-- HEADER -->
         <copy css:content="#portal-searchbox" css:theme="div.search" />
+        <copy css:content="dl#portal-personaltools dd.actionMenuContent > ul" css:theme="ul.dropdown" />
+        <copy css:content="a#user-name" css:theme="li.header-button > a.user" />
 
         <!-- FOOTER -->
         
