@@ -1197,3 +1197,8 @@ div.searchSection, input.searchButton {
     min-height: 30px !important;
     border-top: 3px solid #75AD0A !important;
 }
+
+#mid-container h1 {
+    font-size: 26px;
+}
+

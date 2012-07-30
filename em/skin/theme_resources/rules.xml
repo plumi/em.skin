@@ -157,9 +157,33 @@
     
     <!-- VIDEO VIEW PAGE -->
     <rules css:if-content="body.template-video_view">
-
-    <copy css:content="#content h1.documentFirstHeading" css:theme="#video-title" /> 
         
+        <copy css:content="#content h1.documentFirstHeading > span" css:theme="#video-title h1" /> 
+        <copy css:theme=".video" css:content="#video-core" /> 
+        <copy css:theme="#description" css:content="#content p.documentDescription" /> 
+        <copy css:theme="#video-info" css:content="#video-infos" /> 
+        <append css:theme="#video-info" css:content="#video-licensing" /> 
+        <append css:theme="#video-info" css:content="#video-transcoding" /> 
+        <copy css:theme="#video-comments" css:content=".discussion" /> 
+        <append css:theme="#video-comments" css:content="#commenting" /> 
+    
+        <replace css:theme=".video-list">
+            <ul class="video-list">
+            <xsl:for-each css:select="#authors_latest li">
+                <li class="video-item">
+                        <a href="h4 a.video-download">
+                        <!-- <xsl:copy-of select="h4 a.video-download" /><xsl:value-of select="a/@href"/> -->
+                        <xsl:copy-of css:select="h4 img" />
+                        <h5>
+                            <xsl:copy-of css:select="h4 span.featuredItemTitle"/>
+                        </h5>
+                        <!-- <img class="video-thumb"> -->
+                        </a>
+                </li>
+            </xsl:for-each>
+            </ul>
+        </replace>
+
     </rules>
     
     <rules css:if-content="#visual-portal-wrapper">
