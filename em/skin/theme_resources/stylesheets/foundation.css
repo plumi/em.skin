@@ -331,6 +331,7 @@ div.row.footer + div.row.footer {
 
 #lower-container .columns ul li {
   margin-bottom: 1em;
+  display: block;
 }
 
   /* Newsletter */
