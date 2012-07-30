@@ -167,6 +167,7 @@
     <!-- VIDEO VIEW PAGE -->
     <rules css:if-content="body.template-video_view">
         
+
         <copy css:content="#content h1.documentFirstHeading > span" css:theme="#video-title h1" /> 
         <copy css:theme=".video" css:content="#video-core" /> 
         <copy css:theme="#description" css:content="#content p.documentDescription" /> 
