@@ -5,6 +5,7 @@
 
     <!-- Apply theme to normal Plone pages -->
     <theme href="index.html" css:if-content="body.template-featured_videos_homepage" />
+    <theme href="video.html" css:if-content="body.template-video_view" />
 
     <rules css:if-content="#visual-portal-wrapper">
 
