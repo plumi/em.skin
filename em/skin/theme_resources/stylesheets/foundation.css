@@ -1184,3 +1184,8 @@ that IE7/8 do not support :nth-child.
 
 /* ----------------------------------------- Page Name 2
 ----------------------------------------- */
+
+#portal-advanced-search, #portal-searchbox label, 
+div.searchSection, input.searchButton {
+    display: none;
+}
