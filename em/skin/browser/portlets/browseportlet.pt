@@ -9,7 +9,7 @@
         <dl>
             <dt>
                 <li>
-                    <a tal:attributes="href python: context.portal_url() + '/taxonomy/gender'" i18n:translate="">Genres</a>
+                    <a tal:attributes="href python: context.portal_url() + '/taxonomy/genre'" i18n:translate="">Genres</a>
                 </li>
                 <li>
                     <a tal:attributes="href python: context.portal_url() + '/taxonomy/topic'" i18n:translate="">Topics</a>
