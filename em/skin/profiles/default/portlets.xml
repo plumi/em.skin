@@ -11,4 +11,20 @@
      name="Projects Portlet"
      />
 
+<assignment
+     manager="plone.leftcolumn"
+     category="context"
+     key="/"
+     type="em.skin.browser.portlets.BrowsePortlet"
+     name="Browse Portlet"
+     />
+
+<assignment
+     manager="plone.leftcolumn"
+     category="context"
+     key="/"
+     type="em.skin.browser.portlets.PublishPortlet"
+     name="Publish Portlet"
+     />
+
 </portlets>

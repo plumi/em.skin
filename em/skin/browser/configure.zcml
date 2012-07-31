@@ -15,4 +15,26 @@
         interface=".portlets.projects.IProjectsPortlet"
         />
 
+    <plone:portlet
+        name="em.skin.browser.portlets.PublishPortlet"
+        view_permission="zope2.View"
+        edit_permission="cmf.ManagePortal"
+        renderer=".portlets.publishportlet.Renderer"
+        assignment=".portlets.publishportlet.Assignment"
+        addview=".portlets.publishportlet.AddForm"
+        editview=".portlets.publishportlet.EditForm"
+        interface=".portlets.publishportlet.IPublishPortlet"
+        />
+
+    <plone:portlet
+        name="em.skin.browser.portlets.BrowsePortlet"
+        view_permission="zope2.View"
+        edit_permission="cmf.ManagePortal"
+        renderer=".portlets.browseportlet.Renderer"
+        assignment=".portlets.browseportlet.Assignment"
+        addview=".portlets.browseportlet.AddForm"
+        editview=".portlets.browseportlet.EditForm"
+        interface=".portlets.browseportlet.IBrowsePortlet"
+        />
+
 </configure>
