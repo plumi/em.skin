@@ -10,10 +10,14 @@
 
 #video-title {
 	padding: 16px 12px;
-	font-size: 24px;
-	font-weight: bold;
 	background: #f3f3f5;
 	color: #333;
+}
+
+#video-title h1 {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0;
 }
 
  /* Video Item */
@@ -23,6 +27,7 @@ ul.video-list {
 }
 
 ul.video-list li.video-item {
+	display: block;
 	overflow: auto;
 	margin: 0;
 }
@@ -31,7 +36,7 @@ ul.video-list li.video-item a {
 	overflow: auto;
 }
 
-ul.video-list li.video-item img.video-thumb {
+ul.video-list li.video-item img {
 	display: block;
 	float: left;
 	width: 60%;
@@ -40,4 +45,5 @@ ul.video-list li.video-item img.video-thumb {
 
 ul.video-list li.video-item h5 {
   float: left;
+  width: 40%;
 }
