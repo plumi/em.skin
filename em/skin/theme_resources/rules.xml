@@ -78,12 +78,20 @@
         <!-- copy user menu -->
         <rules css:if-content="a#user-name">
             <copy css:content-children="dl#portal-personaltools dd.actionMenuContent > ul" css:theme="#user-menu ul.dropdown" />
-            <copy css:content-children="a#user-name" css:theme="li.header-button > a.user" />
+            <copy css:content-children="a#user-name" css:theme="ul#user-menu > li.header-button > a.user" />
         </rules>
         <rules css:if-content="ul#portal-personaltools > li#anon-personalbar">
             <copy css:content="a#personaltools-login" css:theme="ul#user-menu" />
             <drop css:theme="#user-menu ul.dropdown" />
         </rules>
+
+        <!-- copy browse menu -->
+        <copy css:content-children="dl.portletBrowse > dt" css:theme="ul#browse-menu > li.header-button > a.user" />
+        <copy css:content="dd.browse-portlet" css:theme="ul#browse-menu ul.dropdown" />
+
+        <!-- copy upload menu -->
+        <copy css:content-children="dl.portletPublishPortlet > dt" css:theme="ul#publish-menu > li.header-button > a.user" />
+        <copy css:content="dd.publish-portlet" css:theme="ul#publish-menu ul.dropdown" />
 
         <!-- copy language selector -->
         <copy css:content-children="ul#portal-languageselector li.currentLanguage" css:theme="ul#language-menu > li a" />

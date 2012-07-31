@@ -2,23 +2,26 @@
     i18n:domain="plumi.portlets">
 
     <dt class="portletHeader browsePortletHeader">
-        <span class="portletTopLeft"></span>
-        XYZ
-        <span class="portletTopRight"></span>
+        <span class="browse-text" i18n:translate="">Browse</span>
     </dt>
 
     <dd class="portletItem browse-portlet">
         <dl>
             <dt>
-                XYZ
-                YZX
+                <li>
+                    <a tal:attributes="href python: context.portal_url() + '/taxonomy/gender'" i18n:translate="">Genres</a>
+                </li>
+                <li>
+                    <a tal:attributes="href python: context.portal_url() + '/taxonomy/topic'" i18n:translate="">Topics</a>
+                </li>
+                <li>
+                    <a tal:attributes="href python: context.portal_url() + '/taxonomy/countries'" i18n:translate="">Countries</a>
+                </li>
+                <li>
+                    <a tal:attributes="href python: context.portal_url() + '/Members'" i18n:translate="">Members</a>
+                </li>
             </dt>
         </dl>
-    </dd>
-
-    <dd class="portletFooter">
-        <span class="portletBottomLeft"></span>
-        <span class="portletBottomRight"></span>
     </dd>
 
 </dl>

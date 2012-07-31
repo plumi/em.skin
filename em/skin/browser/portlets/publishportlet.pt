@@ -2,23 +2,30 @@
     i18n:domain="plumi.portlets">
 
     <dt class="portletHeader publishPortletHeader">
-        <span class="portletTopLeft"></span>
-        XYZ
-        <span class="portletTopRight"></span>
+        <span class="browse-text" i18n:translate="">Publish</span>
     </dt>
 
-    <dd class="portletItem publish-portlet">
-        <dl>
-            <dt>
-                XYZ
-                YZX
-            </dt>
-        </dl>
-    </dd>
+    <div tal:define="portal context/@@plone_portal_state/portal;
+                     home_url portal/portal_membership/getHomeUrl|nothing;
+                     base_path python: home_url and home_url + '/videos' or ''">
 
-    <dd class="portletFooter">
-        <span class="portletBottomLeft"></span>
-        <span class="portletBottomRight"></span>
-    </dd>
-
+        <dd class="portletItem publish-portlet">
+            <dl>
+                <dt>
+                    <li>
+                        <a tal:attributes="href string:${base_path}/@@publish_video" i18n:translate="">Publish Video</a>
+                    </li>
+                    <li>
+                        <a tal:attributes="href string:${home_url}/events/createObject?type_name=Event" i18n:translate="">Publish Event</a>
+                    </li>
+                    <li>
+                        <a tal:attributes="href string:${home_url}/callouts/createObject?type_name=PlumiCallOut" i18n:translate="">Call Out!</a>
+                    </li>
+                    <li>
+                        <a tal:attributes="href string:${home_url}/news/createObject?type_name=News Item" i18n:translate="">Publish News</a>
+                    </li>
+                </dt>
+            </dl>
+        </dd>
+    </div>
 </dl>
