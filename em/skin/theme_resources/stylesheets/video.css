@@ -47,3 +47,25 @@ ul.video-list li.video-item h5 {
   float: left;
   width: 40%;
 }
+
+/* Video Info */
+
+div.vcard {
+	background: #efeff1;
+}
+
+div.vcard table.vertical {
+	width: 100%;
+}
+
+div.vcard table.vertical th, div.vcard table.vertical td {
+	border: 0px !important;
+}
+
+div.vcard table.vertical tbody th {
+	background: #e6e6e7;
+}
+
+div.vcard table.vertical th {
+	text-align: left;
+}
