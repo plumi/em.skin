@@ -214,6 +214,7 @@
         <copy css:content="#content h1.documentFirstHeading > span" css:theme="#video-title h1" /> 
         <copy css:theme=".video" css:content="#video-core" /> 
         <copy css:theme="#description" css:content="#content p.documentDescription" /> 
+        <copy css:theme="#full-description" css:content="#full-description > div" /> 
         <copy css:theme="#video-info" css:content="#video-infos" /> 
         <append css:theme="#video-info" css:content="#video-licensing" /> 
         <append css:theme="#video-info" css:content="#video-transcoding" /> 

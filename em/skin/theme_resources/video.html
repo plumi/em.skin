@@ -171,9 +171,8 @@
                     <div id="description">
                         <p>International Freedom of Expression Exchange (IFEX) answers all you need to know about the coming World Press Freedom day on May 3, one of the most important days for honouring free expression. </p>
                     </div>
+                    <div id="full-description" style="display:none;"></div>
                     <a href="#" class="more">Show more</a>
-
-                    <div id="full-description"></div>
                 </div>
                 <div class="full row no-v-padding">
                 </div>
@@ -342,5 +341,23 @@
     </div>
     <span id="javascript_at_bottom"></span>      
     <span id="javascript_inline"></span>
+
+<script>
+    $('.more').live('click', function() {
+         $('#full-description').show();
+         $('.more').addClass('less').removeClass('more');
+         $('.less').text('Show less');
+         return false;
+    });
+
+    $('.less').live('click', function() {
+         $('#full-description').hide();
+         $('.less').addClass('more').removeClass('less');
+         $('.more').text('Show more');
+         return false;
+    });
+
+</script>
+
 </body>
 </html>
