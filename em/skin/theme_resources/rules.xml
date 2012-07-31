@@ -65,6 +65,10 @@
         <merge attributes="class" css:content="body" css:theme="body" />
         <copy attributes="id dir" css:content="body" css:theme="body" />
 
+        <!--portlet managers -->
+        <prepend css:content="#portletmanager-plone-leftcolumn" css:theme="#mid-container" />
+        <append css:content="#portletmanager-plone-rightcolumn" css:theme="#mid-container" />
+
 
         <!-- HEADER -->
         
@@ -101,13 +105,22 @@
             </xsl:for-each>
             </ul>
         </replace>
-        <!--copy css:content-children="dl.portletNavigationTree > dd > ul > li > a" css:theme="ul#navigation-tree > li" /-->
+        <!-- Projects -->
+        <!--copy css:content="dl.portletProjects" css:theme="ul#projects-tree" /-->
+        <replace css:theme="ul#projects-tree">
+            <ul id="projects-tree">
+            <xsl:for-each select="//*[@class='portlet portletProjects']/ul/li">
+                <li>
+                    <xsl:copy-of select="a" />
+                </li>
+            </xsl:for-each>
+            </ul>
+        </replace>
 
         <!-- Content footer is for siteelement doormat, so update this rule if
              doormat is needed for the theme -->
         <drop css:theme="#content-footer" />       
         <copy css:content-children=".siteelement-footertext .footertext" css:theme="#colophon" />
-        <replace content='/html/body/div/div[2]/div[2]/div/dl/dd/ul' theme='/html/body/div[4]/div[2]/div[2]/ul' />
     </rules>
 
 

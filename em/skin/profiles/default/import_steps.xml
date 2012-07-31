@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step id="plumi.app.misc"
+               version="20120731-01"
+               handler="em.skin.setuphandlers.setupVarious"
+               title="EngageMedia Skin: miscellaneous import steps">
+  </import-step>
+</import-steps>

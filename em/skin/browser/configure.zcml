@@ -1,6 +1,18 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="em.skin">
+
+    <plone:portlet
+        name="em.skin.browser.portlets.projects.ProjectsPortlet"
+        view_permission="zope2.View"
+        edit_permission="cmf.ManagePortal"
+        renderer=".portlets.projects.Renderer"
+        assignment=".portlets.projects.Assignment"
+        addview=".portlets.projects.AddForm"
+        editview=".portlets.projects.EditForm"
+        interface=".portlets.projects.IProjectsPortlet"
+        />
 
 </configure>
