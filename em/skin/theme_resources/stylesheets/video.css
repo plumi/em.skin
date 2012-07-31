@@ -50,6 +50,11 @@ ul.video-list li.video-item h5 {
 
 /* Video Info */
 
+div#video-info {
+	padding: 14px 10px;
+	background: #dfdfe1;
+}
+
 div.vcard {
 	background: #efeff1;
 }
@@ -68,4 +73,12 @@ div.vcard table.vertical tbody th {
 
 div.vcard table.vertical th {
 	text-align: left;
+}
+
+/* Video Comments */
+
+div.video-comments-title {
+	margin-top: 24px;
+	border-bottom: 1px solid #ccc;
+	top: 0px;
 }
