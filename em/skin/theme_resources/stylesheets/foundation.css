@@ -193,6 +193,7 @@ a.header-menu-item:hover {
 
 #mid-container .row.content {
   background: #c9ccd1;
+  border-top: 1px solid #ddd;
 }
 
 #mid-container .row.text-content {
@@ -242,18 +243,26 @@ div.featured-content {
 
 div.featured-content a .featured-image {
   display: block;
-  float: left;
   background: #111;
 }
 
 div.featured-content a .featured-text {
-  float: left;
   display: block;
   color: #222;
   padding: 12.5px;
+  background: #fdfdfe;
+}
+
+ /* In case of 6col image + text side by side */
+
+.six.columns div.featured-content a .featured-image {
+  float: left;
+}
+
+.six.columns div.featured-content a .featured-text {
+  float: left;
   width: 225px;
   height: 225px;
-  background: #fdfdfe;
 }
 
 div.featured-content:hover a .featured-text {
@@ -263,6 +272,11 @@ div.featured-content:hover a .featured-text {
 
 div.featured-content a .featured-text h5 {
   font-weight: bold;
+  margin: 0;
+}
+
+.featured-text h5 + span, .featured-text h5 + p {
+  margin: 1em 0 0 0;
 }
 
 /* Featured Filmmaker below Video */
@@ -593,12 +607,16 @@ div.sidebar ul li a:hover {
   border-bottom: 1px solid #ccc;
 }
 
+div.sidebar ul li:last-child a:hover {
+  border-bottom: none;
+}
+
 div.sidebar ul li h5 {
   margin: 0px;
   color: #222;
   font-weight: bold;
   font-size: 12px;
-  padding: 10px;
+  padding: 0 10px 10px 10px;
 }
 
 div.sidebar ul li p.date {
@@ -618,6 +636,7 @@ div.sidebar ul li p.date {
   text-align: center;
   color: #444;
   font-weight: bold;
+  border-top: 1px solid #ccc;
  }
 
  div.sidebar div.column-more a:hover {
@@ -974,6 +993,10 @@ div.video div.rollover, div.video div.rollover p {
   margin-bottom: 0;
 }
 
+div.video div.rollover p a {
+  color: #333;
+}
+
 div.video:hover div.rollover {
   display: block;
 }
@@ -982,18 +1005,6 @@ div.video div.rollover span.country {
   display: block;
   font-weight: bold;
   margin-top: 0.5em;
-}
-
-/* Universal Subtitles Container */
-
-div.unisub {
-  height: 29px;
-  background: url(images/bg-unisub.png) top left repeat-x;
-}
-
-div.unisub-proxy {
-  height: 29px;
-  background: url(../images/unisub.png) right center no-repeat;
 }
 
 /* Print styles.  Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/ Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
@@ -1199,10 +1210,91 @@ that IE7/8 do not support :nth-child.
 -----------------------------------------------------
 :: Shared Styles
 :: Plain Text Page
+:: Video Upload Form
 :: Page Name 2
 */
 /* ----------------------------------------- Shared Styles
 ----------------------------------------- */
+
+/* Notification */
+
+dl.portalMessage.info {
+  -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.23);
+  -ms-box-shadow: 0 1px 4px rgba(0,0,0,0.23);
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.23);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.23);
+  background: #efefc3;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f4efc3), color-stop(100%, #ebE5BC));
+  background: -webkit-linear-gradient(#f4efc3, #ebE5BC);
+  background: -ms-linear-gradient(#f4efc3, #ebE5BC);
+  background: -moz-linear-gradient(#f4efc3, #ebE5BC);
+  background: -o-linear-gradient(#f4efc3, #ebE5BC);
+  background: linear-gradient(#f4efc3, #ebE5BC);
+  border: none;
+}
+
+dl.portalMessage.info dt {
+  padding: 6px 8px;
+  background: #343436;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #343436), color-stop(100%, #242426));
+  background: -webkit-linear-gradient(#343436, #242426);
+  background: -ms-linear-gradient(#343436, #242426);
+  background: -moz-linear-gradient(#343436, #242426);
+  background: -o-linear-gradient(#343436, #242426);
+  background: linear-gradient(#343436, #242426);
+  color: #efeff1;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+dl.portalMessage.info dd {
+  padding: 6px 8px 5px 8px;
+  font-weight: bold;
+  font-size: 14px;
+  border-bottom: 2px solid #95957C;
+}
+
+/* Universal Subtitles Container */
+
+div.unisub {
+  height: 29px;
+  background: url(images/bg-unisub.png) top left repeat-x;
+}
+
+div.unisub-proxy {
+  height: 29px;
+  background: url(../images/unisub.png) right center no-repeat;
+}
+
+ /* Comments */
+
+.row div#commenting fieldset {
+  border: none;
+  padding: 0;
+}
+
+.row div#commenting fieldset legend {
+  display:block;
+  padding: 8px 10px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.17);
+  -ms-box-shadow: 0 1px 4px rgba(0,0,0,0.17);
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.17);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.17);
+  background: #efeff2;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efeff2), color-stop(100%, #e5e5e7));
+  background: -webkit-linear-gradient(#efeff2, #e5e5e7);
+  background: -ms-linear-gradient(#efeff2, #e5e5e7);
+  background: -moz-linear-gradient(#efeff2, #e5e5e7);
+  background: -o-linear-gradient(#efeff2, #e5e5e7);
+  background: linear-gradient(#efeff2, #e5e5e7);
+}
+
+.row div#commenting fieldset legend + p {
+  margin-top: 1em;
+}
 
 /* ----------------------------------------- Plain Text Page
 ----------------------------------------- */
@@ -1217,10 +1309,6 @@ that IE7/8 do not support :nth-child.
   border-bottom: 1px solid #bbb;
 }
 
-#post-comments .row.text-content {
-  border-top: 1px solid #f9f9fa;
-}
-
 #post-header .row.text-content .post-title {
   font-size: 24px;
   font-weight: bold;
@@ -1229,6 +1317,48 @@ that IE7/8 do not support :nth-child.
 
 #post-header .row.text-content .post-author {
   font-weight: bold;
+}
+
+/* ----------------------------------------- Video Upload Form
+----------------------------------------- */
+
+.template-publish_video #mid-container .documentFirstHeading {
+  padding: 16px 12px;
+  background: #f3f3f5;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 8px;
+  -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.17);
+  -ms-box-shadow: 0 1px 4px rgba(0,0,0,0.17);
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.17);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.17);
+}
+
+div.row form {
+  background: #F0F0F2;
+}
+
+#uploader {
+  background: #E9E9EB;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.17);
+  -ms-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.17);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.17);
+  margin-top: 14px;
+}
+
+.template-publish_video #mid-container div.row.text-content {
+  background: #C9CCD1;
+  border-top: 1px solid #ddd;
+}
+
+#uploader {
+  margin: 0 8px;
+}
+
+#uploader #fileupload div.controls {
+  margin: 0;
 }
 
 /* ----------------------------------------- Page Name 2

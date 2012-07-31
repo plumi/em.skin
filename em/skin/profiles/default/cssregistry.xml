@@ -3,8 +3,8 @@
 
   <!-- Set conditions on stylesheets we don't want to pull in -->
   <stylesheet
-      enabled="off"
-      expression="not:request/HTTP_X_THEME_ENABLED | nothing"
+      enabled="on"
+      expression=""
       id="public.css"
       />
 

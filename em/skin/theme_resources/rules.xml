@@ -113,6 +113,7 @@
             </xsl:for-each>
             </ul>
         </replace>
+        
         <!-- Projects -->
         <!--copy css:content="dl.portletProjects" css:theme="ul#projects-tree" /-->
         <replace css:theme="ul#projects-tree">
@@ -138,7 +139,7 @@
 
         <!-- the right portlet column should contain News, Blog, Comments for this to work-->
         <!-- News -->
-        <replace content="//*[@id='portal-column-two']/div/div[1]/dl[1]/dt[1]/a" theme="//h4[@id='news-title']" />
+        <!--replace content="//*[@id='portal-column-two']/div/div[1]/dl[1]/dt[1]/a" theme="//h4[@id='news-title']" />
         <replace css:theme="ul#news-right-portlet">
         <ul id="news-right-portlet">
            <xsl:for-each select="//*[@id='portal-column-two']/div/div[1]/dl[1]/dd">
@@ -146,7 +147,7 @@
                </li>
            </xsl:for-each>
         </ul>
-        </replace>
+        </replace-->
 
         <!-- Blogs 
         <replace content="//*[@id='portal-column-two']/div/div[2]/dl[1]/dt/a" theme="//h4[@id='blogs-title']" />
@@ -161,7 +162,7 @@
         -->
 
         <!-- Comments -->
-        <replace content="//*[@id='portal-column-two']/div/div[3]/dl[1]/dt/a" theme="//h4[@id='comments-title']" />
+        <!--replace content="//*[@id='portal-column-two']/div/div[3]/dl[1]/dt/a" theme="//h4[@id='comments-title']" />
         <replace css:theme="ul#comments-right-portlet">
         <ul id="comments-right-portlet">
            <xsl:for-each select="//*[@id='portal-column-two']/div/div[3]/dl[1]/dd">
@@ -169,15 +170,16 @@
                </li>
            </xsl:for-each>
         </ul>
-        </replace>
+        </replace-->
 
         <!-- Featured items. Right portlets 1 -->
-       <replace css:theme=".featured-content">
+       <!--replace css:theme=".featured-content">
           <div class="featured-content">
               <xsl:copy-of select="//*[@id='portal-column-two']/div[1]/dl[1]/dd"/>
           </div>
-        </replace>
+        </replace-->
 
+        <!-- Latest videos -->
         <replace css:theme="#mid-container #latestvideos">
             <div id="latestvideos" class="row content">
             <xsl:for-each css:select="#featured-latest-videos dd.featuredItem">
@@ -204,7 +206,7 @@
     <rules css:if-content="body.template-video_view">
         
         <prepend css:theme="div.video-content">
-            <div class="row">
+            <div class="row no-v-padding">
                 <xsl:copy-of css:select="#edit-bar" />
                 <xsl:copy-of css:select="dl.portalMessage" />
             </div>
