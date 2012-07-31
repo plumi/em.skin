@@ -90,8 +90,19 @@
         <copy attributes="href title" css:content="a#portal-logo" css:theme="a.main-title-link" />
 
 
-        <!-- FOOTER ?? -->
-        
+        <!-- FOOTER -->
+        <!-- About us -->
+        <replace css:theme="ul#navigation-tree">
+            <ul id="navigation-tree">
+            <xsl:for-each select="//*[@class='portlet portletNavigationTree']/dd/ul/li">
+                <li>
+                    <xsl:copy-of select="a" />
+                </li>
+            </xsl:for-each>
+            </ul>
+        </replace>
+        <!--copy css:content-children="dl.portletNavigationTree > dd > ul > li > a" css:theme="ul#navigation-tree > li" /-->
+
         <!-- Content footer is for siteelement doormat, so update this rule if
              doormat is needed for the theme -->
         <drop css:theme="#content-footer" />       

@@ -353,6 +353,11 @@ div.row.footer + div.row.footer {
   display: block;
 }
 
+ul#navigation-tree li a {
+    background: none !important;
+    padding-left: 0 !important;
+}
+
   /* Newsletter */
 
   input#newsletter-text, input#newsletter-submit {
