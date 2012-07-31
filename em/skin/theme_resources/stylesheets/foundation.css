@@ -533,6 +533,17 @@ div.row-title h4 {
   color: #f6f6f7;
 }
 
+div.row-title a.icon, div.column-title a.icon {
+  display: block;
+  float: right;
+  width: 32px;
+  height: 36px;
+}
+
+div.row-title a.icon.rss {
+  background: url(images/rss.png) center no-repeat;
+}
+
 /* Titles w/ Icons ------------------------ */
 
 div.column-title .column-title-icon {
@@ -956,7 +967,11 @@ div.video div.rollover {
   overflow: hidden;
   background: #efeff1;
   opacity: 0.75;
+}
+
+div.video div.rollover, div.video div.rollover p {
   font-size: 12px;
+  margin-bottom: 0;
 }
 
 div.video:hover div.rollover {

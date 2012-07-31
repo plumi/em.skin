@@ -176,13 +176,13 @@
                 <div class="four columns video">
                     <xsl:copy-of css:select="a.featured-video-image"/>
                     <div class="rollover">
-                        (content goes here) In 1990 The Wasur National Park in Merauke was made to protect the biodiversity and empower the local inhabitants.
-                        <span class="country">Country: Thailand</span>
+                        <p><a><xsl:copy-of select="a[@class='featured-video-image']/@href" /><xsl:copy-of select="substring(p/text(),0, 130)" />...</a></p>
+                        <span class="country"><xsl:copy-of select="dl[@class='plumi-country plumi-props-listing']/dt/text()" />: <xsl:copy-of select="dl[@class='plumi-country plumi-props-listing']//a" /></span>
                     </div>
                     <div class="proxy-under"></div>
                     <div class="wrapper-under">
                         <div class="under">
-                            <span class="duration">5:53</span>
+                            <span class="duration"><xsl:copy-of css:select=".featured-video-duration span" /></span>
                             <h5><xsl:copy-of css:select="h4 a.featuredItemTitle"/></h5>
                         </div>
                     </div>
@@ -219,7 +219,6 @@
             </xsl:for-each>
             </ul>
         </replace>
-
     </rules>
     
     <rules css:if-content="#visual-portal-wrapper">
