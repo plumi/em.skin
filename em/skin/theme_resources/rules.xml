@@ -103,10 +103,11 @@
     <!-- HOMEPAGE -->
     <rules css:if-content="body.template-featured_videos_homepage">
         <replace theme="//*[@id='featuredvideo']/div[1]" css:content="dl#featured-video video"/>
+
         <!-- the right portlet column should contain News, Blog, Comments for this to work-->
         <!-- News -->
         <replace content="//*[@id='portal-column-two']/div/div[1]/dl[1]/dt[1]/a" theme="//h4[@id='news-title']" />
-        <replace css:theme="#news-right-portlet">
+        <replace css:theme="ul#news-right-portlet">
         <ul id="news-right-portlet">
            <xsl:for-each select="//*[@id='portal-column-two']/div/div[1]/dl[1]/dd">
                <li><xsl:copy-of select="a" /> <br /> <xsl:value-of select="a/@title"/>               
@@ -115,10 +116,9 @@
         </ul>
         </replace>
 
-
         <!-- Blogs 
         <replace content="//*[@id='portal-column-two']/div/div[2]/dl[1]/dt/a" theme="//h4[@id='blogs-title']" />
-        <replace css:theme="#blogs-right-portlet">
+        <replace css:theme="ul#blogs-right-portlet">
         <ul id="blogs-right-portlet">
            <xsl:for-each select="//*[@id='portal-column-two']/div/div[2]/dl[1]/dd">
                <li><xsl:copy-of select="a" /> <br /> <xsl:value-of select="a/@title"/>
@@ -126,10 +126,11 @@
            </xsl:for-each>
         </ul>
         </replace>
+        -->
 
-        <!-Comments->
+        <!-- Comments -->
         <replace content="//*[@id='portal-column-two']/div/div[3]/dl[1]/dt/a" theme="//h4[@id='comments-title']" />
-        <replace css:theme="#comments-right-portlet">
+        <replace css:theme="ul#comments-right-portlet">
         <ul id="comments-right-portlet">
            <xsl:for-each select="//*[@id='portal-column-two']/div/div[3]/dl[1]/dd">
                <li><xsl:copy-of select="a" /> <br /> <xsl:value-of select="a/@title"/>
@@ -138,31 +139,29 @@
         </ul>
         </replace>
 
-        <!- Featured items. Right portlets 4 and 5 
-        <replace css:theme=".featured-filmmaker">
-          <div class="featured-filmmaker">
-              <xsl:copy-of select="//*[@id='portal-column-two']/div/div[4]/dl[1]/dd"/>
-          </div>
-        </replace>
-
-        <replace css:theme=".featured-filmmaker">
-          <div class="featured-filmmaker">
-              <xsl:copy-of select="//*[@id='portal-column-two']/div/div[4]/dl[1]/dd"/>
-          </div>
-        </replace>
-
+        <!-- Featured items. Right portlets 1 -->
        <replace css:theme=".featured-content">
           <div class="featured-content">
-              <xsl:copy-of select="//*[@id='portal-column-two']/div/div[5]/dl[1]/dd"/>
+              <xsl:copy-of select="//*[@id='portal-column-two']/div[1]/dl[1]/dd"/>
           </div>
         </replace>
--->
+
         <replace css:theme="#mid-container #latestvideos">
-            <div class="row content">
+            <div id="latestvideos" class="row content">
             <xsl:for-each css:select="#featured-latest-videos dd.featuredItem">
-                <div class="three columns video">
-                        <xsl:copy-of css:select="a.featured-video-image"/>
-                    <div class="under"><h5><xsl:copy-of css:select="h4 a.featuredItemTitle"/></h5></div>
+                <div class="four columns video">
+                    <xsl:copy-of css:select="a.featured-video-image"/>
+                    <div class="rollover">
+                        (content goes here) In 1990 The Wasur National Park in Merauke was made to protect the biodiversity and empower the local inhabitants.
+                        <span class="country">Country: Thailand</span>
+                    </div>
+                    <div class="proxy-under"></div>
+                    <div class="wrapper-under">
+                        <div class="under">
+                            <span class="duration">5:53</span>
+                            <h5><xsl:copy-of css:select="h4 a.featuredItemTitle"/></h5>
+                        </div>
+                    </div>
                 </div>
             </xsl:for-each>
             </div>
@@ -200,7 +199,7 @@
     </rules>
     
     <rules css:if-content="#visual-portal-wrapper">
-        <copy css:content="#portal-column-content" css:theme="#post-content > div.text-content" /> 
+        <copy css:content="#portal-column-content" css:theme="#post-content > div.text-content" />
         <drop css:content="#portal-breadcrumbs" />
         <drop css:content="span.documentModified > span" />
     </rules> 
