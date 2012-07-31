@@ -13,16 +13,13 @@
             <dl>
                 <dt>
                     <li>
-                        <a tal:attributes="href string:${base_path}/@@publish_video" i18n:translate="">Publish Video</a>
+                        <a tal:attributes="href string:${base_path}/@@publish_video" i18n:translate="">Video</a>
                     </li>
                     <li>
-                        <a tal:attributes="href string:${home_url}/events/createObject?type_name=Event" i18n:translate="">Publish Event</a>
+                        <a tal:attributes="href string:${home_url}/events/createObject?type_name=Event" i18n:translate="">Event</a>
                     </li>
                     <li>
-                        <a tal:attributes="href string:${home_url}/callouts/createObject?type_name=PlumiCallOut" i18n:translate="">Call Out!</a>
-                    </li>
-                    <li>
-                        <a tal:attributes="href string:${home_url}/news/createObject?type_name=News Item" i18n:translate="">Publish News</a>
+                        <a tal:attributes="href string:${home_url}/news/createObject?type_name=News Item" i18n:translate="">News</a>
                     </li>
                 </dt>
             </dl>
