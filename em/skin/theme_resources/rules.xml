@@ -12,13 +12,14 @@
     
     <!-- ALL PAGES -->
     <rules>
-        <!-- Drop Plone's meta tags that define the content type and IE rendering mode.
-             We set those explicitly in our theme. This allows us to copy the
-             rest of the <meta> tags in one go. -->
 
         <!-- Drop the viewport meta tag from Plone -->
         <drop css:content="meta[name=viewport]"/>
+        
+        <!-- Copy all meta tags -->
         <before content="/html/head/meta" css:theme="#css" />
+        
+        <!-- Get page title -->
         <replace content="/html/head/title" theme="/html/head/title"/>
 
         <!-- Copy the <base> tag -->
@@ -64,10 +65,15 @@
         <merge attributes="class" css:content="body" css:theme="body" />
         <copy attributes="id dir" css:content="body" css:theme="body" />
 
+
         <!-- HEADER -->
+        
+        <!-- Copy search box -->
         <copy css:content="#portal-searchbox" css:theme="div.search" />
+        
+        <!-- copy user menu -->
         <rules css:if-content="a#user-name">
-            <copy css:content="dl#portal-personaltools dd.actionMenuContent > ul" css:theme="#user-menu ul.dropdown" />
+            <copy css:content-children="dl#portal-personaltools dd.actionMenuContent > ul" css:theme="#user-menu ul.dropdown" />
             <copy css:content-children="a#user-name" css:theme="li.header-button > a.user" />
         </rules>
         <rules css:if-content="ul#portal-personaltools > li#anon-personalbar">
@@ -75,10 +81,12 @@
             <drop css:theme="#user-menu ul.dropdown" />
         </rules>
 
+        <!-- copy language selector -->
         <copy css:content-children="ul#portal-languageselector li.currentLanguage" css:theme="ul#language-menu > li a" />
         <copy css:content-children="ul#portal-languageselector" css:theme="#language-menu ul.dropdown" />
 
-        <!-- FOOTER -->
+
+        <!-- FOOTER ?? -->
         
         <!-- Content footer is for siteelement doormat, so update this rule if
              doormat is needed for the theme -->
@@ -86,6 +94,7 @@
         <copy css:content-children=".siteelement-footertext .footertext" css:theme="#colophon" />
         <replace content='/html/body/div/div[2]/div[2]/div/dl/dd/ul' theme='/html/body/div[4]/div[2]/div[2]/ul' />
     </rules>
+
 
     <!-- HOMEPAGE -->
     <rules css:if-content="body.template-featured_videos_homepage">
@@ -157,9 +166,34 @@
     
     <!-- VIDEO VIEW PAGE -->
     <rules css:if-content="body.template-video_view">
-
-    <copy css:content="#content h1.documentFirstHeading" css:theme="#video-title" /> 
         
+
+        <copy css:content="#content h1.documentFirstHeading > span" css:theme="#video-title h1" /> 
+        <copy css:theme=".video" css:content="#video-core" /> 
+        <copy css:theme="#description" css:content="#content p.documentDescription" /> 
+        <copy css:theme="#video-info" css:content="#video-infos" /> 
+        <append css:theme="#video-info" css:content="#video-licensing" /> 
+        <append css:theme="#video-info" css:content="#video-transcoding" /> 
+        <copy css:theme="#video-comments" css:content=".discussion" /> 
+        <append css:theme="#video-comments" css:content="#commenting" /> 
+    
+        <replace css:theme=".video-list">
+            <ul class="video-list">
+            <xsl:for-each css:select="#authors_latest li">
+                <li class="video-item">
+                        <a href="h4 a.video-download">
+                        <!-- <xsl:copy-of select="h4 a.video-download" /><xsl:value-of select="a/@href"/> -->
+                        <xsl:copy-of css:select="h4 img" />
+                        <h5>
+                            <xsl:copy-of css:select="h4 span.featuredItemTitle"/>
+                        </h5>
+                        <!-- <img class="video-thumb"> -->
+                        </a>
+                </li>
+            </xsl:for-each>
+            </ul>
+        </replace>
+
     </rules>
     
     <rules css:if-content="#visual-portal-wrapper">
