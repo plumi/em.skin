@@ -185,7 +185,7 @@
          <replace css:theme="#more-news" css:content="dl.portlet-collection-news dd.portletFooter" />
        
         <!-- Comments -->
-        <replace css:content="dl.portlet-collection-comments dt.portletHeader a" css:theme="h4#comments-title" />
+        <copy css:content="dl.portlet-collection-comments dt.portletHeader a" css:theme="h4#comments-title" />
         <replace css:theme="ul#comments-right-portlet">
         <ul id="comments-right-portlet">
            <xsl:for-each css:select="dl.portlet-collection-comments dd.portletItem">
@@ -200,7 +200,7 @@
 
 
        <!-- Blogs -->
-        <replace css:content="dl.portlet-collection-blog dt.portletHeader a" css:theme="h4#blog-title" />
+        <copy css:content="dl.portlet-collection-blog dt.portletHeader a" css:theme="h4#blog-title" />
         <replace css:theme="ul#blog-right-portlet">
         <ul id="blog-right-portlet">
            <xsl:for-each css:select="dl.portlet-collection-blog dd.portletItem">
