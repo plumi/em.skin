@@ -7,10 +7,9 @@ from plone.portlets.interfaces import IPortletDataProvider
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone import utils
-from zope.app.component.hooks import getSite
 
 
-class IProjectsPortlet(IPortletDataProvider):
+class IFeaturedTopPortlet(IPortletDataProvider):
     """A portlet
 
     It inherits from IPortletDataProvider because for this portlet, the
@@ -26,14 +25,14 @@ class Assignment(base.Assignment):
     with columns.
     """
 
-    implements(IProjectsPortlet)
+    implements(IFeaturedTopPortlet)
 
     @property
     def title(self):
         """This property is used to give the title of the portlet in the
         "manage portlets" screen.
         """
-        return u"Projects Portlet"
+        return u"Featured Top Portlet"
 
 
 class Renderer(base.Renderer):
@@ -44,18 +43,18 @@ class Renderer(base.Renderer):
     of this class. Other methods can be added and referenced in the template.
     """
 
-    render = ViewPageTemplateFile('projects.pt')
+    render = ViewPageTemplateFile('featuredtop.pt')
 
     def results(self):
         """ """
         context = self.context
-        portal = getSite()
-        folder = portal['Projects']
-        folder_path = '/'.join(folder.getPhysicalPath())
         portal_catalog = getToolByName(context, 'portal_catalog')
-        results = portal_catalog(portal_type='Document', path={'query': folder_path, 'depth': 1}, sort_on="getObjPositionInParent")
-        return self.request.get(
-            'items', results)
+        results = portal_catalog(Subject='featured-top', portal_type='News Item', review_state=['featured'],sort_on='effective')[:1]
+        objects = []
+        for item in results:
+            obj = item.getObject()
+            objects.append(obj)
+        return objects
 
 
 class AddForm(base.AddForm):

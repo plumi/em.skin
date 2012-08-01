@@ -1,9 +1,7 @@
 <dl class="portlet portletProjects"
     i18n:domain="em.skin">
-
     <ul>
         <tal:items tal:repeat="obj view/results">
-
             <li>
                 <a href="" tal:content="obj/Title" tal:attributes="href python: obj.getURL();">
                     title

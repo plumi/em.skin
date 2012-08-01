@@ -219,6 +219,7 @@
               <xsl:copy-of select="//*[@id='portal-column-two']/div[1]/dl[1]/dd"/>
           </div>
         </replace-->
+        <copy css:content="div.featured-filmmaker" css:theme="div.featured-filmmaker" />
 
         <!-- Social Networks-->
         <copy css:content-children="div.social-networks" css:theme="div.social-networks" />

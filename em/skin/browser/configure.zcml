@@ -59,4 +59,15 @@
         interface=".portlets.socialnetworks.ISocialNetworksPortlet"
         />
 
+    <plone:portlet
+        name="em.skin.browser.portlets.FeaturedTopPortlet"
+        view_permission="zope2.View"
+        edit_permission="cmf.ManagePortal"
+        renderer=".portlets.featuredtop.Renderer"
+        assignment=".portlets.featuredtop.Assignment"
+        addview=".portlets.featuredtop.AddForm"
+        editview=".portlets.featuredtop.EditForm"
+        interface=".portlets.featuredtop.IFeaturedTopPortlet"
+        />
+
 </configure>

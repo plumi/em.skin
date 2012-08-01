@@ -43,4 +43,12 @@
      name="Social Networks Portlet"
      />
 
+<assignment
+     manager="plone.rightcolumn"
+     category="context"
+     key="/"
+     type="em.skin.browser.portlets.FeaturedTopPortlet"
+     name="Featured Top Portlet"
+     />
+
 </portlets>
