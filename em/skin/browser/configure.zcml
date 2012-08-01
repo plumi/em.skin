@@ -48,4 +48,15 @@
         interface=".portlets.newsletter.INewsletterPortlet"
         />
 
+    <plone:portlet
+        name="em.skin.browser.portlets.SocialNetworksPortlet"
+        view_permission="zope2.View"
+        edit_permission="cmf.ManagePortal"
+        renderer=".portlets.socialnetworks.Renderer"
+        assignment=".portlets.socialnetworks.Assignment"
+        addview=".portlets.socialnetworks.AddForm"
+        editview=".portlets.socialnetworks.EditForm"
+        interface=".portlets.socialnetworks.ISocialNetworksPortlet"
+        />
+
 </configure>

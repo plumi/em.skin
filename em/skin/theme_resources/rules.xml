@@ -182,6 +182,8 @@
           </div>
         </replace-->
 
+        <!-- Social Networks-->
+        <copy css:content-children="div.social-networks" css:theme="div.social-networks" />
         <!-- Latest videos -->
         <replace css:theme="#mid-container #latestvideos">
             <div id="latestvideos" class="row content">

@@ -35,4 +35,12 @@
      name="Newsletter Portlet"
      />
 
+<assignment
+     manager="plone.rightcolumn"
+     category="context"
+     key="/"
+     type="em.skin.browser.portlets.SocialNetworksPortlet"
+     name="Social Networks Portlet"
+     />
+
 </portlets>
