@@ -81,7 +81,7 @@ div.row.header input#searchGadget {
   background-color: rgba(255,255,255,0.24);
   padding: 5px;
   position:relative;
-  top: -6px;
+  top: 0px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -1335,30 +1335,34 @@ div.unisub-proxy {
   box-shadow: 0 1px 4px rgba(0,0,0,0.17);
 }
 
-div.row form {
-  background: #F0F0F2;
-}
-
-#uploader {
+.template-publish_video #mid-container #uploader {
   background: #E9E9EB;
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.17);
   -ms-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.17);
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.17);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.17);
-  margin-top: 14px;
+  margin: 14px 8px 0 8px;
 }
 
 .template-publish_video #mid-container div.row.text-content {
   background: #C9CCD1;
   border-top: 1px solid #ddd;
+  padding: 8px;
 }
 
-#uploader {
-  margin: 0 8px;
+.template-publish_video #mid-container #uploader #fileupload div.row {
+  padding: 8px;
 }
 
 #uploader #fileupload div.controls {
   margin: 0;
+}
+
+div.row form {
+  background: #F0F0F2;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.17);
+  -ms-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.17);
 }
 
 /* ----------------------------------------- Page Name 2
@@ -1394,4 +1398,13 @@ div.unisubs-videoTab a span.unisubs-tabTextShare { display: none !important; }
 ul#dl-links {
     left: 414px !important;
     width: 110px !important;
+}
+
+div#share-box {
+    width: 330px !important;
+    height: 60px !important;
+}
+
+div.LSBox {
+    margin-top: -10px;
 }

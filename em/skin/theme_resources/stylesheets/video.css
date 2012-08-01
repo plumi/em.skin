@@ -54,7 +54,7 @@ p.documentDescription {
 	margin: 0;
 }
 
- a.more {
+a.more, a.less {
  	display: block;
  	font-weight: bold;
  	color: #445;
@@ -96,3 +96,10 @@ div.video-comments-title {
 	border-bottom: 1px solid #ccc;
 	top: 0px;
 }
+
+#description {
+    margin-bottom:10px;
+}
+ 
+
+
