@@ -51,4 +51,20 @@
      name="Featured Top Portlet"
      />
 
+<assignment
+     manager="plone.rightcolumn"
+     category="context"
+     key="/"
+     type="em.skin.browser.portlets.FeaturedLeftPortlet"
+     name="Featured Left Portlet"
+     />
+
+<assignment
+     manager="plone.rightcolumn"
+     category="context"
+     key="/"
+     type="em.skin.browser.portlets.FeaturedRightPortlet"
+     name="Featured Right Portlet"
+     />
+
 </portlets>
