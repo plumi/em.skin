@@ -17,6 +17,12 @@
   <stylesheet
       enabled="off"
       expression="not:request/HTTP_X_THEME_ENABLED | nothing"
+      id="RTL.css"
+      />
+
+  <stylesheet
+      enabled="off"
+      expression="not:request/HTTP_X_THEME_ENABLED | nothing"
       id="IEFixes.css"
       />
 

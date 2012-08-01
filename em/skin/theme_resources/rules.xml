@@ -133,6 +133,31 @@
              doormat is needed for the theme -->
         <drop css:theme="#content-footer" />       
         <copy css:content-children=".siteelement-footertext .footertext" css:theme="#colophon" />
+
+        <!-- video listings -->
+        <replace css:theme="#mid-container #latestvideos">
+            <div id="latestvideos" class="row content">
+            <xsl:for-each css:select="dl#featured-video dd.featuredItem">
+                <div class="four columns video">
+                    <xsl:copy-of css:select="a.featured-video-image"/>
+                    <div class="rollover">
+                        <p><a><xsl:copy-of select="a[@class='featured-video-image']/@href" /><xsl:copy-of select="substring(p/text(),0, 130)" />...</a></p>
+                        <span class="country"><xsl:copy-of select="dl[@class='plumi-country plumi-props-listing']/dt/text()" />: <xsl:copy-of select="dl[@class='plumi-country plumi-props-listing']//a" /></span>
+                    </div>
+                    <div class="proxy-under"></div>
+                    <div class="wrapper-under">
+                        <div class="under">
+                            <span class="duration"><xsl:copy-of css:select=".featured-video-duration span" /></span>
+                            <h5><xsl:copy-of css:select="h4 a.featuredItemTitle"/></h5>
+                        </div>
+                    </div>
+                </div>
+            </xsl:for-each>
+            </div>
+        </replace>
+        <drop css:content="#featured-video" />
+        <!-- video listings -->
+
     </rules>
 
 
@@ -140,40 +165,53 @@
     <rules css:if-content="body.template-featured_videos_homepage">
         <replace theme="//*[@id='featuredvideo']/div[1]" css:content="dl#featured-video video"/>
 
-        <!-- the right portlet column should contain News, Blog, Comments for this to work-->
+        <!-- In order for this to work, we need News, Comments, Blogs portlets with more link and dates enabled.
+             The portlets take their class names according to their names, so keep the portlets News, Comments, Blogs
+             For the featured items, we need portlets Feature 1 and Featured 2, showing 1 item, and the hack on the portlets collection
+             to display the image when it sees 1 item -->
+
         <!-- News -->
-        <!--replace content="//*[@id='portal-column-two']/div/div[1]/dl[1]/dt[1]/a" theme="//h4[@id='news-title']" />
+        <replace css:content="dl.portlet-collection-news dt.portletHeader a" css:theme="h4#news-title" />
         <replace css:theme="ul#news-right-portlet">
         <ul id="news-right-portlet">
-           <xsl:for-each select="//*[@id='portal-column-two']/div/div[1]/dl[1]/dd">
-               <li><xsl:copy-of select="a" /> <br /> <xsl:value-of select="a/@title"/>               
-               </li>
-           </xsl:for-each>
-        </ul>
-        </replace-->
-
-        <!-- Blogs 
-        <replace content="//*[@id='portal-column-two']/div/div[2]/dl[1]/dt/a" theme="//h4[@id='blogs-title']" />
-        <replace css:theme="ul#blogs-right-portlet">
-        <ul id="blogs-right-portlet">
-           <xsl:for-each select="//*[@id='portal-column-two']/div/div[2]/dl[1]/dd">
-               <li><xsl:copy-of select="a" /> <br /> <xsl:value-of select="a/@title"/>
+           <xsl:for-each css:select="dl.portlet-collection-news dd.portletItem">
+               <li>
+                    <p class="date"><xsl:copy-of css:select="a span.portletItemDetails" /></p>
+                    <h5><a><xsl:copy-of select="a/@*" /><xsl:copy-of select="a/text()" /></a></h5>
                </li>
            </xsl:for-each>
         </ul>
         </replace>
-        -->
-
+         <replace css:theme="#more-news" css:content="dl.portlet-collection-news dd.portletFooter" />
+       
         <!-- Comments -->
-        <!--replace content="//*[@id='portal-column-two']/div/div[3]/dl[1]/dt/a" theme="//h4[@id='comments-title']" />
+        <replace css:content="dl.portlet-collection-comments dt.portletHeader a" css:theme="h4#comments-title" />
         <replace css:theme="ul#comments-right-portlet">
         <ul id="comments-right-portlet">
-           <xsl:for-each select="//*[@id='portal-column-two']/div/div[3]/dl[1]/dd">
-               <li><xsl:copy-of select="a" /> <br /> <xsl:value-of select="a/@title"/>
+           <xsl:for-each css:select="dl.portlet-collection-comments dd.portletItem">
+               <li>
+                    <p class="date"><xsl:copy-of css:select="a span.portletItemDetails" /></p>
+                    <h5><a><xsl:copy-of select="a/@*" /><xsl:copy-of select="a/text()" /></a></h5>
                </li>
            </xsl:for-each>
         </ul>
-        </replace-->
+        </replace>
+         <replace css:theme="#more-comments" css:content="dl.portlet-collection-comments dd.portletFooter" />
+
+
+       <!-- Blogs -->
+        <replace css:content="dl.portlet-collection-blog dt.portletHeader a" css:theme="h4#blog-title" />
+        <replace css:theme="ul#blog-right-portlet">
+        <ul id="blog-right-portlet">
+           <xsl:for-each css:select="dl.portlet-collection-blog dd.portletItem">
+               <li>
+                    <p class="date"><xsl:copy-of css:select="a span.portletItemDetails" /></p>
+                    <h5><a><xsl:copy-of select="a/@*" /><xsl:copy-of select="a/text()" /></a></h5>
+               </li>
+           </xsl:for-each>
+        </ul>
+        </replace>
+
 
         <!-- Featured items. Right portlets 1 -->
        <!--replace css:theme=".featured-content">
