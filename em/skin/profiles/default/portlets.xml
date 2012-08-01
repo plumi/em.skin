@@ -27,4 +27,12 @@
      name="Publish Portlet"
      />
 
+<assignment
+     manager="plone.leftcolumn"
+     category="context"
+     key="/"
+     type="em.skin.browser.portlets.NewsletterPortlet"
+     name="Newsletter Portlet"
+     />
+
 </portlets>

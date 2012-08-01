@@ -1,5 +1,5 @@
 <dl class="portlet portletBrowse"
-    i18n:domain="plumi.portlets">
+    i18n:domain="em.skin">
 
     <dt class="portletHeader browsePortletHeader">
         <span class="browse-text" i18n:translate="">Browse</span>

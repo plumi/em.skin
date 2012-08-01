@@ -126,6 +126,9 @@
             </ul>
         </replace>
 
+        <!-- Newsletter -->
+        <copy css:content="#newsletter-portlet" css:theme="#newsletter-footer" />
+
         <!-- Content footer is for siteelement doormat, so update this rule if
              doormat is needed for the theme -->
         <drop css:theme="#content-footer" />       

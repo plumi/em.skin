@@ -5,7 +5,7 @@ from zope.interface import implements
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from zope import i18n
-_ = i18n.MessageFactory("plumi.content")
+_ = i18n.MessageFactory("em.skin")
 
 class IBrowsePortlet(IPortletDataProvider):
     """A portlet
