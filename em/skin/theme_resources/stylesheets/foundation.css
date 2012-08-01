@@ -309,28 +309,6 @@ div.featured-filmmaker a .featured-text h5 {
   border-top: 1px solid #aaaaad;
 }
 
-/* Comments */
-
-div.comment {
-  background: #f3f3f4;
-  padding: 1em;
-  margin-top: 0;
-}
-
-div.comment + div.comment {
-  border-top: 1px solid #ccc;
-
-}
-
-div.commentBody {
-  border-radius: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-}
-
 /* Lower Container ---------------------- */
 
 #lower-container {
@@ -616,7 +594,7 @@ div.sidebar ul li h5 {
   color: #222;
   font-weight: bold;
   font-size: 12px;
-  padding: 0 10px 10px 10px;
+  padding: 4px 10px 10px 10px;
 }
 
 div.sidebar ul li p.date {
@@ -653,7 +631,6 @@ ul, ol { font-size: 14px; line-height: inherit; margin-bottom: 17px; list-style-
   color: #222;
   text-shadow: 0 1px 0 white;
   border-color: #CCC #CCC #AAA;
-  background-color: #E0E0E0;
   -moz-box-shadow: inset 0 0 1px white;
   -ms-box-shadow: inset 0 0 1px white;
   -webkit-box-shadow: inset 0 0 1px white;
@@ -1268,6 +1245,94 @@ div.unisub-proxy {
 
  /* Comments */
 
+div.comment {
+  position: relative;
+  overflow: auto;
+  background: #f3f3f4;
+  padding: 1em;
+  margin-top: 0;
+}
+
+div.comment + div.comment {
+  border-top: 1px solid #ccc;
+}
+
+div.comment div.commentImage {
+margin-right: 20px;
+}
+
+div.comment div.commentBody {
+  margin-left: 95px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+div.comment button.reply-to-comment-button {
+  float: right;
+  display: block;
+  padding: 4px 5px;
+  color: #222;
+  text-shadow: 0 1px 0 white;
+  -moz-box-shadow: inset 0 0 1px white;
+  -ms-box-shadow: inset 0 0 1px white;
+  -webkit-box-shadow: inset 0 0 1px white;
+  box-shadow: inset 0 0 1px white;
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=snowfa,EndColorStr=#FFDCDCdc);
+  background: #efeff2;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efeff2), color-stop(100%, #dfdfe2));
+  background: -webkit-linear-gradient(#efeff2, #dfdfe2);
+  background: -ms-linear-gradient(#efeff2, #dfdfe2);
+  background: -moz-linear-gradient(#efeff2, #dfdfe2);
+  background: -o-linear-gradient(#efeff2, #dfdfe2);
+  background: linear-gradient(#efeff2, #dfdfe2);
+  border: 1px solid #aaa;
+  outline: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  white-space: nowrap;
+  word-wrap: normal;
+  cursor: pointer;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  -ms-box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+div.comment button.reply-to-comment-button:hover {
+  color: #000;
+  border: 1px solid #666;
+  -moz-box-shadow: 0 2px 7px rgba(0,0,0,0.2);
+  -ms-box-shadow: 0 2px 7px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0 2px 7px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 7px rgba(0,0,0,0.2);
+}
+
+div.comment button.reply-to-comment-button:active {
+  color: #000;
+  border: 1px solid #444;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+  color: #efeff1;
+  background: #555;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #555), color-stop(100%, #777));
+  background: -webkit-linear-gradient(#555, #777);
+  background: -ms-linear-gradient(#555, #777);
+  background: -moz-linear-gradient(#555, #777);
+  background: -o-linear-gradient(#555, #777);
+  background: linear-gradient(#555, #777);
+}
+
 .row div#commenting fieldset {
   border: none;
   padding: 0;
@@ -1294,6 +1359,10 @@ div.unisub-proxy {
 
 .row div#commenting fieldset legend + p {
   margin-top: 1em;
+}
+
+.row div#commenting form {
+  padding: 1em;
 }
 
 /* ----------------------------------------- Plain Text Page
