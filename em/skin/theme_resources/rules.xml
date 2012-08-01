@@ -139,36 +139,39 @@
             <div id="latestvideos" class="row content">
             <xsl:for-each css:select="dl#featured-video dd.featuredItem">
                 <div class="four columns video">
-                    <xsl:copy-of css:select="a.featured-video-image"/>
-                    <div class="rollover">
-                        <p><a><xsl:copy-of select="a[@class='featured-video-image']/@href" /><xsl:copy-of select="substring(p/text(),0, 130)" />...</a></p>
-                        <span class="country"><xsl:copy-of select="dl[@class='plumi-country plumi-props-listing']/dt/text()" />: <xsl:copy-of select="dl[@class='plumi-country plumi-props-listing']//a" /></span>
-                    </div>
-                    <div class="proxy-under"></div>
+                    
+                    
                     <div class="wrapper-under">
                         <div class="under">
-                            <span class="duration"><xsl:copy-of css:select=".featured-video-duration span" /></span>
                             <h5><xsl:copy-of css:select="h4 a.featuredItemTitle"/></h5>
                         </div>
+                        <div class="rollover">
+                            <p><a><xsl:copy-of select="a[@class='featured-video-image']/@href" /><xsl:copy-of select="substring(p/text(),0, 130)" />...</a></p>
+                            <span class="country"><xsl:copy-of select="dl[@class='plumi-country plumi-props-listing']/dt/text()" />: <xsl:copy-of select="dl[@class='plumi-country plumi-props-listing']//a" /></span>
+                        </div>
                     </div>
+                    <div class="proxy-under"></div>
+                    <xsl:copy-of css:select="a.featured-video-image"/>
+                    <span class="duration"><xsl:copy-of css:select=".featured-video-duration span" /></span>
                 </div>
             </xsl:for-each>
             </div>
         </replace>
         <drop css:content="#featured-video" />
         <!-- video listings -->
-
     </rules>
 
 
     <!-- HOMEPAGE -->
     <rules css:if-content="body.template-featured_videos_homepage">
-        <replace theme="//*[@id='featuredvideo']/div[1]" css:content="dl#featured-video video"/>
+        <replace theme="//*[@id='featuredvideo']/div[1]" content="//video/.."/>
 
         <!-- In order for this to work, we need News, Comments, Blogs portlets with more link and dates enabled.
              The portlets take their class names according to their names, so keep the portlets News, Comments, Blogs
              For the featured items, we need portlets Feature 1 and Featured 2, showing 1 item, and the hack on the portlets collection
              to display the image when it sees 1 item -->
+
+        <!-- RSS icon link to the latest videos feeds -->
 
         <!-- News -->
         <copy css:content="dl.portlet-collection-news dt.portletHeader a" css:theme="h4#news-title" />
@@ -225,22 +228,28 @@
             <div id="latestvideos" class="row content">
             <xsl:for-each css:select="#featured-latest-videos dd.featuredItem">
                 <div class="four columns video">
-                    <xsl:copy-of css:select="a.featured-video-image"/>
-                    <div class="rollover">
-                        <p><a><xsl:copy-of select="a[@class='featured-video-image']/@href" /><xsl:copy-of select="substring(p/text(),0, 130)" />...</a></p>
-                        <span class="country"><xsl:copy-of select="dl[@class='plumi-country plumi-props-listing']/dt/text()" />: <xsl:copy-of select="dl[@class='plumi-country plumi-props-listing']//a" /></span>
-                    </div>
-                    <div class="proxy-under"></div>
+                    
                     <div class="wrapper-under">
                         <div class="under">
-                            <span class="duration"><xsl:copy-of css:select=".featured-video-duration span" /></span>
                             <h5><xsl:copy-of css:select="h4 a.featuredItemTitle"/></h5>
                         </div>
                     </div>
+                    <div class="proxy-under"></div>
+                    <div class="wrapper-image">
+                        <div class="rollover">
+                            <p><a><xsl:copy-of select="a[@class='featured-video-image']/@href" /><xsl:copy-of select="substring(p/text(),0, 130)" />...</a></p>
+                            <span class="country"><xsl:copy-of select="dl[@class='plumi-country plumi-props-listing']/dt/text()" />: <xsl:copy-of select="dl[@class='plumi-country plumi-props-listing']//a" /></span>
+                        </div>
+                        <xsl:copy-of css:select="a.featured-video-image"/>
+                    </div>
+                    <span class="duration"><xsl:copy-of css:select=".featured-video-duration span" /></span>
                 </div>
             </xsl:for-each>
+            <div class="six columns centered load-more">
+                <a class="button large" href="latestvideos" >Load More</a>
             </div>
-        </replace>        
+            </div>
+        </replace>      
     </rules>
     
     <!-- VIDEO VIEW PAGE -->
