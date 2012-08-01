@@ -7,7 +7,7 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope import i18n
 _ = i18n.MessageFactory("em.skin")
 
-class IPublishPortlet(IPortletDataProvider):
+class ISocialNetworksPortlet(IPortletDataProvider):
     """A portlet
 
     It inherits from IPortletDataProvider because for this portlet, the
@@ -23,14 +23,15 @@ class Assignment(base.Assignment):
     with columns.
     """
 
-    implements(IPublishPortlet)
+    implements(ISocialNetworksPortlet)
 
     @property
     def title(self):
         """This property is used to give the title of the portlet in the
         "manage portlets" screen.
         """
-        return _(u"Publish Portlet")
+        return _(u"Social Networks")
+
 
 class Renderer(base.Renderer):
     """Portlet renderer.
@@ -40,7 +41,7 @@ class Renderer(base.Renderer):
     of this class. Other methods can be added and referenced in the template.
     """
 
-    render = ViewPageTemplateFile('publishportlet.pt')
+    render = ViewPageTemplateFile('socialnetworks.pt')
 
 class AddForm(base.AddForm):
     """Portlet add form.
@@ -60,3 +61,4 @@ class EditForm(base.EditForm):
     zope.formlib which fields to display.
     """
     pass
+

@@ -37,4 +37,26 @@
         interface=".portlets.browseportlet.IBrowsePortlet"
         />
 
+    <plone:portlet
+        name="em.skin.browser.portlets.NewsletterPortlet"
+        view_permission="zope2.View"
+        edit_permission="cmf.ManagePortal"
+        renderer=".portlets.newsletter.Renderer"
+        assignment=".portlets.newsletter.Assignment"
+        addview=".portlets.newsletter.AddForm"
+        editview=".portlets.newsletter.EditForm"
+        interface=".portlets.newsletter.INewsletterPortlet"
+        />
+
+    <plone:portlet
+        name="em.skin.browser.portlets.SocialNetworksPortlet"
+        view_permission="zope2.View"
+        edit_permission="cmf.ManagePortal"
+        renderer=".portlets.socialnetworks.Renderer"
+        assignment=".portlets.socialnetworks.Assignment"
+        addview=".portlets.socialnetworks.AddForm"
+        editview=".portlets.socialnetworks.EditForm"
+        interface=".portlets.socialnetworks.ISocialNetworksPortlet"
+        />
+
 </configure>
