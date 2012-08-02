@@ -10,7 +10,7 @@
     <tal:items tal:repeat="obj view/results">
         <dd class="portletItem odd">
             <a title="python: obj.Title()" class="tile" tal:attributes="href python: obj.absolute_url();">
-                test event
+                <span tal:replace="python: obj.Title()">test event</span>
                 <span class="portletItemDetails" tal:content="python:toLocalizedTime(obj.Date())">Jul 24, 2012</span>
             </a>
         </dd>
