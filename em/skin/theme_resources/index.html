@@ -35,58 +35,36 @@
     <div id="upper-container">
         <div class="row no-v-padding header">
             <div class="twelve columns header">
-                <a href="#" class="main-logo-link"><div class="one column main-logo"></div></a>
-                <a href="#" class="main-title-link">
-                    <div class="five columns main-title">
-                        <h2>EngageMedia</h2>
-                        <p>Social justice and environmental video from the Asia Pacific</p>
-                    </div>
-                </a>
-                <div class="six columns offset-by-one search">
-                    <input type="text" id="searchGadget" class="text-input" name="searchGadget" value="Search EngageMedia">
+                <div class="five columns main-title">
+                    <p>Social justice and environmental video from the Asia Pacific</p>
                 </div>
-                <div class="six columns menu">
+                <div class="top-menu">
                     <ul class="header-menu-item" id="language-menu">
-                        <li class="header-button">
-                            <a href="#" class="english language"></a>
+                        <li>
+                            <a href="#" class="english language">English</a>
                         </li>
                         <li>
-                            <ul class="dropdown shade">
-                                <li>
-                                    <a href="#" class="english language">English</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="indonesian language">Indonesian</a>
-                                </li>
-                            </ul>
+                            <a href="#" class="bahasa language">Bahasa Indonesia</a>
                         </li>
                     </ul>
                     <ul class="header-menu-item" id="user-menu">
-                        <li class="header-button">
+                        <li>
                             <a href="#" class="user">
                                 User
                             </a>
                         </li>
                         <li>
                             <ul class="dropdown shade">
-                                <li>
-                                    <a href="#">My Profile</a>
-                                </li>
-                                <li>
-                                    <a href="#">My Folder</a>
-                                </li>
-                                <li>
-                                    <a href="#">Admin</a>
-                                </li>
-                                <li>
-                                    <a href="#">Review List</a>
-                                </li>
-                                <li>
-                                    <a href="#">Log Out</a>
-                                </li>
                             </ul>
                         </li>
                     </ul>
+                </div>
+
+                <div class="six columns menu">
+                     <div class="search">
+                        <input type="text" id="searchGadget" class="text-input" name="searchGadget" value="Search EngageMedia">
+                    </div>
+                    
                     <ul class="header-menu-item" id="publish-menu">
                         <li class="header-button">
                             <a href="#" class="user">
@@ -95,21 +73,6 @@
                         </li>
                         <li>
                             <ul class="dropdown shade">
-                                <li>
-                                    <a href="#">My Profile</a>
-                                </li>
-                                <li>
-                                    <a href="#">My Folder</a>
-                                </li>
-                                <li>
-                                    <a href="#">Admin</a>
-                                </li>
-                                <li>
-                                    <a href="#">Review List</a>
-                                </li>
-                                <li>
-                                    <a href="#">Log Out</a>
-                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -121,21 +84,6 @@
                         </li>
                         <li>
                             <ul class="dropdown shade">
-                                <li>
-                                    <a href="#">My Profile</a>
-                                </li>
-                                <li>
-                                    <a href="#">My Folder</a>
-                                </li>
-                                <li>
-                                    <a href="#">Admin</a>
-                                </li>
-                                <li>
-                                    <a href="#">Review List</a>
-                                </li>
-                                <li>
-                                    <a href="#">Log Out</a>
-                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -148,7 +96,7 @@
         <div class="content row">
             <div class="nine columns">
                 <div class="row full no-top-padding">
-                    <div class="video featured shade" id="featuredvideo">
+                    <div class="video featured" id="featuredvideo">
                         <div class="viewport">
                             <img src="images/main.png">
                             <div class="unisub">
@@ -245,6 +193,9 @@
                             </span>
                         </a>
                     </div>
+                    <div class="column-more">
+                        <a href="#">More Projects</a>
+                    </div>
                 </div>
             </div>
             <div class="three columns sidebar blog-portlet">
@@ -257,7 +208,9 @@
                         <li><a href="#"><p class="date">May, 16</p><h5>Engagemedia Ventures Into Thailand, Sprouting Projects And Partnerships</h5></a></li>
                         <li><a href="#"><p class="date">May, 16</p><h5>Engagemedia Ventures Into Thailand, Sprouting Projects And Partnerships</h5></a></li>
                     </ul>
-
+                    <div class="column-more">
+                        <a href="#" id="more-news">More...</a>
+                    </div>
                 </div>
             </div>
             <div class="three columns sidebar">
@@ -279,13 +232,10 @@
 
     <div id="lower-container">
         <div class="row footer">
-            <div class="six columns">
-                <div class="logo"></div>
+            <div class="three columns engage">
+                <h5>EngageMedia</h5>
             </div>
-        </div>
-        <div class="row footer">
-            
-            <div class="three columns offset-by-three">
+            <div class="three columns">
                 <h5>About Us</h5>
                 <ul id="navigation-tree">
                     <li>Editorial Policy</li>
