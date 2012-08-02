@@ -1,7 +1,7 @@
 from plone.app.portlets.portlets import base
 from plone.portlets.interfaces import IPortletDataProvider
 from zope.interface import implements
-
+from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from zope import i18n
@@ -41,6 +41,42 @@ class Renderer(base.Renderer):
     """
 
     render = ViewPageTemplateFile('publishportlet.pt')
+
+    def videos_path(self):
+        """This property is used to give the title of the portlet in the
+        "manage portlets" screen.
+        """
+        mtool = getToolByName(self,'portal_membership')
+        portal_url = getToolByName(self.context, "portal_url")
+        if mtool.getHomeUrl():
+            base_path = mtool.getHomeUrl() + '/videos/@@publish_video'
+        else:
+            base_path = portal_url() + '/publish'
+        return base_path
+
+    def events_path(self):
+        """This property is used to give the title of the portlet in the
+        "manage portlets" screen.
+        """
+        mtool = getToolByName(self,'portal_membership')
+        portal_url = getToolByName(self.context, "portal_url")
+        if mtool.getHomeUrl():
+            base_path = mtool.getHomeUrl() + '/events/createObject?type_name=Event'
+        else:
+            base_path = portal_url() + '/publish'
+        return base_path
+
+    def news_path(self):
+        """This property is used to give the title of the portlet in the
+        "manage portlets" screen.
+        """
+        mtool = getToolByName(self,'portal_membership')
+        portal_url = getToolByName(self.context, "portal_url")
+        if mtool.getHomeUrl():
+            base_path = mtool.getHomeUrl() + '/news/createObject?type_name=News Item'
+        else:
+            base_path = portal_url() + '/publish'
+        return base_path
 
 class AddForm(base.AddForm):
     """Portlet add form.
