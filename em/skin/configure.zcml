@@ -2,12 +2,16 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="em.skin">
 
   <includeDependencies package="."/>
 
   <i18n:registerTranslations directory="locales" />
+
+  <!-- File System Directory Views registration -->
+  <cmf:registerDirectory name="em_skin_custom_templates"/>
 
   <!-- Container for all static theme related files -->
   <plone:static
