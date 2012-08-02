@@ -92,4 +92,15 @@
         interface=".portlets.featuredright.IFeaturedRightPortlet"
         />
 
+    <plone:portlet
+        name="em.skin.browser.portlets.NewsAndEventsPortlet"
+        view_permission="zope2.View"
+        edit_permission="cmf.ManagePortal"
+        renderer=".portlets.newsandevents.Renderer"
+        assignment=".portlets.newsandevents.Assignment"
+        addview=".portlets.newsandevents.AddForm"
+        editview=".portlets.newsandevents.EditForm"
+        interface=".portlets.newsandevents.INewsAndEventsPortlet"
+        />
+
 </configure>

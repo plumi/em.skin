@@ -183,11 +183,11 @@
              For the featured items, we need portlets Feature 1 and Featured 2, showing 1 item, and the hack on the portlets collection
              to display the image when it sees 1 item -->
 
-        <!-- News -->
-        <copy css:content="dl.portlet-collection-news-and-events dt.portletHeader a" css:theme="h4#news-title" />
+        <!-- News and Events -->
+        <copy css:content="dl.portletNewsAndEvents dt.portletHeader a" css:theme="h4#news-title" />
         <replace css:theme="ul#news-right-portlet">
         <ul id="news-right-portlet">
-           <xsl:for-each css:select="dl.portlet-collection-news-and-events dd.portletItem">
+           <xsl:for-each css:select="dl.portletNewsAndEvents dd.portletItem">
                <li>
                     <p class="date"><xsl:copy-of css:select="a span.portletItemDetails" /></p>
                     <h5><a><xsl:copy-of select="a/@*" /><xsl:copy-of select="a/text()" /></a></h5>
@@ -195,7 +195,7 @@
            </xsl:for-each>
         </ul>
         </replace>
-         <replace css:theme="#more-news" css:content="dl.portlet-collection-news dd.portletFooter" />
+        <replace css:theme="#more-news" css:content="dl.portletNewsAndEvents dd.portletFooter" />
        
         <!-- Comments -->
         <copy css:content="dl.portlet-collection-comments dt.portletHeader a" css:theme="h4#comments-title" />

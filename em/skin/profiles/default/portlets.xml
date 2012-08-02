@@ -59,6 +59,14 @@
      manager="plone.rightcolumn"
      category="context"
      key="/"
+     type="em.skin.browser.portlets.NewsAndEventsPortlet"
+     name="News and Events Portlet"
+     />
+
+<assignment
+     manager="plone.rightcolumn"
+     category="context"
+     key="/"
      type="em.skin.browser.portlets.SocialNetworksPortlet"
      name="Social Networks Portlet"
      />
