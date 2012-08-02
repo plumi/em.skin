@@ -20,6 +20,10 @@
                 <li>
                     <a tal:attributes="href python: context.portal_url() + '/Members'" i18n:translate="">Members</a>
                 </li>
+                 <li>
+                    <a tal:attributes="href python: context.portal_url() + '/video languages'" i18n:translate="">Languages</a>
+                </li>
+
             </dt>
         </dl>
     </dd>

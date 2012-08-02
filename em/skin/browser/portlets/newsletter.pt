@@ -7,11 +7,11 @@
                 <input id="newsletter-submit" class="button small" value="Go" type="submit">
             </form>
         </li>
-        <li><a tal:attributes="href python: context.portal_url() + '/contact-info'" i18n:translate="">Contact Us</a></li>
         <li>
             <span class="social-title">Social Media</span>
             <span class="fb"></span>
             <span class="twitter"></span>
         </li>
+        <li><a tal:attributes="href python: context.portal_url() + '/contact-info'" i18n:translate="">Contact Us</a></li>
     </ul>
 </div>
