@@ -98,10 +98,20 @@ a.header-menu-item:hover {
 }
 
 div.top-menu .header-menu-item {
-  padding: 1px 8px;
+  padding: 0 10px;
   background: #efeff2;
   margin-left: 0px;
   border-left: 1px solid #ccc;
+}
+
+div.top-menu .header-menu-item li a {
+  display: inline-block;
+  padding: 2px 5px;
+}
+
+div.top-menu .header-menu-item li.currentLanguage a {
+  background: #fedf69;
+  font-weight: bold;
 }
 
 div.row.header div.top-menu {
@@ -1435,26 +1445,14 @@ div.comment button.reply-to-comment-button:active {
 
 .template-publish_video #content-core div.row form {
   background: #F0F0F2;
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.17);
-  -ms-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.17);
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.17);
 }
 
 #content #content-core div.row ul.formTabs {
   display: block;
   overflow: auto;
   border: none;
-  -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.17);
-  -ms-box-shadow: 0 1px 4px rgba(0,0,0,0.17);
-  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.17);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.17);
-  background: #efeff2;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efeff2), color-stop(100%, #e5e5e7));
-  background: -webkit-linear-gradient(#efeff2, #e5e5e7);
-  background: -ms-linear-gradient(#efeff2, #e5e5e7);
-  background: -moz-linear-gradient(#efeff2, #e5e5e7);
-  background: -o-linear-gradient(#efeff2, #e5e5e7);
-  background: linear-gradient(#efeff2, #e5e5e7);
+  
+  background: #C9CCD1;
   border-bottom: 1px solid #bfbfbf;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -1467,21 +1465,28 @@ div.comment button.reply-to-comment-button:active {
   margin: 0;
   padding: 0;
   border-right: 1px solid #bbb;
+  background: #aaa;
+  color: #efeff1;
+}
+
+#content #content-core div.row ul.formTabs li.formTab a:hover {
+  color: #000;
+  background: #e5e5e7;
 }
 
 #content #content-core div.row ul.formTabs li.formTab a.selected, #content #content-core div.row ul.formTabs li.formTab a:active {
-  background: #333;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #333), color-stop(100%, #5f5f5f));
-  background: -webkit-linear-gradient(#333, #5f5f5f);
-  background: -ms-linear-gradient(#333, #5f5f5f);
-  background: -moz-linear-gradient(#333, #5f5f5f);
-  background: -o-linear-gradient(#333, #5f5f5f);
-  background: linear-gradient(#333, #5f5f5f);  
-  color: #efeff1 !important;
-}
-
-#content #content-core div.row ul.formTabs li.formTab a:link:hover {
-  color: #000;
+  background: #efeff2;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efeff2), color-stop(100%, #e5e5e7));
+  background: -webkit-linear-gradient(#efeff2, #e5e5e7);
+  background: -ms-linear-gradient(#efeff2, #e5e5e7);
+  background: -moz-linear-gradient(#efeff2, #e5e5e7);
+  background: -o-linear-gradient(#efeff2, #e5e5e7);
+  background: linear-gradient(#efeff2, #e5e5e7); 
+  -moz-box-shadow: 0 2px 7px rgba(0,0,0,0.22);
+  -ms-box-shadow: 0 2px 7px rgba(0,0,0,0.22);
+  -webkit-box-shadow: 0 2px 7px rgba(0,0,0,0.22);
+  box-shadow: 0 2px 7px rgba(0,0,0,0.22); 
+  color: #333 !important;
 }
 
 #content #content-core div.row ul.formTabs li.formTab a {
@@ -1502,7 +1507,7 @@ fieldset#fieldset-0.formPanel textarea,
 fieldset#fieldset-default.formPanel textarea.mce_editable {
   padding: 0.5em;
   background: #f8f8fa;
-  font-size: 16px;
+  font-size: 14px;
   border: 1px solid #bbb;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -1658,4 +1663,12 @@ div.listingBarBottom {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
+}
+
+a.user {
+  cursor: pointer;
+}
+
+#statistics {
+  display: inline;
 }
