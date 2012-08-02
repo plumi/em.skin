@@ -38,6 +38,7 @@ setup(name='em.skin',
           'plone.browserlayer',
           'setuptools',
           'unittest2',
+          'Products.ContentWellPortlets',
           'zope.i18nmessageid',
       ],
       entry_points="""

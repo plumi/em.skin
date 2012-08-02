@@ -4,7 +4,7 @@
     i18n:domain="plumi">
 
 <assignment
-     manager="plone.leftcolumn"
+     manager="ContentWellPortlets.FooterPortletManager1"
      category="context"
      key="/"
      type="em.skin.browser.portlets.projects.ProjectsPortlet"
@@ -12,7 +12,27 @@
      />
 
 <assignment
+     remove="True"
      manager="plone.leftcolumn"
+     category="context"
+     key="/"
+     type="portlets.Navigation"
+     name="navigation"
+     />
+
+ <assignment name="Navigation Portlet" category="context" key="/"
+    manager="ContentWellPortlets.FooterPortletManager1" type="portlets.Navigation" visible="True">
+  <property name="topLevel">0</property>
+  <property name="portlet_style"> </property>
+  <property name="currentFolderOnly">False</property>
+  <property name="name"></property>
+  <property name="includeTop">False</property>
+  <property name="bottomLevel">0</property>
+  <property name="root"/>
+ </assignment>
+
+<assignment
+     manager="ContentWellPortlets.FooterPortletManager1"
      category="context"
      key="/"
      type="em.skin.browser.portlets.BrowsePortlet"
@@ -20,7 +40,7 @@
      />
 
 <assignment
-     manager="plone.leftcolumn"
+     manager="ContentWellPortlets.FooterPortletManager1"
      category="context"
      key="/"
      type="em.skin.browser.portlets.PublishPortlet"
@@ -28,7 +48,7 @@
      />
 
 <assignment
-     manager="plone.leftcolumn"
+     manager="ContentWellPortlets.FooterPortletManager1"
      category="context"
      key="/"
      type="em.skin.browser.portlets.NewsletterPortlet"

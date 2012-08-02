@@ -10,9 +10,6 @@
 
   <i18n:registerTranslations directory="locales" />
 
-  <!-- File System Directory Views registration -->
-  <cmf:registerDirectory name="em_skin_custom_templates"/>
-
   <!-- Container for all static theme related files -->
   <plone:static
       directory="theme_resources"

@@ -111,7 +111,7 @@
 
         <!-- FOOTER -->
         <!-- About us -->
-        <replace css:theme="ul#navigation-tree">
+        <replace css:theme="div#lower-container ul#navigation-tree">
             <ul id="navigation-tree">
             <xsl:for-each select="//*[@class='portlet portletNavigationTree']/dd/ul/li">
                 <li>
