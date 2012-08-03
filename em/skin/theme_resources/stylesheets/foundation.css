@@ -102,6 +102,7 @@ div.top-menu .header-menu-item {
   background: #efeff2;
   margin-left: 0px;
   border-left: 1px solid #ccc;
+  padding-right: 5px;
 }
 
 div.top-menu .header-menu-item li a {
@@ -936,7 +937,7 @@ a#featuredVideoTitle, #featuredVideoTitle:link, #featuredVideoTitle:visited {
   background-image: -webkit-linear-gradient(top,#444446 0,#39393b 100%);
   background-image: linear-gradient(to bottom,#444446 0,#39393b 100%);
   width: 186px;
-  height: 331px;
+  height: 329px;
   position: absolute;
   left: -186px;
   top: 0;
@@ -1680,4 +1681,32 @@ a.user {
 
 #statistics {
   display: inline;
+}
+
+#mep_0 {
+  overflow: hidden;
+}
+
+.main-title {
+  height: 113px;
+  margin-left: -8px;
+  width: 460px;
+}
+
+#latest-videos-title a {
+    color: #EFEFF1;
+}
+
+.tileItem p.tileFooter {
+    display:none;
+}
+
+
+div.unisubs-videoTab-anchoring {
+   width: 200px !important;
+}
+
+#user-menu .user {
+    background: url("images/user-down.png") no-repeat scroll right center transparent;
+    padding-right: 30px;
 }
