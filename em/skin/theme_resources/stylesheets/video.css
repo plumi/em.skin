@@ -92,6 +92,11 @@ div.vcard table.vertical tbody th {
 
 div.vcard table.vertical th {
 	text-align: left;
+	width: 28%;
+}
+
+div.vcard table.vertical ul {
+	margin-bottom: 0px;
 }
 
 /* Video Comments */

@@ -353,6 +353,11 @@ ul#navigation-tree li a {
     padding-left: 0 !important;
 }
 
+#lower-container .columns ul a {
+    clear: left;
+    display: block;
+}
+
   /* Newsletter */
 
   #newsletter-portlet form {
@@ -1710,12 +1715,20 @@ div.unisubs-videoTab-anchoring {
    width: 200px !important;
 }
 
-a#form-help  {
-    float: right;
-    position: relative;
-    right: 250px;
-    top: 110px;
-    z-index: 1000;
+a#form-help {
+  position: relative;
+  left: 50%;
+  z-index: 1000;
+  top: 122px;
+  margin-left: 410px;
+  font-weight: bold;
+  padding: 4px 10px;
+  background: #2297ee;
+  color: #fff;
+  font-wize: 18px;
+  -moz-border-radius: 11px;
+  -webkit-border-radius: 11px;
+  border-radius: 11px;
 }
 
 div#categorize-text-container {
@@ -1724,3 +1737,40 @@ div#categorize-text-container {
     position: relative;
     width: 500px;
 }
+
+.author-details {
+    padding-bottom: 20px;
+}
+
+body.template-featured_videos_homepage ul#dl-links {
+    left: 324px !important;
+    width: 201px !important;
+}
+
+/* Front page featured */
+
+.sidebar-section .featured-filmmaker {
+  margin-bottom: 0px;
+}
+
+.sidebar-section .featured-filmmaker div.under {
+  background: #efeff1;
+  border: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.sidebar-section .featured-filmmaker div.proxy-under {
+  height: 48px;
+}
+
+.sidebar-section .featured-filmmaker div.under a {
+    color: #333;
+    text-shadow: none;
+}
+
+.sidebar-section .featured-filmmaker .rollover {
+    width: 100%;
+}
+
