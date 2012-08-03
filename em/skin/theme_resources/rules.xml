@@ -9,6 +9,7 @@
     <theme href="video.html" css:if-content="body.template-video_view #visual-portal-wrapper" />
 
     <theme href="list.html" css:if-content="body.template-video_listing_view #visual-portal-wrapper" />
+    <theme href="list.html" css:if-content="body.template-author" />
 
     <theme href="text.html" css:if-content="#visual-portal-wrapper" />
     
@@ -84,6 +85,9 @@
 
         <!-- drop breadcrumbs -->
         <drop css:content="#portal-breadcrumbs" />
+
+        <!-- drop tags on news items -->
+        <drop css:content="body.portaltype-news-item div#category" />
         
         <!-- HEADER -->        
         <!-- Copy search box -->
@@ -303,7 +307,7 @@
             <div class="documentFullDescription"><xsl:copy-of select="//div[@id='content']//div[1]/div[2]" /></div>
             <div class="listingBarTop"><xsl:copy-of select="//div[@class='listingBar'][1]" /></div>
             <xsl:for-each css:select="#content dl.videos-listing dd.featuredItem">
-                <div class="three columns video">
+                <div class="three columns video tablet-two mobile-one">
                     <div class="wrapper-under">
                         <div class="under">
                             <h5><xsl:copy-of css:select="h4 a.featuredItemTitle"/></h5>
@@ -324,7 +328,7 @@
             </div>
         </replace>
     </rules> 
-   
+    
 
    <!-- AUTHOR PAGE -->
     <rules css:if-content="body.template-author">
@@ -332,11 +336,9 @@
         <copy css:theme="#mid-container div.full h4" css:content-children="#region-content div h1.documentFirstHeading" />
         <replace css:theme="#mid-container #video-listings">
             <div class="content row" id="video-listings">
-            <div class="documentDescription"><xsl:copy-of select="//p[@class='documentDescription']" /></div>
-            <div class="documentDescription"><xsl:copy-of select="//div[@class='discreet']" /></div>
-            <div class="portraitPhoto"><xsl:copy-of select="//p[@class='portraitPhoto']" /></div>
-            <div class="listingBarTop"><xsl:copy-of select="//div[@class='listingBar'][1]" /></div>
-            <xsl:for-each css:select=".featured-block dl.videos-listing dd.featuredItem">
+            <xsl:copy-of select="//div[@id='author-full-details']" />
+  
+            <xsl:for-each css:select=".featured-block dl.videos-listing-only dd.featuredItem">
                 <div class="three columns video">
                     <div class="wrapper-under">
                         <div class="under">
@@ -354,7 +356,10 @@
                     <span class="duration"><xsl:copy-of css:select=".featured-video-duration span" /></span>
                 </div>
             </xsl:for-each>
-            <div class="listingBarBottom"><xsl:copy-of select="//div[@class='listingBar'][1]" /></div>
+            <div class="foo" style="clear:both"></div>
+            <xsl:copy-of select="//p[@id='all-videos']" />
+            <xsl:copy-of select="//div[@id='other-published-stuff']" />
+            <xsl:copy-of select="//div[@id='contact-area']" />
             </div>
         </replace>
     </rules>

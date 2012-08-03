@@ -136,6 +136,7 @@
                 Author ID
             </h1>
 
+            <div id="author-full-details">
             <div class="discreet">
                 <tal:location condition="view/author_city|nothing" i18n:translate="text_location">
                      <span tal:content="view/author_city" tal:omit-tag="" i18n:name="author_city">
@@ -202,20 +203,6 @@
 			        <br />
 		    </tal:url>
 
-		    <tal:homepages condition="view/author_homepages_display|nothing"
-				          i18n:translate="">
-                    <div id="other-homepages-title">Social Networking and Blogs</div>
-			        <div id="other-homepages"
-                         tal:repeat="homepage view/author_homepages_display">
-			           <a tal:attributes="href homepage;
-                                          class python:context.isSocialNetworkURL(homepage)"
-                          tal:content="homepage">
-				    Some URL
-			        </a>
-                    </div>
-
-                    <br />
-            </tal:homepages>
 
                     <tal:street condition="view/author_street|nothing">
                         <span class="street_label" i18n:translate="">Address : </span>
@@ -298,12 +285,14 @@
                 </p>
             </div>
 
+
           </tal:plumi_domain>
           <!-- END : custom author profile, Plumi Skin impl -->
+        </div> <!--author-full-details -->
 
 	<!-- Videos listing -->
 	<div class="featured-block" tal:define="videos view/videos|nothing" tal:condition="videos">
-	  <dl class="videos-listing" i18n:domain="plumi" >
+	  <dl class="videos-listing-only" i18n:domain="plumi" >
 	       
 	    <dt class="featuredHeader">
 	      <a href="#" tal:attributes="href string:${view/homefolder/absolute_url}/videos/RSS2"><img class="feedButton" src="rss2_icon.png" alt="RSS2 Syndication" title="RSS2 Syndication" id="icon-rss2syndication" i18n:attributes="alt title"/></a>
@@ -316,7 +305,8 @@
 	    </dd>
 	    <!-- end of each video item -->
 
-            <p tal:condition="python:mtool.getHomeFolder(id=author)">
+
+            <p id="all-videos" tal:condition="python:mtool.getHomeFolder(id=author)">
               <a href="#" tal:attributes="href python:(mtool.getHomeFolder(id=author).absolute_url() + '/videos')"
                  i18n:translate="label_author_internal_video_page">All videos from this author&hellip;</a>
             </p>
@@ -324,6 +314,7 @@
 	  </dl>
 	</div>
 	<!-- end of video listing for user -->
+        <div id="other-published-stuff">
 
 	<!-- Callout listing -->
 	<div class="featured-block" tal:define="callouts view/callouts|nothing" tal:condition="callouts">
@@ -406,6 +397,10 @@
 	</div>
 	<!-- end of Event listing for user -->
 
+                       
+        </div> <!-- other-published-stuff -->
+
+                        <div id="contact-area">
   <tal:mailsetup tal:condition="python:email_from_address and authorinfo['has_email']">
 
                         <div class="formControls" tal:condition="isAnon">
@@ -421,7 +416,6 @@
                         </div>
 
                         <!-- feedback form -->
-
 
                         <tal:owner tal:condition="python: not isOwner and not isAnon">
                             <p class="discreet"
@@ -498,6 +492,7 @@
                             </form>
                         </tal:owner>
                     </tal:mailsetup>
+                        </div> <!-- contactarea -->
 
             <!-- listing of content created by this user -->
 
