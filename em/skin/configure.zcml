@@ -8,6 +8,9 @@
 
   <includeDependencies package="."/>
 
+  <!-- File System Directory Views registration --> 	
+  <cmf:registerDirectory name="em_skin_custom_templates"/>
+
   <i18n:registerTranslations directory="locales" />
 
   <!-- Container for all static theme related files -->
