@@ -1665,6 +1665,15 @@ div.listingBarBottom {
   border-radius: 3px;
 }
 
+#user-menu a#personaltools-login {
+  padding-right: 10px;
+  border-right: 1px solid #CCCCCC ;
+}
+
+#user-menu a#personaltools-join {
+  padding-left: 10px;
+}
+
 a.user {
   cursor: pointer;
 }

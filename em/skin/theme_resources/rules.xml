@@ -84,6 +84,7 @@
         </rules>
         <rules css:if-content="ul#portal-personaltools > li#anon-personalbar">
             <copy css:content="a#personaltools-login" css:theme="ul#user-menu" />
+            <append css:content="a#personaltools-join" css:theme="ul#user-menu" />
             <drop css:theme="#user-menu ul.dropdown" />
         </rules>
 
