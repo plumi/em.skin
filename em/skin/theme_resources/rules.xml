@@ -100,7 +100,7 @@
 
         <!-- logo -->
         <copy attributes="href title" css:content="a#portal-logo" css:theme="a.main-logo-link" />
-        <copy attributes="href title" css:content="a#portal-logo" css:theme="a.main-title-link" />
+        <copy attributes="href title" css:content="a#portal-logo" css:theme="a.main-title" />
 
         <!-- RSS icon link -->
         <replace css:theme="a.rss">
@@ -151,11 +151,16 @@
         <copy theme="//div[@id='featuredvideo']//div[1]/a" content="//div[@id='featured-front-page']//div[2]/span[1]/a" />
         <copy theme="//div[@id='featuredvideo']//h3" css:content="#featuredVideoTitle" />
         <replace theme="//div[@id='featuredvideo']//p">
-            <p><xsl:copy-of select="substring(//p[@id='featuredVideoDescription']/text(),0,200)" />...</p>
+            <p><xsl:copy-of select="substring(//p[@id='featuredVideoDescription']/text(),0,260)" />...</p>
         </replace>
+
         <!-- RSS icon link to the latest videos feeds -->
-        <replace css:theme="a.rss">
-            <a href="latestvideos/RSS2" class="rss icon"></a>
+        <replace css:theme="#latest-videos-title">
+            <div class="full row no-v-padding row-title" id="latest-videos-title">
+                <h4><a href="latestvideos">Latest Videos</a></h4>
+                <a href="latestvideos/RSS2" class="rss icon"></a>
+            </div>
+
         </replace>
         <!-- In order for this to work, we need News, Comments, Blogs portlets with more link and dates enabled.
              The portlets take their class names according to their names, so keep the portlets News, Comments, Blogs
@@ -202,12 +207,15 @@
            </xsl:for-each>
         </ul>
         </replace>
+        <replace css:theme="#more-blogs" css:content="dl.portlet-collection-blog dd.portletFooter" />
 
         <!-- Featured items. Right portlets 1 -->
         <copy css:content="div.featured-filmmaker" css:theme="div.featured-filmmaker" />
         <copy css:content="div#featured-left" css:theme="div#featured-left" />
         <copy css:content="div#featured-right" css:theme="div#featured-right" />
-
+        <replace css:theme="#more-projects">
+        <a href="projects" id="more-projects">More Projects</a>
+        </replace>
         <!-- Social Networks-->
         <copy css:content-children="div.social-networks" css:theme="div.social-networks" />
         <!-- Latest videos -->
@@ -303,5 +311,39 @@
             </div>
         </replace>
     </rules> 
-    
+   
+
+   <!-- AUTHOR PAGE -->
+    <rules css:if-content="body.template-author">
+        <!-- video listing -->
+        <copy css:theme="#mid-container div.full h4" css:content-children="#region-content div h1.documentFirstHeading" />
+        <replace css:theme="#mid-container #video-listings">
+            <div class="content row" id="video-listings">
+            <div class="documentDescription"><xsl:copy-of select="//p[@class='documentDescription']" /></div>
+            <div class="documentDescription"><xsl:copy-of select="//div[@class='discreet']" /></div>
+            <div class="portraitPhoto"><xsl:copy-of select="//p[@class='portraitPhoto']" /></div>
+            <div class="listingBarTop"><xsl:copy-of select="//div[@class='listingBar'][1]" /></div>
+            <xsl:for-each css:select=".featured-block dl.videos-listing dd.featuredItem">
+                <div class="three columns video">
+                    <div class="wrapper-under">
+                        <div class="under">
+                            <h5><xsl:copy-of css:select="h4 a.featuredItemTitle"/></h5>
+                        </div>
+                    </div>
+                    <div class="proxy-under"></div>
+                    <div class="wrapper-image">
+                        <div class="rollover">
+                            <p><a><xsl:copy-of select="a[@class='featured-video-image']/@href" /><xsl:copy-of select="substring(p/text(),0, 130)" />...</a></p>
+                            <span class="country"><xsl:copy-of select="dl[@class='plumi-country plumi-props-listing']//a" /></span>
+                        </div>
+                        <xsl:copy-of css:select="a.featured-video-image"/>
+                    </div>
+                    <span class="duration"><xsl:copy-of css:select=".featured-video-duration span" /></span>
+                </div>
+            </xsl:for-each>
+            <div class="listingBarBottom"><xsl:copy-of select="//div[@class='listingBar'][1]" /></div>
+            </div>
+        </replace>
+    </rules>
+ 
 </rules>
