@@ -1776,3 +1776,14 @@ body.template-featured_videos_homepage ul#dl-links {
     width: 100%;
 }
 
+.video .wrapper-under {
+  width: 215px;
+}
+
+#calroot {
+  width: 207px !important;
+}
+
+#caldays {
+  height: 22px !important;
+}

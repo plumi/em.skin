@@ -76,6 +76,11 @@
         <append css:if-content="body.template-publish_video" css:theme="#mid-container">
             <div id="categorize-text-container">
                 <span class="categorize-test">HAVE YOU CATEGORISED YOUR VIDEO? Choose the Categorise tab above to make it easier for people to find your video, before clicking Save Changes.</span>
+            <script>
+                window.onload=function(){$('li.lastFormTab').click(function (e) {
+                    $('#categorize-text-container').hide();
+                });}
+            </script>
             </div>
         </append>
 
