@@ -624,6 +624,8 @@ div.sidebar ul li p.date {
   color: #333;
   font-size: 12px;
   padding: 10px 10px 0 10px;
+  border: 0;
+  text-align: left;
 }
 
  /* "More" links */

@@ -2,7 +2,7 @@
     <tal:items tal:repeat="obj view/results">
         <div class="wrapper-under">
             <div class="under">
-                <h5><a tal:attributes="href python: obj.absolute_url();">test2</a></h5>
+                <h5><a tal:content="obj/Title" tal:attributes="href python: obj.absolute_url();">test2</a></h5>
             </div>
         </div>
         <div class="proxy-under"></div>
