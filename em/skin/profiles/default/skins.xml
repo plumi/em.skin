@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_skins">
+ <object name="em_skin_custom_templates"
+    meta_type="Filesystem Directory View"
+    directory="em.skin:skins/em_skin_custom_templates"/>
+
+ <skin-path name="*">
+  <layer name="em_skin_custom_templates"
+     insert-after="custom"/>
+ </skin-path>
+</object>
