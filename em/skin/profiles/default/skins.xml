@@ -4,8 +4,15 @@
     meta_type="Filesystem Directory View"
     directory="em.skin:skins/em_skin_custom_templates"/>
 
+ <object name="em_skin_custom_images"
+    meta_type="Filesystem Directory View"
+    directory="em.skin:skins/em_skin_custom_images"/>
+
+
  <skin-path name="*">
   <layer name="em_skin_custom_templates"
+     insert-after="custom"/>
+  <layer name="em_skin_custom_images"
      insert-after="custom"/>
  </skin-path>
 </object>

@@ -10,6 +10,7 @@
 
   <!-- File System Directory Views registration --> 	
   <cmf:registerDirectory name="em_skin_custom_templates"/>
+  <cmf:registerDirectory name="em_skin_custom_images"/>
 
   <i18n:registerTranslations directory="locales" />
 
