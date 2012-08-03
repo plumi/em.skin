@@ -71,6 +71,13 @@
             <a href="/help" target="_blank" id="form-help">Help</a>
         </prepend>
 
+        <!-- add categorize warning to the bottom of the publish form -->
+        <append css:if-content="body.template-publish_video" css:theme="#mid-container">
+            <div id="categorize-text-container">
+                <span class="categorize-test">HAVE YOU CATEGORISED YOUR VIDEO? Choose the Categorise tab above to make it easier for people to find your video, before clicking Save Changes.</span>
+            </div>
+        </append>
+
         <!--portlet managers -->
         <prepend css:content="#portletmanager-plone-leftcolumn" css:theme="#mid-container" />
         <append css:content="#portletmanager-plone-rightcolumn" css:theme="#mid-container" />

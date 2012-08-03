@@ -1717,3 +1717,10 @@ a#form-help  {
     top: 110px;
     z-index: 1000;
 }
+
+div#categorize-text-container {
+    bottom: 290px;
+    left: 200px;
+    position: relative;
+    width: 500px;
+}
