@@ -66,6 +66,11 @@
         <merge attributes="class" css:content="body" css:theme="body" />
         <copy attributes="id dir" css:content="body" css:theme="body" />
 
+        <!-- add help image to publish form -->
+        <prepend css:if-content="body.template-publish_video" css:theme="#mid-container">
+            <a href="/help" target="_blank" id="form-help">Help</a>
+        </prepend>
+
         <!--portlet managers -->
         <prepend css:content="#portletmanager-plone-leftcolumn" css:theme="#mid-container" />
         <append css:content="#portletmanager-plone-rightcolumn" css:theme="#mid-container" />

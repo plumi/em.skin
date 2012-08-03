@@ -1701,12 +1701,19 @@ a.user {
     display:none;
 }
 
+#user-menu .user {
+    background: url("images/user-down.png") no-repeat scroll right center transparent;
+    padding-right: 30px;
+}
 
 div.unisubs-videoTab-anchoring {
    width: 200px !important;
 }
 
-#user-menu .user {
-    background: url("images/user-down.png") no-repeat scroll right center transparent;
-    padding-right: 30px;
+a#form-help  {
+    float: right;
+    position: relative;
+    right: 250px;
+    top: 110px;
+    z-index: 1000;
 }
