@@ -1,11 +1,18 @@
-<div class="featured-filmmaker" i18n:domain="em.skin">
+<div class="featured-filmmaker video" i18n:domain="em.skin">
     <tal:items tal:repeat="obj view/results">
-        <a tal:attributes="href python: obj.absolute_url();">
-            <img class="featured-image" tal:attributes="src python: obj.getImage().absolute_url() + '_preview'">
-            <span class="featured-text">
-                <h5 tal:content="python: obj.Title()">Featured Item </h5>
-                <span tal:replace="python: obj.Description()">International Freedom of Expression Exchange (IFEX) answers all you need to know about the coming World Press Freedom day. </span>
-            </span>
-        </a>
+        <div class="wrapper-under">
+            <div class="under">
+                <h5><a tal:attributes="href python: obj.absolute_url();">test2</a></h5>
+            </div>
+        </div>
+        <div class="proxy-under"></div>
+        <div class="wrapper-image">
+            <div class="rollover">
+                <p><a tal:attributes="href python: obj.absolute_url();"><span tal:replace="python: obj.Description()">Description</span></a></p>
+            </div>
+            <a tal:attributes="href python: obj.absolute_url();">
+                <img alt="''" tal:attributes="src python: obj.getImage().absolute_url() + '_preview'">
+            </a>
+        </div>
     </tal:items>
 </div>
