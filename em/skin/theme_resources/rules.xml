@@ -93,6 +93,7 @@
         <rules css:if-content="a#user-name">
             <copy css:content-children="dl#portal-personaltools dd.actionMenuContent > ul" css:theme="#user-menu ul.dropdown" />
             <copy css:content-children="a#user-name" css:theme="ul#user-menu > li > a.user" />
+            <copy attributes="href title" css:content="a#user-name" css:theme="ul#user-menu > li > a" />
         </rules>
         <rules css:if-content="ul#portal-personaltools > li#anon-personalbar">
             <copy css:content="a#personaltools-login" css:theme="ul#user-menu" />
