@@ -1791,3 +1791,7 @@ body.template-featured_videos_homepage ul#dl-links {
 #caldays {
   height: 22px !important;
 }
+
+.icons-on .contenttype-document {
+background: none;
+}
