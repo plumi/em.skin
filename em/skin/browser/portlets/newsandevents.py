@@ -49,7 +49,7 @@ class Renderer(base.Renderer):
         """ """
         context = self.context
         portal_catalog = getToolByName(context, 'portal_catalog')
-        results = portal_catalog(portal_type=['News Item','Event'], review_state=['published'],sort_on='effective')[:3]
+        results = portal_catalog(portal_type=['News Item','Event'], review_state=['published'],sort_on='effective',sort_order='descending')[:3]
         objects = []
         for item in results:
             obj = item.getObject()
