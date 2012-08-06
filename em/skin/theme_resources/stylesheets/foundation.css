@@ -1776,8 +1776,12 @@ body.template-featured_videos_homepage ul#dl-links {
     width: 100%;
 }
 
-.featured-filmmaker video .video .wrapper-under {
+.video .wrapper-under {
   width: 215px;
+}
+
+.featured-filmmaker .wrapper-under {
+  width: 226px;
 }
 
 #calroot {
