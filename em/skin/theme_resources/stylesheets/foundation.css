@@ -832,7 +832,7 @@ div.column.centered.load-more {
   -ms-box-shadow: 0 2px 4px rgba(0,0,0,0.18);
   -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.18);
   box-shadow: 0 2px 4px rgba(0,0,0,0.18);
-  z-index: 999;
+  z-index: 499;
 }
 
 .video div.under h3, .video div.under h4, .video div.under h5 {
