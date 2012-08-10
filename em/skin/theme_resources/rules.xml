@@ -27,6 +27,14 @@
         <!-- Copy the <base> tag -->
         <copy content="/html/head/base" theme="/html/head/base" />
 
+        <!-- TEMPORARY FIX FOR EM. SHOULD BE MORE GENERIC -->
+        <rules if-path="portal_registration/passwordreset">
+            <append theme="//html/head">
+                <base href="https://www.engagemedia.org/portal_registration" />
+            </append>
+        </rules>
+
+
         <!-- copy body attrs -->
         <prepend theme="/html/body" content="/html/body/@class" />
         <prepend theme="/html/body" content="/html/body/@id" />
