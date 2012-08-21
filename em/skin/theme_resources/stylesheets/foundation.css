@@ -1795,3 +1795,7 @@ body.template-featured_videos_homepage ul#dl-links {
 .icons-on .contenttype-document {
 background: none;
 }
+
+div#video-listings .video span.duration {
+   right: 25px;
+}
