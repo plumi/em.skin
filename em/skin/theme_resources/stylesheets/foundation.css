@@ -254,10 +254,12 @@ div.featured-content a .featured-text {
 .six.columns div.featured-content a .featured-image {
   float: left;
 }
+
 .sidebar-section ul#blog-right-portlet {
   overflow-y: scroll;
   height: 136px;
 }
+
 
 .six.columns div.featured-content a .featured-text {
   float: left;
@@ -334,7 +336,7 @@ div.row.footer + div.row.footer {
 }
 
 #lower-container .columns h5 {
-  padding-bottom: 1em;
+  padding-bottom: 0.4em;
   border-bottom: 1px solid #aaa;
 }
 
@@ -460,8 +462,8 @@ p img.right { margin: 17px; margin-right: 0; }
 h1, h2, h3, h4, h5, h6 { text-rendering: optimizeLegibility; line-height: 1.1; margin-bottom: 14px; margin-top: 14px; }
 
 body h1 { font-size: 48px; }
-body h2 { font-size: 34px; }
-body h3 { font-size: 24px; }
+body h2 { font-size: 22px; }
+body h3 { font-size: 20px; }
 body h4 { font-size: 14px; line-height: 1.30; }
 body h5 { font-size: 14px; line-height: 1.30; }
 body h6 { font-size: 14px; font-weight: normal; }
