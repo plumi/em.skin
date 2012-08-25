@@ -1414,6 +1414,12 @@ div.comment button.reply-to-comment-button:active {
   font-weight: bold;
 }
 
+body.template-author h2 {
+    text-decoration: underline;
+    color: #205C90;
+}
+
+
 /* ----------------------------------------- Video Upload Form
 ----------------------------------------- */
 
