@@ -1829,3 +1829,10 @@ div#video-listings .video span.duration {
 }
 
 
+@media only screen and (max-width: 985px) {
+   #upper-container div.row.header { background:none; }
+   div.download { display: none; }
+   div.unisubs-videoTab { display:none !important; }
+   div.video div.rollover, div.video div.rollover p { max-width: 215px; }
+   #video-listings div.video, #latestvideos div.video { max-width: 231px; }
+}
