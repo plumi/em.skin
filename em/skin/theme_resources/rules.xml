@@ -385,6 +385,9 @@
             <xsl:copy-of select="//div[@id='contact-area']" />
             </div>
         </replace>
+        <!-- RSS icon link -->
+       <replace css:theme="a.rss">
+        </replace>
     </rules>
  
 </rules>

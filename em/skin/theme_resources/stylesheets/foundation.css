@@ -1417,8 +1417,17 @@ div.comment button.reply-to-comment-button:active {
 body.template-author h2 {
     text-decoration: underline;
     color: #205C90;
+    display: inline;
 }
 
+#other-published-stuff dd.featuredItem img {
+    float: left;
+    margin:  0 1em 0.5em;
+}
+
+#other-published-stuff dd.featuredItem {
+    min-height: 150px;
+}
 
 /* ----------------------------------------- Video Upload Form
 ----------------------------------------- */
@@ -1807,3 +1816,16 @@ background: none;
 div#video-listings .video span.duration {
    right: 25px;
 }
+
+.card {
+    border-color: #FFF;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    margin: 1em;
+    padding: 1em 0;
+    text-align: center;
+    width: 110px;
+}
+
+

@@ -137,6 +137,15 @@
             </h1>
 
             <div id="author-full-details">
+
+           <img src=""
+                 alt=""
+                 class="portraitPhoto"
+                 width="75"
+                 style="float: left; margin: 0 1em 1em;"
+                 tal:attributes="src portrait/absolute_url" />
+
+
             <div class="discreet">
                 <tal:location condition="view/author_city|nothing" i18n:translate="text_location">
                      <span tal:content="view/author_city" tal:omit-tag="" i18n:name="author_city">
@@ -161,12 +170,6 @@
                 </tal:language>
             </div>
 
-            <img src=""
-                 alt=""
-                 class="portraitPhoto"
-                 width="75"
-                 style="float: left; margin: 1em;"
-                 tal:attributes="src portrait/absolute_url" />
                       
 
             <p class="documentDescription" tal:content="view/author_userbio|nothing">
@@ -292,6 +295,9 @@
 
        <tal:videos define="videos view/videos|nothing" condition="videos">
         <h2><a href="#" tal:attributes="href string:${view/homefolder/absolute_url}/videos/" i18n:translate="" >Videos</a></h2>
+       <a href="#" class="video-rss-syndicate" tal:attributes="href string:${view/homefolder/absolute_url}/videos/RSS2"><img class="feedButton" src="../rss.gif" alt="RSS2 Syndication" title="RSS2 Syndication" id="icon-rss2syndication" i18n:attributes="alt title"/></a>
+        <br />
+        <br />
        </tal:videos>
 
         </div> <!--author-full-details -->
@@ -304,8 +310,8 @@
 	  <dl class="videos-listing-only" i18n:domain="plumi" >
 	       
 	    <dt class="featuredHeader">
-	      <a href="#" tal:attributes="href string:${view/homefolder/absolute_url}/videos/RSS2"><img class="feedButton" src="../rss2_icon.png" alt="RSS2 Syndication" title="RSS2 Syndication" id="icon-rss2syndication" i18n:attributes="alt title"/></a>
 	      <h2><a href="#" tal:attributes="href string:${view/homefolder/absolute_url}/videos/" i18n:translate="">Latest Videos</a></h2>
+	      <a href="#" tal:attributes="href string:${view/homefolder/absolute_url}/videos/RSS2"><img class="feedButton" src="../rss.gif" alt="RSS2 Syndication" title="RSS2 Syndication" id="icon-rss2syndication" i18n:attributes="alt title"/></a>
 	    </dt>
 		<!-- each video item -->
 	    <dd class="featuredItem" tal:repeat="obj videos">
@@ -332,8 +338,8 @@
 	  <dl class="videos-listing"  i18n:domain="plumi" >
 	       
 	    <dt class="featuredHeader">
-	      <a href="#" tal:attributes="href string:${view/homefolder/absolute_url}/callouts/RSS2"><img class="feedButton" style="padding-left:3px" src="../rss2_icon.png" alt="RSS2 Syndication" title="RSS2 Syndication" id="icon-rss2syndication" i18n:attributes="alt title"/></a>
 	      <h2><a href="#" tal:attributes="href string:${view/homefolder/absolute_url}/callouts/" i18n:translate="">Latest Callouts</a></h2>
+	      <a href="#" tal:attributes="href string:${view/homefolder/absolute_url}/callouts/RSS2"><img class="feedButton" style="padding-left:3px" src="../rss.gif" alt="RSS2 Syndication" title="RSS2 Syndication" id="icon-rss2syndication" i18n:attributes="alt title"/></a>
 	    </dt>
 
 		<!-- each Callout item -->
@@ -360,8 +366,8 @@
 	  <dl class="videos-listing" i18n:domain="plumi">
 	       
 	    <dt class="featuredHeader">
-	      <a href="#" tal:attributes="href string:${view/homefolder/absolute_url}/news/RSS2"><img class="feedButton" src="../rss2_icon.png" alt="RSS2 Syndication" title="RSS2 Syndication" id="icon-rss2syndication" i18n:attributes="alt title"/></a>
 	      <h2><a href="#" tal:attributes="href string:${view/homefolder/absolute_url}/news/" i18n:translate="">Latest News</a></h2>
+	      <a href="#" tal:attributes="href string:${view/homefolder/absolute_url}/news/RSS2"><img class="feedButton" src="../rss.gif" alt="RSS2 Syndication" title="RSS2 Syndication" id="icon-rss2syndication" i18n:attributes="alt title"/></a>
 	    </dt>
 
 		<!-- each news item -->
@@ -387,8 +393,8 @@
 	  <dl class="videos-listing" i18n:domain="plumi">
 	       
 	    <dt class="featuredHeader">
-	      <a href="#" tal:attributes="href string:${view/homefolder/absolute_url}/events/RSS2"><img class="feedButton" src="../rss2_icon.png" alt="RSS2 Syndication" title="RSS2 Syndication" id="icon-rss2syndication" i18n:attributes="alt title"/></a>
 	      <h2><a href="#" tal:attributes="href string:${view/homefolder/absolute_url}/events/" i18n:translate="">Latest Events</a></h2>
+	      <a href="#" tal:attributes="href string:${view/homefolder/absolute_url}/events/RSS2"><img class="feedButton" src="../rss.gif" alt="RSS2 Syndication" title="RSS2 Syndication" id="icon-rss2syndication" i18n:attributes="alt title"/></a>
 	    </dt>
 
 		<!-- each Event item -->
