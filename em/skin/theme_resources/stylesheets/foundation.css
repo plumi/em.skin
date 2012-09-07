@@ -1002,6 +1002,7 @@ div.video div.rollover p a {
 
 div.video:hover div.rollover {
   display: block;
+  width: 215px;
 }
 
 div.video div.rollover span.country {
@@ -1130,6 +1131,10 @@ img { -ms-interpolation-mode: bicubic; }
   .no-left-margin, .offset-by-one, .offset-by-two, .offset-by-three, .offset-by-four, .offset-by-five, .offset-by-six, .offset-by-seven, .offset-by-eight, .offset-by-nine, .offset-by-ten { margin-left: 0 !important; }
   .left-auto, .push-two, .push-three, .push-four, .push-five, .push-six, .push-seven, .push-eight, .push-nine, .push-ten { left: auto; }
   .right-auto, .pull-two, .pull-three, .pull-four, .pull-five, .pull-six, .pull-seven, .pull-eight, .pull-nine, .pull-ten { right: auto; }
+  .column, .columns {    float: left !important; }
+  .video.featured {  left: 0px !important;   }
+  body.template-featured_videos_homepage #mid-container #featuredvideo .description { left: 0px !important; }
+  body.template-featured_videos_homepage #mid-container #featuredvideo dd.featuredItem { margin-left: 186px; }
 
 /* Tablet Grid ---------------------- */
 @media only screen and (max-width: 985px) and (min-width: 768px) { body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; width: 100%; min-width: 0; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
@@ -1185,6 +1190,9 @@ img { -ms-interpolation-mode: bicubic; }
   .pull-two-mobile { right: 50%; }
   .push-three-mobile { left: 75%; }
   .pull-three-mobile { right: 75%; } 
+  div.LSBox { display: none !important; }
+  div.row.header div.search { display: none !important; }
+  .header-menu-item { float: left !important; }
 }
 /* Block Grids ---------------------- */
 /* These are 2-up, 3-up, 4-up and 5-up ULs, suited
@@ -1633,7 +1641,7 @@ div.searchSection, input.searchButton {
 }
 
 div#LSResult {
-    z-index:1;
+    z-index:1000;
     margin-top: -25px;
     margin-right: 8px;
     background-color: transparent !important;
