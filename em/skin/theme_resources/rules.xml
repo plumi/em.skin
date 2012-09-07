@@ -27,6 +27,14 @@
         <!-- Copy the <base> tag -->
         <copy content="/html/head/base" theme="/html/head/base" />
 
+        <!-- TEMPORARY FIX FOR EM. SHOULD BE MORE GENERIC -->
+        <rules if-path="portal_registration/passwordreset">
+            <append theme="//html/head">
+                <base href="https://www.engagemedia.org/portal_registration" />
+            </append>
+        </rules>
+
+
         <!-- copy body attrs -->
         <prepend theme="/html/body" content="/html/body/@class" />
         <prepend theme="/html/body" content="/html/body/@id" />
@@ -305,6 +313,15 @@
 
     <!-- VIDEO LISTINGS PAGE -->
     <rules css:if-content="body.template-video_listing_view">
+
+        <!-- Show edit bar on Member listings -->
+        <prepend if-path="/Members" css:theme="div#mid-container">
+            <div class="row no-v-padding">
+                <xsl:copy-of css:select="#edit-bar" />
+                <xsl:copy-of css:select="dl.portalMessage" />
+            </div>
+        </prepend>
+
         <!-- video listing -->     
         <copy css:theme="#mid-container div.full h4" css:content-children="div#content div h1.documentFirstHeading" />
         <replace css:theme="#mid-container #video-listings">
@@ -367,6 +384,9 @@
             <xsl:copy-of select="//div[@id='other-published-stuff']" />
             <xsl:copy-of select="//div[@id='contact-area']" />
             </div>
+        </replace>
+        <!-- RSS icon link -->
+       <replace css:theme="a.rss">
         </replace>
     </rules>
  

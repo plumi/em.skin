@@ -254,10 +254,12 @@ div.featured-content a .featured-text {
 .six.columns div.featured-content a .featured-image {
   float: left;
 }
+
 .sidebar-section ul#blog-right-portlet {
   overflow-y: scroll;
   height: 136px;
 }
+
 
 .six.columns div.featured-content a .featured-text {
   float: left;
@@ -334,7 +336,7 @@ div.row.footer + div.row.footer {
 }
 
 #lower-container .columns h5 {
-  padding-bottom: 1em;
+  padding-bottom: 0.4em;
   border-bottom: 1px solid #aaa;
 }
 
@@ -460,8 +462,8 @@ p img.right { margin: 17px; margin-right: 0; }
 h1, h2, h3, h4, h5, h6 { text-rendering: optimizeLegibility; line-height: 1.1; margin-bottom: 14px; margin-top: 14px; }
 
 body h1 { font-size: 48px; }
-body h2 { font-size: 34px; }
-body h3 { font-size: 24px; }
+body h2 { font-size: 22px; }
+body h3 { font-size: 20px; }
 body h4 { font-size: 14px; line-height: 1.30; }
 body h5 { font-size: 14px; line-height: 1.30; }
 body h6 { font-size: 14px; font-weight: normal; }
@@ -832,7 +834,7 @@ div.column.centered.load-more {
   -ms-box-shadow: 0 2px 4px rgba(0,0,0,0.18);
   -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.18);
   box-shadow: 0 2px 4px rgba(0,0,0,0.18);
-  z-index: 999;
+  z-index: 499;
 }
 
 .video div.under h3, .video div.under h4, .video div.under h5 {
@@ -995,7 +997,7 @@ div.video div.rollover, div.video div.rollover p {
 }
 
 div.video div.rollover p a {
-  color: #333;
+  color: #111;
 }
 
 div.video:hover div.rollover {
@@ -1412,6 +1414,21 @@ div.comment button.reply-to-comment-button:active {
   font-weight: bold;
 }
 
+body.template-author h2 {
+    text-decoration: underline;
+    color: #205C90;
+    display: inline;
+}
+
+#other-published-stuff dd.featuredItem img {
+    float: left;
+    margin:  0 1em 0.5em;
+}
+
+#other-published-stuff dd.featuredItem {
+    min-height: 150px;
+}
+
 /* ----------------------------------------- Video Upload Form
 ----------------------------------------- */
 
@@ -1794,4 +1811,28 @@ body.template-featured_videos_homepage ul#dl-links {
 
 .icons-on .contenttype-document {
 background: none;
+}
+
+div#video-listings .video span.duration {
+   right: 25px;
+}
+
+.card {
+    border-color: #FFF;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    margin: 1em;
+    padding: 1em 0;
+    text-align: center;
+    width: 110px;
+}
+
+
+@media only screen and (max-width: 985px) {
+   #upper-container div.row.header { background:none; }
+   div.download { display: none; }
+   div.unisubs-videoTab { display:none !important; }
+   div.video div.rollover, div.video div.rollover p { max-width: 215px; }
+   #video-listings div.video, #latestvideos div.video { max-width: 231px; }
 }
