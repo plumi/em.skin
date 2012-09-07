@@ -280,5 +280,22 @@
     </div>
     <span id="javascript_at_bottom"></span>      
     <span id="javascript_inline"></span>
+    <script>
+    function resizePlayer(){ 
+        if ($(window).width() < 550 ) {
+            mejs.players[0].setPlayerSize($(window).width()-25,($(window).width()-25)/1.75);
+            mejs.players[0].setControlsSize();
+            $('div.videobar').width($(window).width()-25);
+            $('#featuredvideo .description').width($(window).width()-25);
+            try{ mejs.players[0].setVideoSize($(window).width()-25,($(window).width()-25)/1.75); } catch(err) {}
+        } else {
+            $('#featuredvideo .description').attr('style','');
+            $('div.videobar').attr('style','');
+        }
+    };
+
+    $(document).ready(resizePlayer);
+    $(window).resize(resizePlayer);
+    </script>
 </body>
 </html>

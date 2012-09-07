@@ -204,14 +204,14 @@ div.news div.social-networks {
     background: #efeff1;
     border-bottom: 1px solid #bbb;
     padding: 8px;
-  }
+}
 
-  div.news div.social-networks span {
+div.news div.social-networks span {
     display: block;
     float: left;
     padding-top: 14px;
     font-weight: bold;
-  }
+}
 
 div.news div.twitter {
     width: 28px;
@@ -219,7 +219,7 @@ div.news div.twitter {
     margin: 4px 0 0 4px;
     background: url(images/twitter.png) center no-repeat;
     float: right;
-  }
+}
 
 div.news div.fb {
     width: 28px;
@@ -227,9 +227,9 @@ div.news div.fb {
     margin: 4px 0 0 4px;
     background: url(images/facebook.png) center no-repeat;
     float: right;
-  }
+}
 
-  /* Featured Content below Video */
+/* Featured Content below Video */
 
 div.featured-content {
   background: #fdfdfe;
@@ -1837,9 +1837,17 @@ div#video-listings .video span.duration {
 }
 
 @media only screen and (max-width: 985px) {
-   #upper-container div.row.header { background:none; }
+   #upper-container div.row.header { background:none repeat scroll 0 0 #C9CCD1; }
    div.download { display: none; }
    div.unisubs-videoTab { display:none !important; }
    div.video div.rollover, div.video div.rollover p { max-width: 215px; }
    #video-listings div.video, #latestvideos div.video { max-width: 231px; }
+   body.template-featured_videos_homepage #mid-container #featuredvideo .description { 
+       clear: both; 
+       position: inherit;
+       float: none;
+       width: 525px;
+       height: auto;
+       padding-bottom: 10px;
+   }
 }
