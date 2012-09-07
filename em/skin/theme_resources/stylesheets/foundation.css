@@ -1839,7 +1839,11 @@ div#video-listings .video span.duration {
 @media only screen and (max-width: 985px) {
    #upper-container div.row.header { background:none repeat scroll 0 0 #C9CCD1; }
    #upper-container div.header {width: 100%;}
-   div.row.header .main-title p {left:0;}
+   #portal-searchbox { margin-top: 2.2em !important; margin-bottom:.6em !important}
+   div.row.header div.search { display: block; float: none; clear: both; }
+   div.row.header, div.twelve.columns.header { height: 150px; }
+   div.top-menu .header-menu-item { float: left; }
+   div.row.header a.main-title p {left:0; color: transparent}
    div.download { display: none; }
    div.unisubs-videoTab { display:none !important; }
    div.video div.rollover, div.video div.rollover p { max-width: 215px; }
