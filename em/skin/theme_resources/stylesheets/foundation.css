@@ -360,34 +360,34 @@ ul#navigation-tree li a {
     display: block;
 }
 
-  /* Newsletter */
+/* Newsletter */
 
-  #newsletter-portlet form {
+#newsletter-portlet form {
     overflow: auto;
     background: none;
     margin-top: 6px;
-  }
+}
 
-  input#newsletter-input {
+input#newsletter-input {
     display: block;
     float: left;
     background: #efeff1;
-  }
+}
 
-  input#newsletter-submit {
+input#newsletter-submit {
     display:block;
     float:left;
     margin-left: 10px;
-  }
+}
 
-  /* Social Networks */
+/* Social Networks */
 
-  #lower-container span.social-title {
+#lower-container span.social-title {
     display: block;
     float: left;
-  }
+}
 
-  #lower-container span.twitter {
+#lower-container span.twitter {
     width: 32px;
     height: 32px;
     margin-left: 8px;
@@ -395,28 +395,28 @@ ul#navigation-tree li a {
     position: relative;
     background: url(images/twitter.png) no-repeat;
     float: left;
-  }
+}
 
-    #lower-container span.fb {
+#lower-container span.fb {
     width: 32px;
     height: 32px;
     margin-left: 8px;
     margin-top: -10px;
     background: url(images/facebook.png) no-repeat;
     float: left;
-  }
+}
 
-  #lower-container .colophon {
+#lower-container .colophon {
     margin: 10px 0;
     font-size: 12px;
-  }
+}
 
-  #lower-container .colophon a {
+#lower-container .colophon a {
     color: #333;
     font-size: 12px;
-  }
+}
 
-  #lower-container .colophon span.plumi-logo {
+#lower-container .colophon span.plumi-logo {
     display: inline-block;
     height: 20px;
     width: 47px;
@@ -424,7 +424,7 @@ ul#navigation-tree li a {
     position: relative;
     top: 5px;
     left: -4px;
-  }
+}
 
 /* Links ---------------------- */
 a { color: #2bc6eb; text-decoration: none; line-height: inherit; }
@@ -1827,7 +1827,6 @@ div#video-listings .video span.duration {
     text-align: center;
     width: 110px;
 }
-
 
 @media only screen and (max-width: 985px) {
    #upper-container div.row.header { background:none; }

@@ -34,7 +34,6 @@
             </append>
         </rules>
 
-
         <!-- copy body attrs -->
         <prepend theme="/html/body" content="/html/body/@class" />
         <prepend theme="/html/body" content="/html/body/@id" />
@@ -173,7 +172,11 @@
         <copy css:content="#portal-column-content" css:theme="#post-content > div.text-content" />        
         <drop css:content="span.documentModified > span" />
     </rules>
+    
 
+    <!--rules css:if-path="portal_registration/passwordreset">
+        <copy content="/html/head/base" theme="/html/head/base" />
+    </rules-->
     <!-- HOMEPAGE -->
     <rules css:if-content="body.template-featured_videos_homepage">
         
@@ -313,7 +316,6 @@
 
     <!-- VIDEO LISTINGS PAGE -->
     <rules css:if-content="body.template-video_listing_view">
-
         <!-- Show edit bar on Member listings -->
         <prepend if-path="/Members" css:theme="div#mid-container">
             <div class="row no-v-padding">
