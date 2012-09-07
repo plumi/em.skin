@@ -1192,6 +1192,7 @@ img { -ms-interpolation-mode: bicubic; }
   div.LSBox { display: none !important; }
   div.row.header div.search { display: none !important; }
   .header-menu-item { float: left !important; }
+  .search {float: left;}
 }
 /* Block Grids ---------------------- */
 /* These are 2-up, 3-up, 4-up and 5-up ULs, suited
@@ -1837,6 +1838,8 @@ div#video-listings .video span.duration {
 
 @media only screen and (max-width: 985px) {
    #upper-container div.row.header { background:none repeat scroll 0 0 #C9CCD1; }
+   #upper-container div.header {width: 100%;}
+   div.row.header .main-title p {left:0;}
    div.download { display: none; }
    div.unisubs-videoTab { display:none !important; }
    div.video div.rollover, div.video div.rollover p { max-width: 215px; }
