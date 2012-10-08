@@ -112,4 +112,6 @@ div.video-comments-title {
 }
  
 
-
+.videobar span {
+    cursor: pointer !important;
+}

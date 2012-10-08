@@ -1605,6 +1605,10 @@ div.formControls input[type="submit"]:hover {
   box-shadow: 0 2px 7px rgba(0,0,0,0.2);
 }
 
+.videobar span {
+    cursor: pointer !important;
+}
+
 div.formControls input[type="submit"]:active {
   color: #000;
   border: 1px solid #444;
