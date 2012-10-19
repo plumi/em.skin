@@ -257,7 +257,7 @@ div.featured-content a .featured-text {
 
 .sidebar-section ul#blog-right-portlet {
   overflow-y: scroll;
-  height: 136px;
+  height: 188px;
 }
 
 
@@ -1410,6 +1410,11 @@ div.comment button.reply-to-comment-button:active {
 #post-content .row.text-content {
   border-top: 1px solid #f9f9fa;
   border-bottom: 1px solid #bbb;
+  background-color: #C9CCD1;
+}
+
+#post-content .nine {
+  background-color: #F0F0F2;
 }
 
 #post-header .row.text-content .post-title {
@@ -1478,6 +1483,10 @@ body.template-author h2 {
 
 .template-publish_video #content-core div.row form {
   background: #F0F0F2;
+}
+
+#content {
+  margin: -2em 0.25em 2em !important;
 }
 
 #content #content-core div.row ul.formTabs {
@@ -1809,6 +1818,10 @@ body.template-featured_videos_homepage ul#dl-links {
   width: 215px;
 }
 
+#content img.tileImage {
+  margin-top: 0.5em !important;
+} 
+
 .featured-filmmaker .wrapper-under {
   width: 226px;
 }
@@ -1862,3 +1875,4 @@ div#video-listings .video span.duration {
        padding-bottom: 10px;
    }
 }
+
