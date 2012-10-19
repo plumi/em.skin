@@ -1410,6 +1410,11 @@ div.comment button.reply-to-comment-button:active {
 #post-content .row.text-content {
   border-top: 1px solid #f9f9fa;
   border-bottom: 1px solid #bbb;
+  background-color: #C9CCD1;
+}
+
+#post-content .nine {
+  background-color: #F0F0F2;
 }
 
 #post-header .row.text-content .post-title {
