@@ -115,3 +115,8 @@ div.video-comments-title {
 .videobar span {
     cursor: pointer !important;
 }
+
+#content {
+    margin-top: -1em !important;
+}
+
