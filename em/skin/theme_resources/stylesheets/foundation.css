@@ -1818,6 +1818,10 @@ body.template-featured_videos_homepage ul#dl-links {
   width: 215px;
 }
 
+#content img.tileImage {
+  margin-top: 0.5em !important;
+} 
+
 .featured-filmmaker .wrapper-under {
   width: 226px;
 }
@@ -1871,3 +1875,4 @@ div#video-listings .video span.duration {
        padding-bottom: 10px;
    }
 }
+
