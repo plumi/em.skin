@@ -168,9 +168,11 @@
              doormat is needed for the theme -->
         <drop css:theme="#content-footer" />       
         <copy css:content-children=".siteelement-footertext .footertext" css:theme="#colophon" />
-        
-        <copy css:content="#portal-column-content" css:theme="#post-content > div.text-content" />        
+
+        <!-- main content -->        
+        <copy css:content="#portal-column-content" css:theme="#post-content > div.text-content > div.nine" />        
         <drop css:content="span.documentModified > span" />
+        
     </rules>
     
 
