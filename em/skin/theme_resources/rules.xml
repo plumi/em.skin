@@ -224,6 +224,23 @@
     <!--rules css:if-path="portal_registration/passwordreset">
         <copy content="/html/head/base" theme="/html/head/base" />
     </rules-->
+
+    <!-- Login Page-->
+    <rules css:if-content="#login_form">
+        <drop css:theme="div.sidebar" />
+    </rules>
+
+    <!-- Register Page -->
+    <rules css:if-content="body.template-register">
+        <drop css:theme="div.sidebar" />
+    </rules>
+
+    <!-- Publish Page -->
+    <rules css:if-content="body.template-publish_video">
+        <drop css:theme="div.sidebar" />
+    </rules>
+
+
     <!-- HOMEPAGE -->
     <rules css:if-content="body.template-featured_videos_homepage">
         

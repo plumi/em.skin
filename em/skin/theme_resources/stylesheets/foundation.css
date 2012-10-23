@@ -1759,7 +1759,7 @@ a#form-help {
   position: relative;
   left: 50%;
   z-index: 1000;
-  top: 122px;
+  top: 100px;
   margin-left: 410px;
   font-weight: bold;
   padding: 4px 10px;
@@ -1773,7 +1773,7 @@ a#form-help {
 
 div#categorize-text-container {
     bottom: 290px;
-    left: 200px;
+    left: 500px;
     position: relative;
     width: 500px;
 }
@@ -1876,3 +1876,6 @@ div#video-listings .video span.duration {
    }
 }
 
+body.template-logged_out .row .nine, body.template-login_form .row .nine, body.template-register .row .nine, body.template-publish_video .row .nine {
+    width:100%;
+}
