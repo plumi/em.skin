@@ -204,6 +204,18 @@
         </replace>
         <replace css:theme="#more-comments" css:content="dl.portlet-collection-comments dd.portletFooter" />
 
+
+        <!-- Blogroll static text -->
+        <replace css:theme="ul#blogroll-right-portlet">
+        <ul id="blogroll-right-portlet">
+           <xsl:for-each css:select="dl.portlet-static-blogroll dd.portletItem p">
+               <li>
+                    <h5><a><xsl:copy-of select="a/@*" /><xsl:copy-of select="a/text()" /></a></h5>
+               </li>
+           </xsl:for-each>
+        </ul>
+        </replace>
+
        <!-- Blogs -->
         <copy css:content="dl.portlet-collection-blog dt.portletHeader a" css:theme="h4#blog-title" />
         <replace css:theme="ul#blog-right-portlet">
