@@ -245,7 +245,7 @@ div.featured-content a .featured-image {
 div.featured-content a .featured-text {
   display: block;
   color: #222;
-  padding: 12.5px;
+  padding: 9.5px;
   background: #fdfdfe;
 }
 
@@ -256,7 +256,7 @@ div.featured-content a .featured-text {
 }
 
 .sidebar-section ul#blog-right-portlet {
-  overflow-y: scroll;
+/*   overflow-y: scroll; */
   height: 188px;
 }
 
@@ -427,7 +427,8 @@ input#newsletter-submit {
 }
 
 /* Links ---------------------- */
-a { color: #2bc6eb; text-decoration: none; line-height: inherit; }
+a { color: #205C90; text-decoration: none; line-height: inherit; }
+/* a { color: #2bc6eb; text-decoration: none; line-height: inherit; } */
 
 a:hover { color: #16bee7; }
 
@@ -982,8 +983,12 @@ a#featuredVideoTitle, #featuredVideoTitle:link, #featuredVideoTitle:visited {
 div.video div.rollover {
   display: none;
   position: absolute;
-  top: 0;
-  left: 0;
+/*   top: 0; */
+/*  left: 0; */
+  height: 122px;
+  left: 3px;
+  top: 8px;
+  width: 215px;
   bottom: 0px;
   padding: 8px;
   overflow: hidden;
