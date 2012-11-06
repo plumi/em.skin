@@ -800,6 +800,7 @@ div.column.centered.load-more {
 }
 .video div.wrapper-under, .video div.wrapper-image {
   position: relative;
+  width: 100%;
 }
 
 .video div.under {
@@ -983,12 +984,9 @@ a#featuredVideoTitle, #featuredVideoTitle:link, #featuredVideoTitle:visited {
 div.video div.rollover {
   display: none;
   position: absolute;
-/*   top: 0; */
-/*  left: 0; */
-  height: 122px;
-  left: 3px;
-  top: 8px;
-  width: 215px;
+  left: 0; 
+  top: 0;
+  width: 100%;
   bottom: 0px;
   padding: 8px;
   overflow: hidden;
@@ -1007,7 +1005,7 @@ div.video div.rollover p a {
 
 div.video:hover div.rollover {
   display: block;
-  width: 215px;
+  width: 100%;
 }
 
 div.video div.rollover span.country {
@@ -1884,3 +1882,4 @@ div#video-listings .video span.duration {
 body.template-logged_out .row .nine, body.template-login_form .row .nine, body.template-register .row .nine, body.template-publish_video .row .nine {
     width:100%;
 }
+
