@@ -1883,3 +1883,7 @@ body.template-logged_out .row .nine, body.template-login_form .row .nine, body.t
     width:100%;
 }
 
+body.template-usergroup-userprefs .row .nine {
+    width:100%;
+}
+

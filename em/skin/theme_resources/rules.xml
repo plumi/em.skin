@@ -230,6 +230,8 @@
         </replace>
         <replace css:theme="#more-blogs" css:content="dl.portlet-collection-blog dd.portletFooter" />
         
+        <!-- Userprefs page -->
+        <drop css:theme="div.sidebar" if-path="/@@usergroup-userprefs" />
     </rules>
     
 
@@ -241,6 +243,7 @@
     <rules css:if-content="#login_form">
         <drop css:theme="div.sidebar" />
     </rules>
+
 
     <!-- Register Page -->
     <rules css:if-content="body.template-register">
