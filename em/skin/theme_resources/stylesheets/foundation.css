@@ -800,7 +800,6 @@ div.column.centered.load-more {
 }
 .video div.wrapper-under, .video div.wrapper-image {
   position: relative;
-  width: 100%;
 }
 
 .video div.under {
@@ -986,12 +985,17 @@ div.video div.rollover {
   position: absolute;
   left: 0; 
   top: 0;
-  width: 100%;
+  width: 215px;
   bottom: 0px;
   padding: 8px;
   overflow: hidden;
   background: #f5f5f7;
   opacity: 0.82;
+}
+
+div.sidebar-section div.wrapper-image div.rollover {
+    width: 100% !important;
+    height: 100%;
 }
 
 div.video div.rollover, div.video div.rollover p {
@@ -1005,7 +1009,6 @@ div.video div.rollover p a {
 
 div.video:hover div.rollover {
   display: block;
-  width: 100%;
 }
 
 div.video div.rollover span.country {
@@ -1690,6 +1693,7 @@ div.listingBarBottom {
 
 #video-listings div.video, #latestvideos div.video {
     height: 177px;
+    width: 231px;
 }
 
 #fieldset-openid-login .formControls input, #login-form .formControls input {
@@ -1813,8 +1817,9 @@ body.template-featured_videos_homepage ul#dl-links {
     text-shadow: none;
 }
 
-.sidebar-section .featured-filmmaker .rollover {
-    width: 100%;
+.sidebar .featured-filmmaker .rollover {
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .video .wrapper-under {
