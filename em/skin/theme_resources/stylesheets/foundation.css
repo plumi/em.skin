@@ -1892,3 +1892,16 @@ body.template-usergroup-userprefs .row .nine {
     width:100%;
 }
 
+#viewlet-below-content-title {
+    margin-bottom: 20px;
+}
+
+h1#parent-fieldname-title {
+    margin-bottom: 0px !important;
+    line-height: normal !important;
+}
+
+#content h1.documentFirstHeading {
+    margin-top: 5px !important;
+}
+
