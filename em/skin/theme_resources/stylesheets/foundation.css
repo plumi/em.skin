@@ -1686,9 +1686,13 @@ div.LSBox {
     margin-top: -10px;
 }
 
+.content div.listingBar {
+    font-size: 100%;
+}
+
 div.listingBarBottom {
     clear: both;
-    padding-top: 35px;
+    padding-top: 5px;
 }
 
 #video-listings div.video, #latestvideos div.video {
