@@ -1017,6 +1017,11 @@ div.video div.rollover span.country {
   margin-top: 0.5em;
 }
 
+/* Events */
+#content .eventDetails.vcard .eventDetail h3 {
+   margin-top: -2px;
+}
+
 /* Print styles.  Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/ Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
 */
 .print-only { display: none !important; }
