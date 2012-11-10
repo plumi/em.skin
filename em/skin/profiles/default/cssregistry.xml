@@ -16,7 +16,7 @@
 
   <stylesheet
       enabled="off"
-      expression="not:request/HTTP_X_THEME_ENABLED | nothing"
+      expression="nothing"
       id="RTL.css"
       />
 
@@ -48,12 +48,6 @@
       enabled="off"
       expression="not:request/HTTP_X_THEME_ENABLED | nothing"
       id="print.css"
-      />
-
-  <stylesheet
-      enabled="off"
-      expression="not:request/HTTP_X_THEME_ENABLED | nothing"
-      id="RTL.css"
       />
 
   <stylesheet
@@ -96,6 +90,13 @@
       enabled="off"
       expression="not:request/HTTP_X_THEME_ENABLED | nothing"
       id="forms.css"
+      />
+
+
+  <stylesheet
+      enabled="off" 
+      expression="not:request/HTTP_X_THEME_ENABLED | nothing"
+      id="++resource++plumi.content.stylesheets/main.css"
       />
       
 </object>
