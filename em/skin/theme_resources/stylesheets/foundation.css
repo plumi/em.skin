@@ -380,6 +380,26 @@ input#newsletter-submit {
     margin-left: 10px;
 }
 
+/* Copyright */
+div#copyright-button img {
+    float: left;   
+}
+
+div#copyrightDocumentByLine {
+    text-align: left;
+}
+
+div#copyright-text {
+    padding-left: 8em;
+    padding-top: 0.2em;
+}
+
+div#copyright-citation {
+    text-align: center;
+    font-size: 85%;
+    padding-top: 1em;
+}
+
 /* Social Networks */
 
 #lower-container span.social-title {
