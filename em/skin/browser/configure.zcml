@@ -103,4 +103,12 @@
         interface=".portlets.newsandevents.INewsAndEventsPortlet"
         />
 
+    <browser:page	
+        for="*"
+        name="author_view"
+        class=".author.AuthorPage"
+        permission="zope2.View"
+        allowed_interface="plumi.content.browser.interfaces.IAuthorPage"
+        />
+
 </configure>
