@@ -1914,3 +1914,11 @@ h1#parent-fieldname-title {
     margin-top: 5px !important;
 }
 
+.loginOption {
+    padding: 1em;
+}
+
+.kssattr-formname-register {
+    width: 75%;
+}
+
