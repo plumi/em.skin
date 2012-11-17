@@ -1947,11 +1947,15 @@ h1#parent-fieldname-title {
     margin-top: 5px !important;
 }
 
-.loginOption {
+form#login_form {
     padding: 1em;
 }
 
 .kssattr-formname-register {
     width: 75%;
+}
+
+.video.featured div.description h3 {
+  line-height: 1em;
 }
 
