@@ -2376,6 +2376,10 @@ div.footer dl.portlet span.portletTopLeft, div.footer dl.portlet dt.portletHeade
     border: none;
 }
 
+div.footer dl.portlet dd.portletItem {
+    padding: 0;
+}
+
 div.footer dl.portletNavigationTree dt.hiddenStructure {
     display: none !important;
 }
