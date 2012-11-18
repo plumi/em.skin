@@ -50,9 +50,9 @@ class Renderer(base.Renderer):
         """ """
         context = self.context
         portal = getSite()
-        folder_path = '/'
+        folder_path = '/'.join(context.getPhysicalPath())
         portal_catalog = getToolByName(context, 'portal_catalog')
-        results = portal_catalog(portal_type=['Document','Topic','Folder'], path={'query': folder_path, 'depth': 1}, sort_on="getObjPositionInParent")
+        results = portal_catalog(portal_type=['Document','Topic','Folder'], path={'query': folder_path, 'depth': 1}, review_state=['published'], sort_on="getObjPositionInParent")
         return self.request.get(
             'items', results)
 
