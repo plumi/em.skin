@@ -4,13 +4,13 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <!-- Apply theme to normal Plone pages -->
-    <theme href="index.html" css:if-content="body.template-featured_videos_homepage #visual-portal-wrapper" />
-    
+    <theme href="index.html" css:if-content="body.template-featured_videos_homepage #visual-portal-wrapper" />    
     <theme href="video.html" css:if-content="body.template-video_view #visual-portal-wrapper" />
 
     <theme href="list.html" css:if-content="body.template-video_listing_view #visual-portal-wrapper" />
-    <theme href="list.html" css:if-content="body.template-author" />
+    <theme href="author.html" css:if-content="body.template-author #visual-portal-wrapper" />
 
+    <!--theme href="search.html" css:if-content="body.template-search #visual-portal-wrapper" /-->
     <theme href="text.html" css:if-content="#visual-portal-wrapper" />
     
     <!-- ALL PAGES -->
@@ -71,7 +71,6 @@
 
         <!-- Copy over the id/class attributes on the body tag.
              This is important for per-section styling -->
-        <merge attributes="class" css:content="body" css:theme="body" />
         <copy attributes="id dir" css:content="body" css:theme="body" />
 
         <!-- add help image to publish form -->
@@ -94,6 +93,14 @@
         <!--portlet managers -->
         <prepend css:content="#portletmanager-plone-leftcolumn" css:theme="#mid-container" />
         <append css:content="#portletmanager-plone-rightcolumn" css:theme="#mid-container" />
+
+        <!--right column portlets-->
+        <append theme="//div[@class='three columns news sidebar']" css:content="#portal-column-two"/>
+
+        <!-- footer portlets -->
+        <replace theme-children="//div[@class='row footer']/div[@class='columns']" css:content="div.FooterPortletManager1"/>
+
+        <append css:content="div.manageFooterPortletsLink" theme="//div[@class='row footer']/div[@class='columns']" />
 
         <!-- drop breadcrumbs -->
         <drop css:content="#portal-breadcrumbs" />
@@ -133,36 +140,10 @@
         <copy attributes="href title" css:content="a#portal-logo" css:theme="a.main-title" />
 
         <!-- RSS icon link -->
-        <replace css:theme="a.rss">
+        <replace css:theme="a.rss" if-not-path="author">
             <a href="RSS2" class="rss icon"></a>
         </replace>
 
-        <!-- FOOTER -->
-        <!-- About us -->
-        <replace css:theme="div#lower-container ul#navigation-tree">
-            <ul id="navigation-tree">
-            <xsl:for-each select="//*[@class='portlet portletNavigationTree']/dd/ul/li">
-                <li>
-                    <xsl:copy-of select="a" />
-                </li>
-            </xsl:for-each>
-            </ul>
-        </replace>
-        
-        <!-- Projects -->
-        <!--copy css:content="dl.portletProjects" css:theme="ul#projects-tree" /-->
-        <replace css:theme="ul#projects-tree">
-            <ul id="projects-tree">
-            <xsl:for-each select="//*[@class='portlet portletProjects']/ul/li">
-                <li>
-                    <xsl:copy-of select="a" />
-                </li>
-            </xsl:for-each>
-            </ul>
-        </replace>
-
-        <!-- Newsletter -->
-        <copy css:content="#newsletter-portlet" css:theme="#newsletter-footer" />
 
         <!-- Content footer is for siteelement doormat, so update this rule if
              doormat is needed for the theme -->
@@ -173,63 +154,6 @@
         <copy css:content="#portal-column-content" css:theme="#post-content > div.text-content > div.nine" />        
         <drop css:content="span.documentModified > span" />
 
-        <!-- featured right-->
-        <copy css:content="div.featured-filmmaker" css:theme="div.featured-filmmaker" />
-
-        <!-- News and Events -->
-        <copy css:content="dl.portletNewsAndEvents dt.portletHeader a" css:theme="h4#news-title" css:if-content="dl.portletNewsAndEvents dt.portletHeader a" />
-        <replace css:theme="ul#news-right-portlet">
-        <ul id="news-right-portlet">
-           <xsl:for-each css:select="dl.portletNewsAndEvents dd.portletItem">
-               <li>
-                    <p class="date"><xsl:copy-of css:select="a span.portletItemDetails" /></p>
-                    <h5><a><xsl:copy-of select="a/@*" /><xsl:copy-of select="a/text()" /></a></h5>
-               </li>
-           </xsl:for-each>
-        </ul>
-        </replace>
-        <replace css:theme="#more-news" css:content="dl.portletNewsAndEvents dd.portletFooter" />
-       
-        <!-- Comments -->
-        <copy css:content="dl.portlet-collection-comments dt.portletHeader a" css:theme="h4#comments-title" />
-        <replace css:theme="ul#comments-right-portlet">
-        <ul id="comments-right-portlet">
-           <xsl:for-each css:select="dl.portlet-collection-comments dd.portletItem">
-               <li>
-                    <p class="date"><xsl:copy-of css:select="a span.portletItemDetails" /></p>
-                    <h5><a><xsl:copy-of select="a/@*" /><xsl:copy-of select="a/text()" /></a></h5>
-               </li>
-           </xsl:for-each>
-        </ul>
-        </replace>
-        <replace css:theme="#more-comments" css:content="dl.portlet-collection-comments dd.portletFooter" />
-
-
-        <!-- Blogroll static text, needs css:if-content="body.template-blog_view or similar -->
-        <replace css:if-content="body.template-blog_view" css:theme="ul#blogroll-right-portlet">
-        <ul id="blogroll-right-portlet">
-           <xsl:for-each css:select="dl.portlet-static-blogroll dd.portletItem p">
-               <li>
-                    <h5><a><xsl:copy-of select="a/@*" /><xsl:copy-of select="a/text()" /></a></h5>
-               </li>
-           </xsl:for-each>
-        </ul>
-        </replace>
-
-       <!-- Blogs -->
-        <copy css:content="dl.portlet-collection-blog dt.portletHeader a" css:theme="h4#blog-title" />
-        <replace css:theme="ul#blog-right-portlet">
-        <ul id="blog-right-portlet">
-           <xsl:for-each css:select="dl.portlet-collection-blog dd.portletItem">
-               <li>
-                    <p class="date"><xsl:copy-of css:select="a span.portletItemDetails" /></p>
-                    <h5><a><xsl:copy-of select="a/@*" /><xsl:copy-of select="a/text()" /></a></h5>
-               </li>
-           </xsl:for-each>
-        </ul>
-        </replace>
-        <replace css:theme="#more-blogs" css:content="dl.portlet-collection-blog dd.portletFooter" />
-        
         <!-- Userprefs page -->
         <drop css:theme="div.sidebar" if-path="/@@usergroup-userprefs" />
     </rules>
@@ -258,21 +182,25 @@
 
     <!-- HOMEPAGE -->
     <rules css:if-content="body.template-featured_videos_homepage">
-       
-      <prepend css:theme="div.content">
+
+       <prepend css:theme="div.content">
             <div class="row no-v-padding">
                 <xsl:copy-of css:select="#edit-bar" />
                 <xsl:copy-of css:select="dl.portalMessage" />
             </div>
         </prepend>
- 
+
+        
         <!-- Featured video -->
         <replace theme="//*[@id='featuredvideo']/div[1]" content="//video/.."/>
         <copy theme="//div[@id='featuredvideo']//div[1]/a" content="//div[@id='featured-front-page']//div[2]/span[1]/a" />
         <copy theme="//div[@id='featuredvideo']//h3" css:content="#featuredVideoTitle" />
-        <replace theme="//div[@id='featuredvideo']//p">
+        <replace theme="//div[@id='featuredvideo'][1]//p">
+            <div class="featuredVideo-date">, <xsl:value-of select="substring(//span[@class='featuredItemDetailsPosted discreet'],14,21)" /></div>
+            <span class="country"><xsl:copy-of select="//div[@id='featured-front-page']//div[2]//dl[@class='plumi-country plumi-props-listing']/dd/ul/li/a" /></span>
             <p><xsl:copy-of select="substring(//p[@id='featuredVideoDescription']/text(),0,260)" />...</p>
         </replace>
+        <drop css:theme=".video.featured div.description" css:if-not-content="#featured-item"/>
 
         <!-- RSS icon link to the latest videos feeds -->
         <replace css:theme="#latest-videos-title">
@@ -286,48 +214,6 @@
              The portlets take their class names according to their names, so keep the portlets News, Comments, Blogs
              For the featured items, we need portlets Feature 1 and Featured 2, showing 1 item, and the hack on the portlets collection
              to display the image when it sees 1 item -->
-
-        <!-- News and Events -->
-        <copy css:content="dl.portletNewsAndEvents dt.portletHeader a" css:theme="h4#news-title" css:if-content="dl.portletNewsAndEvents dt.portletHeader a" />
-        <replace css:theme="ul#news-right-portlet">
-        <ul id="news-right-portlet">
-           <xsl:for-each css:select="dl.portletNewsAndEvents dd.portletItem">
-               <li>
-                    <p class="date"><xsl:copy-of css:select="a span.portletItemDetails" /></p>
-                    <h5><a><xsl:copy-of select="a/@*" /><xsl:copy-of select="a/text()" /></a></h5>
-               </li>
-           </xsl:for-each>
-        </ul>
-        </replace>
-        <replace css:theme="#more-news" css:content="dl.portletNewsAndEvents dd.portletFooter" />
-       
-        <!-- Comments -->
-        <copy css:content="dl.portlet-collection-comments dt.portletHeader a" css:theme="h4#comments-title" />
-        <replace css:theme="ul#comments-right-portlet">
-        <ul id="comments-right-portlet">
-           <xsl:for-each css:select="dl.portlet-collection-comments dd.portletItem">
-               <li>
-                    <p class="date"><xsl:copy-of css:select="a span.portletItemDetails" /></p>
-                    <h5><a><xsl:copy-of select="a/@*" /><xsl:copy-of select="a/text()" /></a></h5>
-               </li>
-           </xsl:for-each>
-        </ul>
-        </replace>
-        <replace css:theme="#more-comments" css:content="dl.portlet-collection-comments dd.portletFooter" />
-
-       <!-- Blogs -->
-        <copy css:content="dl.portlet-collection-blog dt.portletHeader a" css:theme="h4#blog-title" />
-        <replace css:theme="ul#blog-right-portlet">
-        <ul id="blog-right-portlet">
-           <xsl:for-each css:select="dl.portlet-collection-blog dd.portletItem">
-               <li>
-                    <p class="date"><xsl:copy-of css:select="a span.portletItemDetails" /></p>
-                    <h5><a><xsl:copy-of select="a/@*" /><xsl:copy-of select="a/text()" /></a></h5>
-               </li>
-           </xsl:for-each>
-        </ul>
-        </replace>
-        <replace css:theme="#more-blogs" css:content="dl.portlet-collection-blog dd.portletFooter" />
 
         <!-- Featured items. Right portlets 1 -->
         <copy css:content="div.featured-filmmaker" css:theme="div.featured-filmmaker" />
@@ -353,6 +239,7 @@
                             <div class="rollover">
                                 <p><a><xsl:copy-of select="a[@class='featured-video-image']/@href" /><xsl:copy-of select="substring(p/text(),0, 130)" />...</a></p>
                                 <span class="country"><xsl:copy-of select="dl[@class='plumi-country plumi-props-listing']//a" /></span>
+                                <xsl:value-of select="substring(span[@class='featuredItemDetailsPosted discreet'],14,21)" />
                             </div>
                             <xsl:copy-of css:select="a.featured-video-image"/>
                         </div>
@@ -363,7 +250,7 @@
                     <a class="button large" href="latestvideos">More Videos</a>
                 </div>
             </div>
-        </replace>           
+        </replace>
     </rules>
     
     <!-- VIDEO VIEW PAGE -->
@@ -387,7 +274,7 @@
         <append css:theme="#video-info" css:content="#video-transcoding" /> 
         <copy css:theme="#video-comments" css:content=".discussion" /> 
         <append css:theme="#video-comments" css:content="#commenting" /> 
-    
+ 
         <replace css:theme=".video-list">
             <ul class="video-list">
             <xsl:for-each css:select="#authors_latest li">
@@ -444,39 +331,105 @@
 
    <!-- AUTHOR PAGE -->
     <rules css:if-content="body.template-author">
+        <copy css:theme="#mid-container div#video-title h1" css:content-children="#region-content div h1.documentFirstHeading" />
+        <copy css:theme="li.location" css:content-children="div.author-details a" />
+        <replace css:theme="li.lang a" css:content-children="div#author-full-details div.discreet a" />
+        <copy css:theme="li.description" css:content-children="div#author-full-details p.documentDescription" />
+        <copy css:theme="div.author-image-wrapper" css:content="#author-full-details > img" />
+        <copy css:theme="li.paypal" css:content="div#paypal-donation" />
+        <drop css:theme="li.role" />
+        <drop css:theme="li.genres" />
+        <drop css:theme="li.activities" />
+        <copy css:theme="li.homepage" css:content="p.homepage a" />
+
         <!-- video listing -->
-        <copy css:theme="#mid-container div.full h4" css:content-children="#region-content div h1.documentFirstHeading" />
         <replace css:theme="#mid-container #video-listings">
             <div class="content row" id="video-listings">
-            <xsl:copy-of select="//div[@id='author-full-details']" />
-  
-            <xsl:for-each css:select=".featured-block dl.videos-listing-only dd.featuredItem">
-                <div class="three columns video">
-                    <div class="wrapper-under">
-                        <div class="under">
-                            <h5><xsl:copy-of css:select="h4 a.featuredItemTitle"/></h5>
+                <xsl:for-each css:select=".featured-block dl.videos-listing-only dd.featuredItem">
+                    <div class="three columns video">
+                        <div class="wrapper-under">
+                            <div class="under">
+                                <h5><xsl:copy-of css:select="h4 a.featuredItemTitle"/></h5>
+                            </div>
                         </div>
-                    </div>
-                    <div class="proxy-under"></div>
-                    <div class="wrapper-image">
-                        <div class="rollover">
-                            <p><a><xsl:copy-of select="a[@class='featured-video-image']/@href" /><xsl:copy-of select="substring(p/text(),0, 130)" />...</a></p>
-                            <span class="country"><xsl:copy-of select="dl[@class='plumi-country plumi-props-listing']//a" /></span>
+                        <div class="proxy-under"></div>
+                        <div class="wrapper-image">
+                            <div class="rollover">
+                                <p><a><xsl:copy-of select="a[@class='featured-video-image']/@href" /><xsl:copy-of select="substring(p/text(),0, 130)" />...</a></p>
+                                <span class="country"><xsl:copy-of select="dl[@class='plumi-country plumi-props-listing']//a" /></span>
+                            </div>
+                            <xsl:copy-of css:select="a.featured-video-image"/>
                         </div>
-                        <xsl:copy-of css:select="a.featured-video-image"/>
-                    </div>
-                    <span class="duration"><xsl:copy-of css:select=".featured-video-duration span" /></span>
+                        <span class="duration"><xsl:copy-of css:select=".featured-video-duration span" /></span>
                 </div>
             </xsl:for-each>
             <div class="foo" style="clear:both"></div>
             <xsl:copy-of select="//p[@id='all-videos']" />
-            <xsl:copy-of select="//div[@id='other-published-stuff']" />
-            <xsl:copy-of select="//div[@id='contact-area']" />
+            <!--xsl:copy-of select="//div[@id='other-published-stuff']" />
+            <xsl:copy-of select="//div[@id='contact-area']" /-->
             </div>
         </replace>
-        <!-- RSS icon link -->
-       <replace css:theme="a.rss">
+
+        <!-- news listing -->
+        <!--copy css:theme="#mid-container div.full h4" css:content-children="#region-content div h1.documentFirstHeading" /-->
+        <replace css:theme="#news-listing">
+        <div class="content row">
+            <div class="twelve columns">
+                <ul class="news list">
+                    <xsl:for-each css:select=".featured-block dl.news-listing dd.featuredItem">
+                        <li>
+                            <span class="image"><xsl:copy-of select="img" /></span>
+                            <span class="posted"><xsl:copy-of select="div/h4" /></span>
+                            <span class="posted"><xsl:value-of select="substring(div/span[@class='featuredItemDetailsPosted discreet'],10,28)" /></span>
+                            <span class="content">
+                            <xsl:copy-of select="substring(div/p[@class='discreet plumi-nice-description']/text(),0, 430)" />
+                            </span>
+                            <span class="readmore"><xsl:copy-of select="div/p/span[@class='featured-read-more']/a" /></span>
+                        </li>
+                    </xsl:for-each>
+                </ul>
+            </div>
+        </div>
         </replace>
+
+        <!-- events listing -->
+        <replace css:theme="#events-listing">
+        <div class="content row">
+            <div class="twelve columns">
+                <ul class="events list">
+                    <xsl:for-each css:select=".featured-block dl.events-listing dd.featuredItem">
+                        <li>
+                            <span class="image"><xsl:copy-of select="img" /></span>
+                            <span class="posted"><xsl:copy-of select="div/h4" /></span>
+                            <span class="posted"><xsl:value-of select="substring(div/span[@class='featuredItemDetailsPosted discreet'],10,28)" /></span>
+                            <span class="content">
+                            <xsl:copy-of select="substring(div/p[@class='discreet plumi-nice-description']/text(),0, 430)" />
+                            </span>
+                            <xsl:for-each select="div/p/a">
+                                <xsl:copy-of select="." />
+                            </xsl:for-each>
+                            <span class="readmore"><xsl:copy-of select="div/p/span[@class='featured-read-more']/a" /></span>
+                        </li>
+                    </xsl:for-each>
+                </ul>
+            </div>
+        </div>
+        </replace>
+
+        <append css:theme="#mid-container">
+            <div class="content row">
+                <xsl:copy-of css:select="div#contact-area" />
+            </div>
+        </append>
+
+        <!-- RSS icon link -->
+        <prepend css:theme="a.rss-videos" content="//a[@class='videos-rss-syndicate']/@href" />
+        <prepend css:theme="a.rss-news" content="//a[@class='news-rss-syndicate']/@href" />
+        <prepend css:theme="a.rss-events" content="//a[@class='events-rss-syndicate']/@href" />
+
     </rules>
- 
+
+        <!-- drop browse/publish menu on pages that doesn't have it -->
+        <drop css:if-not-content="#portal-column-one" css:theme="ul#publish-menu" />
+        <drop css:if-not-content="#portal-column-one" css:theme="ul#browse-menu" />
 </rules>

@@ -1,6 +1,6 @@
 <dl class="portlet portletProjects"
     i18n:domain="em.skin">
-    <a href="/Projects"><h5>Projects</h5></a>
+    <a href="/about-us"><h5>About Us</h5></a>
     <ul>
         <tal:items tal:repeat="obj view/results">
             <dd class="portletItem">

@@ -1,13 +1,16 @@
+from zope.interface import Interface
+from zope.interface import implements
+
 from plone.app.portlets.portlets import base
 from plone.portlets.interfaces import IPortletDataProvider
-from zope.interface import implements
-from Products.CMFCore.utils import getToolByName
+
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from Products.CMFCore.utils import getToolByName
+from Products.CMFPlone import utils
+from zope.app.component.hooks import getSite
 
-from zope import i18n
-_ = i18n.MessageFactory("em.skin")
 
-class IPublishPortlet(IPortletDataProvider):
+class IAboutUsPortlet(IPortletDataProvider):
     """A portlet
 
     It inherits from IPortletDataProvider because for this portlet, the
@@ -16,7 +19,6 @@ class IPublishPortlet(IPortletDataProvider):
     """
     pass
 
-
 class Assignment(base.Assignment):
     """Portlet assignment.
 
@@ -24,14 +26,14 @@ class Assignment(base.Assignment):
     with columns.
     """
 
-    implements(IPublishPortlet)
+    implements(IAboutUsPortlet)
 
     @property
     def title(self):
         """This property is used to give the title of the portlet in the
         "manage portlets" screen.
         """
-        return _(u"Publish Portlet")
+        return u"About Us Portlet"
 
 
 class Renderer(base.Renderer):
@@ -42,7 +44,17 @@ class Renderer(base.Renderer):
     of this class. Other methods can be added and referenced in the template.
     """
 
-    render = ViewPageTemplateFile('publishportlet.pt')
+    render = ViewPageTemplateFile('aboutus.pt')
+
+    def results(self):
+        """ """
+        context = self.context
+        portal = getSite()
+        folder_path = '/'
+        portal_catalog = getToolByName(context, 'portal_catalog')
+        results = portal_catalog(portal_type=['Document','Topic','Folder'], path={'query': folder_path, 'depth': 1}, sort_on="getObjPositionInParent")
+        return self.request.get(
+            'items', results)
 
 
 class AddForm(base.AddForm):
@@ -55,7 +67,6 @@ class AddForm(base.AddForm):
 
     def create(self, data):
         return Assignment(**data)
-
 
 class EditForm(base.EditForm):
     """Portlet edit form.

@@ -4,6 +4,12 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="em.skin">
 
+    <interface
+        interface=".interfaces.IThemeSpecific"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="Engagemedia Skin"
+        />
+
     <plone:portlet
         name="em.skin.browser.portlets.projects.ProjectsPortlet"
         view_permission="zope2.View"
@@ -14,6 +20,18 @@
         editview=".portlets.projects.EditForm"
         interface=".portlets.projects.IProjectsPortlet"
         />
+
+    <plone:portlet
+        name="em.skin.browser.portlets.aboutus.AboutUsPortlet"
+        view_permission="zope2.View"
+        edit_permission="cmf.ManagePortal"
+        renderer=".portlets.aboutus.Renderer"
+        assignment=".portlets.aboutus.Assignment"
+        addview=".portlets.aboutus.AddForm"
+        editview=".portlets.aboutus.EditForm"
+        interface=".portlets.aboutus.IAboutUsPortlet"
+        />
+
 
     <plone:portlet
         name="em.skin.browser.portlets.PublishPortlet"
@@ -103,12 +121,48 @@
         interface=".portlets.newsandevents.INewsAndEventsPortlet"
         />
 
-    <browser:page	
-        for="*"
+    <browser:page
+        name="search"
+        class="plone.app.search.browser.Search"
+        permission="zope2.View"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        template="templates/search.pt"
+        layer=".interfaces.IThemeSpecific"        
+        />
+
+    <browser:page
+        name="updated_search"
+        class="plone.app.search.browser.Search"
+        permission="zope2.View"
+        for="Products.CMFCore.interfaces.IFolderish"
+        template="templates/updated_search.pt"
+        layer=".interfaces.IThemeSpecific"
+        />
+        
+    <browser:page
+        name="publish"
+        class="plumi.skin.browser.views.PublishView"
+        permission="cmf.SetOwnProperties"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        layer=".interfaces.IThemeSpecific"
+        />        
+
+    <browser:page
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        allowed_interface="plumi.content.browser.interfaces.IAuthorPage"
         name="author_view"
         class=".author.AuthorPage"
         permission="zope2.View"
-        allowed_interface="plumi.content.browser.interfaces.IAuthorPage"
+        layer=".interfaces.IThemeSpecific"        
+        />
+
+   <browser:page
+        name="taxonomy"
+        class=".views.Taxonomy"
+        permission="zope2.View"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        template="templates/taxonomy.pt"
+        layer=".interfaces.IThemeSpecific"
         />
 
 </configure>
