@@ -175,22 +175,19 @@
 	<!-- custom author profile , Plumi Skin implementation -->
     <tal:plumi_domain i18n:domain="plumi">
         <div class="author-location">
-            <div class="author-city">
-                <tal:location condition="view/author_city|nothing" i18n:translate="text_location">
-                        Location:
-                        <span tal:content="view/author_city" tal:omit-tag="" i18n:name="author_city">
-                            Some City
-                        </span>,
-                </tal:location>
-                <tal:location condition="authorinfo/location" i18n:translate="text_location">
-                            Location:
-                         <a tal:attributes="href string:${portal_url}/@@author_listing?intype=location&invalue=${authorinfo/location}">
-                            <span tal:content="authorinfo/location" tal:omit-tag="" i18n:name="location">
-                                Some Country
-                            </span>
-                         </a>
-                </tal:location>
-            </div>
+            <tal:location condition="view/author_city|nothing" i18n:translate="text_location">
+                Location:
+                <span tal:content="view/author_city" tal:omit-tag="" i18n:name="author_city">
+                    Some City
+                </span>,
+            </tal:location>
+            <tal:location condition="authorinfo/location" i18n:translate="text_location">
+                     <a tal:attributes="href string:${portal_url}/@@author_listing?intype=location&invalue=${authorinfo/location}">
+                        <span tal:content="authorinfo/location" tal:omit-tag="" i18n:name="location">
+                            Some Country
+                        </span>
+                     </a>
+            </tal:location>
         </div>
             <div class="author-homepage">
 		        <tal:url condition="view/author_url|nothing"
