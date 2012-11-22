@@ -2126,9 +2126,11 @@ body.template-featured_videos_homepage ul#dl-links {
 
 dl#blog-portlet {
   background: none repeat scroll 0 0 #FDFDFE;
-  height: 188px;
   margin-bottom: 0 !important;
-  overflow-y: scroll;
+}
+
+dl#blog-portlet dd:last-child {
+  border-bottom: none;
 }
 
 .sidebar .featured-filmmaker {
