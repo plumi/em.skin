@@ -348,7 +348,7 @@
     <rules css:if-content="body.template-author">
         <copy css:theme="#mid-container div#video-title h1" css:content-children="#region-content div h1.documentFirstHeading" />
         <copy css:theme="li.location" css:content-children="div.author-location" />
-        <replace css:theme="li.lang a" css:content-children="div.author-language a" />
+        <replace css:theme="li.lang" css:content-children="div.author-language a" />
         <copy css:theme="li.interests" css:content-children="div.author-interests" />
         <copy css:theme="li.activities" css:content-children="div.author-activities" />
         <copy css:theme="li.formats" css:content-children="div.author-formats" />
@@ -362,6 +362,8 @@
         <drop css:if-not-content="div.author-interests" css:theme="li.interests" />
         <drop css:if-not-content="div.author-activities" css:theme="li.activities" />
         <drop css:if-not-content="div.author-formats" css:theme="li.formats" />
+        <drop css:if-not-content="p.homepage a" css:theme="li.homepage" />
+        <drop if-not-content="//div[@id='author-full-details']//p[@class='documentDescription']/text()" css:theme="li.description" />
 
         <!-- video listing -->
         <replace css:theme="#mid-container #video-listings">
@@ -394,7 +396,7 @@
         <!-- news listing -->
         <!--copy css:theme="#mid-container div.full h4" css:content-children="#region-content div h1.documentFirstHeading" /-->
         <replace css:theme="#news-listing">
-        <div class="content row">
+        <div class="content row news-listing">
             <div class="twelve columns">
                 <ul class="news list">
                     <xsl:for-each css:select=".featured-block dl.news-listing dd.featuredItem">
@@ -415,7 +417,7 @@
 
         <!-- events listing -->
         <replace css:theme="#events-listing">
-        <div class="content row">
+        <div class="content row event-listing">
             <div class="twelve columns">
                 <ul class="events list">
                     <xsl:for-each css:select=".featured-block dl.events-listing dd.featuredItem">
@@ -447,6 +449,10 @@
         <prepend css:theme="a.rss-videos" content="//a[@class='videos-rss-syndicate']/@href" />
         <prepend css:theme="a.rss-news" content="//a[@class='news-rss-syndicate']/@href" />
         <prepend css:theme="a.rss-events" content="//a[@class='events-rss-syndicate']/@href" />
+    
+        <drop if-not-content="//a[@class='news-rss-syndicate']/@href" css:theme="a.rss-news" />
+        <drop if-not-content="//a[@class='videos-rss-syndicate']/@href" css:theme="a.rss-videos" />
+        <drop if-not-content="//a[@class='events-rss-syndicate']/@href" css:theme="a.rss-events" />
 
     </rules>
 
