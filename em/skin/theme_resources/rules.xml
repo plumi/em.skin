@@ -215,6 +215,22 @@
              For the featured items, we need portlets Feature 1 and Featured 2, showing 1 item, and the hack on the portlets collection
              to display the image when it sees 1 item -->
 
+        <!-- Blog portlet -->
+	
+        <!-- Blogs -->
+        <copy css:content="dl.portletBlog dt.portletHeader a" css:theme="h4#blog-title" />
+        <replace css:theme="ul#blog-right-portlet">
+            <ul id="blog-right-portlet">
+               <xsl:for-each css:select="dl.portletBlog dd.portletItem">
+                   <li>
+                        <p class="date"><xsl:copy-of css:select="a span.portletItemDetails" /></p>
+                        <h5><a><xsl:copy-of select="a/@*" /><xsl:copy-of select="a/text()" /></a></h5>
+                   </li>
+               </xsl:for-each>
+            </ul>
+        </replace>
+        <replace css:theme="#more-blogs" css:content="dl.portletBlog dd.portletFooter" />
+
         <!-- Featured items. Right portlets 1 -->
         <copy css:content="div.featured-filmmaker" css:theme="div.featured-filmmaker" />
         <copy css:content="div#featured-left" css:theme="div#featured-left" />

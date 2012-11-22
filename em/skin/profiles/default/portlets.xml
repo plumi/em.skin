@@ -45,6 +45,14 @@
      />
 
 <assignment
+     manager="plone.leftcolumn"
+     category="context"
+     key="/"
+     type="em.skin.browser.portlets.blog.BlogPortlet"
+     name="Blog Portlet"
+     />
+
+<assignment
      manager="ContentWellPortlets.FooterPortletManager1"
      category="context"
      key="/"

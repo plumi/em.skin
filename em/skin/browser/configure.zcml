@@ -32,6 +32,17 @@
         interface=".portlets.aboutus.IAboutUsPortlet"
         />
 
+    <plone:portlet
+        name="em.skin.browser.portlets.blog.BlogPortlet"
+        view_permission="zope2.View"
+        edit_permission="cmf.ManagePortal"
+        renderer=".portlets.blog.Renderer"
+        assignment=".portlets.blog.Assignment"
+        addview=".portlets.blog.AddForm"
+        editview=".portlets.blog.EditForm"
+        interface=".portlets.blog.IBlogPortlet"
+        />
+
 
     <plone:portlet
         name="em.skin.browser.portlets.PublishPortlet"
