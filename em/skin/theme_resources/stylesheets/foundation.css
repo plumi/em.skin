@@ -376,7 +376,9 @@ input#newsletter-submit {
 
 /* Copyright */
 div#copyright-button img {
-    float: left;   
+    float: left;  
+    padding-left: 5px;
+    padding-right: 5px; 
 }
 
 div#copyrightDocumentByLine {
@@ -384,14 +386,29 @@ div#copyrightDocumentByLine {
 }
 
 div#copyright-text {
-    padding-left: 8em;
     padding-top: 0.2em;
+    display: inline;
 }
 
 div#copyright-citation {
     text-align: center;
     font-size: 85%;
     padding-top: 1em;
+    display: inline;
+}
+
+#print_citation {
+    display: none;
+}
+
+#click-citation {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#copyrightDocumentByLine {
+    margin-top: 2em;
+    padding-bottom: 3px;
 }
 
 /* Social Networks */
@@ -2124,6 +2141,15 @@ body.template-featured_videos_homepage ul#dl-links {
 
 /* Front page featured */
 
+dl#blog-portlet {
+  background: none repeat scroll 0 0 #FDFDFE;
+  margin-bottom: 0 !important;
+}
+
+dl#blog-portlet dd:last-child {
+  border-bottom: none;
+}
+
 .sidebar .featured-filmmaker {
   margin-bottom: 0px;
 }
@@ -2394,6 +2420,22 @@ div.footer dl.portletNavigationTree dt.hiddenStructure {
 div.footer dl.portlet ul.navTreeLevel0 > .navTreeItem {
     border: none !important;
     padding: 0 !important;
+    line-height: 1.5em;
+}
+
+div.footer dl.portlet ul.navTreeLevel0 > li.section-about-us {
+    border-bottom: 1px solid #AAA !important;
+    margin-top: 15px;
+}
+
+div.footer dl.portlet ul.navTreeLevel0 > li.section-about-us a:link {
+    color: #444444 !important;
+    font-weight: bold !important;
+    font-family: "Helvetica Neue",Arial,FreeSans,sans-serif !important;
+}
+
+li.section-about-us ul {
+    margin-bottom: 3px;
 }
 
 div.footer dl.portlet dd.portletItem a:link {
@@ -2449,20 +2491,11 @@ div.FooterPortletManager1 dt.portletHeader a.tile {
   border-bottom: 1px solid #aaa !important;
 }
 
-dl#blog-portlet {
-  background: none repeat scroll 0 0 #FDFDFE;
-  height: 144px;
-  margin-bottom: 0 !important;
-  overflow-y: scroll;
-}
-
 body.template-usergroup-userprefs .row .nine {
     width: 100% !important;
 }
 
 li.section-about-us a {
-    padding-bottom: 0.4em;
-    border-bottom: 1px solid #AAA !important;
     font-size: 14px !important;
     line-height: 1.30;
     color: black !important;
