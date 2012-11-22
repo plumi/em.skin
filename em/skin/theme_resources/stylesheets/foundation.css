@@ -2124,6 +2124,13 @@ body.template-featured_videos_homepage ul#dl-links {
 
 /* Front page featured */
 
+dl#blog-portlet {
+  background: none repeat scroll 0 0 #FDFDFE;
+  height: 188px;
+  margin-bottom: 0 !important;
+  overflow-y: scroll;
+}
+
 .sidebar .featured-filmmaker {
   margin-bottom: 0px;
 }
@@ -2447,13 +2454,6 @@ div.FooterPortletManager1 dt.portletHeader a.tile {
 
 #content div.FooterPortletManager1 dl.portletNavigationTree dt.portletHeader a.tile {
   border-bottom: 1px solid #aaa !important;
-}
-
-dl#blog-portlet {
-  background: none repeat scroll 0 0 #FDFDFE;
-  height: 144px;
-  margin-bottom: 0 !important;
-  overflow-y: scroll;
 }
 
 body.template-usergroup-userprefs .row .nine {
