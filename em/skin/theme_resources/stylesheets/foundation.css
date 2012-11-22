@@ -2455,3 +2455,16 @@ dl#blog-portlet {
   margin-bottom: 0 !important;
   overflow-y: scroll;
 }
+
+body.template-usergroup-userprefs .row .nine {
+    width: 100% !important;
+}
+
+li.section-about-us a {
+    padding-bottom: 0.4em;
+    border-bottom: 1px solid #AAA !important;
+    font-size: 14px !important;
+    line-height: 1.30;
+    color: black !important;
+    font-weight: bold !important;
+}
