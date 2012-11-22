@@ -191,6 +191,7 @@
                          </a>
                 </tal:location>
             </div>
+        </div>
             <div class="author-homepage">
 		        <tal:url condition="view/author_url|nothing"
 				              i18n:translate="">
@@ -272,7 +273,6 @@
                     </tal:repeat>
                 </tal:media_formats>
             </div>
-        </div>
 
             <div id="paypal-donation" tal:define="paypalcode view/author_paypal|nothing"
                                          tal:condition="paypalcode">

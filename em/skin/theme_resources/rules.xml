@@ -361,6 +361,11 @@
         <drop css:theme="li.activities" />
         <copy css:theme="li.homepage" css:content="p.homepage a" />
 
+        <drop css:if-not-content="div.author-language a" css:theme="li.lang a" />
+        <drop css:if-not-content="div.author-interests" css:theme="li.interests" />
+        <drop css:if-not-content="div.author-activities" css:theme="li.activities" />
+        <drop css:if-not-content="div.author-formats" css:theme="li.formats" />
+
         <!-- video listing -->
         <replace css:theme="#mid-container #video-listings">
             <div class="content row" id="video-listings">
