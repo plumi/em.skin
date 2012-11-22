@@ -403,6 +403,11 @@ div#copyright-citation {
     text-decoration: underline;
 }
 
+#copyrightDocumentByLine {
+    margin-top: 2em;
+    padding-bottom: 3px;
+}
+
 /* Social Networks */
 
 #lower-container span.social-title {
