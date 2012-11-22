@@ -75,7 +75,7 @@
 
         <!-- add help image to publish form -->
         <prepend css:if-content="body.template-publish_video" css:theme="#mid-container">
-            <a href="/help" target="_blank" id="form-help">Help</a>
+            <a href="/help/how-to-upload-video" target="_blank" id="form-help">Help</a>
         </prepend>
 
         <!-- add categorize warning to the bottom of the publish form -->
