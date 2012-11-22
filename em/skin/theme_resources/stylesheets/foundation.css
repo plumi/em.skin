@@ -2401,6 +2401,22 @@ div.footer dl.portletNavigationTree dt.hiddenStructure {
 div.footer dl.portlet ul.navTreeLevel0 > .navTreeItem {
     border: none !important;
     padding: 0 !important;
+    line-height: 1.5em;
+}
+
+div.footer dl.portlet ul.navTreeLevel0 > li.section-about-us {
+    border-bottom: 1px solid #AAA !important;
+    margin-top: 15px;
+}
+
+div.footer dl.portlet ul.navTreeLevel0 > li.section-about-us a:link {
+    color: #444444 !important;
+    font-weight: bold !important;
+    font-family: "Helvetica Neue",Arial,FreeSans,sans-serif !important;
+}
+
+li.section-about-us ul {
+    margin-bottom: 3px;
 }
 
 div.footer dl.portlet dd.portletItem a:link {
@@ -2461,8 +2477,6 @@ body.template-usergroup-userprefs .row .nine {
 }
 
 li.section-about-us a {
-    padding-bottom: 0.4em;
-    border-bottom: 1px solid #AAA !important;
     font-size: 14px !important;
     line-height: 1.30;
     color: black !important;
