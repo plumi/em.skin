@@ -254,12 +254,6 @@ div.featured-content a .featured-text {
   float: left;
 }
 
-.sidebar-section ul#blog-right-portlet {
-  overflow-y: scroll;
-  height: 144px;
-}
-
-
 .six.columns div.featured-content a .featured-text {
   float: left;
   width: 225px;
@@ -2273,6 +2267,12 @@ dl.portlet dd.portletItem {
     border-bottom: 1px solid #CCCCCC;
 }
 
+li.portletItem {
+    background: none repeat scroll 0 0 #FDFDFE;
+    margin-bottom: 0;
+    border-bottom: 1px solid #CCCCCC;
+}
+
 dl.portlet dd.portletItem a:link {
     color: #205C90;
     text-decoration: none;
@@ -2339,7 +2339,7 @@ div.tileItem div.documentByLine {
 }
 
 #feedback_form div.formControls {
-   margin: 0
+   margin: 0;
 }
 
 div.rollover .featuredItemDetailsPosted {
@@ -2432,10 +2432,12 @@ form.kssattr-formname-register {
 
 .author-info li.paypal {
   padding: 1px 10px;
+}
 
 .video.featured div.description h3 {
   line-height: 1em;
 }
+
 
 div.FooterPortletManager1 dt.portletHeader a.tile {
   padding-bottom: 0.4em;
@@ -2447,3 +2449,9 @@ div.FooterPortletManager1 dt.portletHeader a.tile {
   border-bottom: 1px solid #aaa !important;
 }
 
+dl#blog-portlet {
+  background: none repeat scroll 0 0 #FDFDFE;
+  height: 144px;
+  margin-bottom: 0 !important;
+  overflow-y: scroll;
+}

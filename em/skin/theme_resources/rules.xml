@@ -220,14 +220,13 @@
         <!-- Blogs -->
         <copy css:content="dl.portletBlog dt.portletHeader a" css:theme="h4#blog-title" />
         <replace css:theme="ul#blog-right-portlet">
-            <ul id="blog-right-portlet">
+            <dl id="blog-portlet" class="portlet">
                <xsl:for-each css:select="dl.portletBlog dd.portletItem">
-                   <li>
-                        <p class="date"><xsl:copy-of css:select="a span.portletItemDetails" /></p>
-                        <h5><a><xsl:copy-of select="a/@*" /><xsl:copy-of select="a/text()" /></a></h5>
-                   </li>
+                   <dd class="portletItem odd">
+                        <a><xsl:copy-of select="a/@*" /><xsl:copy-of select="a/text()" /><xsl:copy-of css:select="a span.portletItemDetails" /></a>  
+                   </dd>
                </xsl:for-each>
-            </ul>
+            </dl>
         </replace>
         <replace css:theme="#more-blogs" css:content="dl.portletBlog dd.portletFooter" />
 
