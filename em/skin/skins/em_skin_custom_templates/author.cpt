@@ -189,7 +189,6 @@
                                 Some Country
                             </span>
                          </a>
-                    </div>
                 </tal:location>
             </div>
             <div class="author-homepage">
