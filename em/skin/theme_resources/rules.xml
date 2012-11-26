@@ -95,6 +95,9 @@
         <drop css:content="#copyright-button" css:if-not-content="body.template-video_view" />
         <drop css:content="#copyright-text" css:if-not-content="body.template-video_view" />
 
+        <!--drop documentByLine on taxonomy pages -->
+        <drop css:content=".documentByLine" if-path="taxonomy" />
+
         <!--portlet managers -->
         <prepend css:content="#portletmanager-plone-leftcolumn" css:theme="#mid-container" />
         <append css:content="#portletmanager-plone-rightcolumn" css:theme="#mid-container" />
