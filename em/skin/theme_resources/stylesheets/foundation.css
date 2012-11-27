@@ -2502,3 +2502,8 @@ li.section-about-us a {
     color: black !important;
     font-weight: bold !important;
 }
+
+#contentActionMenus dl.actionMenu a, #contentActionMenus dl.actionMenu.activated dd {
+    z-index:500 !important;
+}
+
