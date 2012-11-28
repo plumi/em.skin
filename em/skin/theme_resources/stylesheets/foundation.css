@@ -2507,3 +2507,7 @@ li.section-about-us a {
     z-index:500 !important;
 }
 
+.fieldRequired {
+    color: #DD0000 !important;
+}
+
