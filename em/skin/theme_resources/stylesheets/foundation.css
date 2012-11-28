@@ -2511,3 +2511,11 @@ li.section-about-us a {
     color: #DD0000 !important;
 }
 
+#rss-subscription {
+    line-height:  normal !important;
+}
+
+body.template-search .row {
+    position: static !important;
+}
+
