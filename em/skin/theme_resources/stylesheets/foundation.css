@@ -2079,6 +2079,8 @@ a.user {
 
 #statistics {
   display: inline;
+  float:right;
+  margin-right: 4px;
 }
 
 #mep_0 {
@@ -2125,8 +2127,8 @@ a#form-help {
 }
 
 div#categorize-text-container {
-    bottom: 190px;
-    left: 185px;
+    bottom: 165px;
+    left: 15.4%;
     position: relative;
     width: 500px;
 }
@@ -2499,6 +2501,5 @@ body.template-usergroup-userprefs .row .nine {
 li.section-about-us a {
     font-size: 14px !important;
     line-height: 1.30;
-    color: black !important;
     font-weight: bold !important;
 }
