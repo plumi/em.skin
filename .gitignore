@@ -3,5 +3,5 @@ em/skin/docs/_build/*
 *.pyc
 *.pyo
 *~
-.DS_Store
+*.DS_Store
 dist
