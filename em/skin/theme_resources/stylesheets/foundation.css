@@ -2269,11 +2269,22 @@ dl.portlet dt.portletHeader {
     padding: 0 !important;
 }
 
-dl.portlet dt a {
+div.portlet-static-blog-feeds img.image-left {
+    margin-top: 0;
+}
+
+dl.portlet dt a,
+dl.portlet-static-blog-roll dt.portletHeader span,
+dl.portletArchivePortlet dt.portletHeader span {
     float: left;
     font-size: 16px;
     margin: 0;
     padding: 8px 10px;
+}
+
+dl.portletArchivePortlet dt.portletHeader {
+    font-size: 16px;
+    line-height: 35px;
 }
 
 dl.portlet span.portletTopLeft {
@@ -2287,6 +2298,15 @@ dl.portlet span.portletTopLeft {
     float: left;
     height: 36px;
     width: 14px;
+}
+
+dl.portlet-static-blog-roll dt.portletHeader span.portletTopLeft,
+dl.portletArchivePortlet dt.portletHeader span.portletTopLeft {
+    padding: 0;
+}
+
+dl.portletArchivePortlet dt.portletHeader span.portletTopLeft {
+    margin-right: -10px;
 }
 
 dl.portlet dd.portletItem {
