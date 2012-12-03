@@ -2509,6 +2509,21 @@ form.kssattr-formname-register {
   padding: 1px 10px;
 }
 
+
+.contact-author-content legend {
+    display:none;
+}
+
+.contact-author-content fieldset {
+    border: none;
+    padding: 0;
+}
+
+.contact-author-content input#subject, .contact-author-content textarea {
+    font: 100% Monaco, "Courier New", Courier, monospace;
+    width: 100%;
+}
+
 .video.featured div.description h3 {
   line-height: 1em;
 }
