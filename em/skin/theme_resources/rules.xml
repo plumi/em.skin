@@ -430,7 +430,7 @@
                         <li>
                             <span class="image"><xsl:copy-of select="img" /></span>
                             <span class="posted"><xsl:copy-of select="div/h4" /></span>
-                            <span class="posted"><xsl:value-of select="substring(div/span[@class='featuredItemDetailsPosted discreet'],10,28)" /></span>
+                            <span class="posted posted-date"><xsl:value-of select="substring(div/span[@class='featuredItemDetailsPosted discreet'],10,28)" /></span>
                             <span class="content">
                             <xsl:copy-of select="substring(div/p[@class='discreet plumi-nice-description']/text(),0, 430)" />
                             </span>
@@ -451,7 +451,7 @@
                         <li>
                             <span class="image"><xsl:copy-of select="img" /></span>
                             <span class="posted"><xsl:copy-of select="div/h4" /></span>
-                            <span class="posted"><xsl:value-of select="substring(div/span[@class='featuredItemDetailsPosted discreet'],10,28)" /></span>
+                            <span class="posted posted-date"><xsl:value-of select="substring(div/span[@class='featuredItemDetailsPosted discreet'],10,28)" /></span>
                             <span class="content">
                             <xsl:copy-of select="substring(div/p[@class='discreet plumi-nice-description']/text(),0, 430)" />
                             </span>
