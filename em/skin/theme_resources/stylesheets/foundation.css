@@ -2277,7 +2277,7 @@ dl.portlet dt.portletHeader {
 }
 
 div.portlet-static-blog-feeds img.image-left {
-    margin-top: 0;
+    margin-top: 2px;
 }
 
 dl.portlet dt a,
