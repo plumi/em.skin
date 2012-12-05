@@ -252,11 +252,16 @@ div.featured-content a .featured-text {
 
 .six.columns div.featured-content a .featured-image {
   float: left;
+  height: 195px;
 }
 
 .six.columns div.featured-content a .featured-text {
   float: left;
   width: 165px;
+}
+
+div.featured-content a .featured-image {
+    height: 165px;
 }
 
 div.featured-content:hover a .featured-text {
@@ -823,8 +828,7 @@ div.column.centered.load-more {
 div.load-more a.loading {
     background-image: url('images/spinner.gif');
     background-repeat: no-repeat;
-    background-position-y: center;
-    background-position-x: 30%;
+    background-position: 30% center;
 }
 
 /* Video ---------------------- */

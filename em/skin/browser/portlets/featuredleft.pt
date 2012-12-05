@@ -1,7 +1,7 @@
 <div class="featured-content" id="featured-left">
     <tal:items tal:repeat="obj view/results">
         <a tal:attributes="href python: obj.absolute_url();">
-            <img height="195px" class="featured-image" tal:attributes="src python: obj.getImage().absolute_url() + '_preview'">
+            <img class="featured-image" tal:attributes="src python: obj.getImage().absolute_url() + '_preview'">
                 <span class="featured-text">
                 <h5 tal:content="python: obj.Title()">Featured Item </h5>
                 <span tal:replace="python: obj.Description()">Description. </span>
