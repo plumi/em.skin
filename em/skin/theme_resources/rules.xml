@@ -199,13 +199,13 @@
 
 
         <!-- Featured video -->
-        <drop theme="//*[@id='featuredvideo']/.." if-content="//video" />
+        <drop theme="//*[@id='featuredvideo']/.." if-not-content="//video" />
         <replace theme="//*[@id='featuredvideo']/div[1]" content="//video/.."/>
         <copy theme="//div[@id='featuredvideo']//div[1]/a" content="//div[@id='featured-front-page']//div[2]/span[1]/a" />
         <copy theme="//div[@id='featuredvideo']//h3" css:content="#featuredVideoTitle" />
         <replace theme="//div[@id='featuredvideo'][1]//p">
             <div class="featuredVideo-date">
-                <xsl:value-of select="substring(//span[@class='featuredItemDetailsPosted discreet'],14,21)" />
+                <xsl:value-of select="//span[@class='featuredItemDetailsPosted discreet']/span[@class='posted-date']" />
             </div>
             <span class="country">
                 <xsl:copy-of select="//div[@id='featured-front-page']//div[2]//dl[@class='plumi-country plumi-props-listing']/dd/ul/li/a" />
@@ -268,7 +268,7 @@
                             <div class="rollover">
                                 <p><a><xsl:copy-of select="a[@class='featured-video-image']/@href" /><xsl:copy-of select="substring(p/text(),0, 130)" />...</a></p>
                                 <span class="country"><xsl:copy-of select="dl[@class='plumi-country plumi-props-listing']//a" /></span>
-                                <xsl:value-of select="substring(span[@class='featuredItemDetailsPosted discreet'],14,21)" />
+                                <xsl:value-of select="span[@class='featuredItemDetailsPosted discreet']/span[@class='posted-date']" />
                             </div>
                             <xsl:copy-of css:select="a.featured-video-image"/>
                         </div>
@@ -302,13 +302,23 @@
         <append css:theme="#video-info" css:content="#video-licensing" />
         <append css:theme="#video-info" css:content="#video-transcoding" />
         <copy css:theme="#video-comments" css:content=".discussion" />
-        <append css:theme="#video-comments" css:content="#commenting" />
+        <append css:theme="#video-comments" content="//*[@class='reply'][1]" />
+	    <drop css:theme=".video-comments-title" css:if-not-content=".discussion div" />
 
         <replace css:theme=".video-list">
             <ul class="video-list">
             <xsl:for-each css:select="#authors_latest li">
                 <li class="video-item">
-                    <xsl:copy-of css:select="a" />
+                    <a class="video-download"><xsl:copy-of select="a/@href" />
+                        <xsl:copy-of select="a/img" />
+                        <xsl:copy-of select="a/h5" />
+                        <xsl:copy-of select="div[@class='duration']" />
+                        <div class="rollover">
+                            <xsl:copy-of select="substring(a/@title,0,130)" />...
+                            <p><xsl:copy-of select="p/span[@class='posted-date']" /></p>
+                        </div>
+                        
+                    </a>
                 </li>
             </xsl:for-each>
             </ul>
