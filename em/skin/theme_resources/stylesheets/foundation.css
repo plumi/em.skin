@@ -256,7 +256,7 @@ div.featured-content a .featured-text {
 
 .six.columns div.featured-content a .featured-text {
   float: left;
-  width: 225px;
+  width: 165px;
 }
 
 div.featured-content:hover a .featured-text {
@@ -2156,6 +2156,8 @@ body.template-featured_videos_homepage ul#dl-links {
 dl#blog-portlet {
   background: none repeat scroll 0 0 #FDFDFE;
   margin-bottom: 0 !important;
+  height: 158px;
+  overflow: auto;
 }
 
 dl#blog-portlet dd:last-child {
