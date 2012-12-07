@@ -2612,3 +2612,9 @@ body.template-search .row {
     background: url(images/homepage_icon.gif) no-repeat left 3px;
 }
 
+div.sidebar-newsletter {
+    display: block;
+    float: left;
+    padding-bottom: 5px;
+    padding-top: 8px;
+}

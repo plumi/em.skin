@@ -2,4 +2,10 @@
     <span i18n:translate="">Stay in touch!</span>
     <a href="http://twitter.com/EngageMedia" target="_blank"><div class="twitter"></div></a>
     <a href="http://www.facebook.com/group.php?gid=43640854087" target="_blank"><div class="fb"></div></a>
+    <div class="sidebar-newsletter">
+        <div class="sidebar-newsletter">Subscribe to our Newsletter</div>
+        <form method="post" target="_blank" action="http://engagemedia.us1.list-manage.com/subscribe/post?u=d9dee6898a6443ce6f94eb51a&amp;id=017d30dda8">
+           <input id="newsletter-input" class="text-input" name="EMAIL" value="your email" type="text"><input id="newsletter-submit" class="button small" value="Go" type="submit">
+        </form>
+    </div>
 </div>
