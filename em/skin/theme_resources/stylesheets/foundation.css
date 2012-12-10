@@ -2579,6 +2579,7 @@ li.section-about-us a {
 
 #rss-subscription {
     line-height:  normal !important;
+    padding-left: 8px;
 }
 
 body.template-search .row {
