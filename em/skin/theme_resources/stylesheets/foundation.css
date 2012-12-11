@@ -1755,6 +1755,10 @@ input.searchPage {
   background-color: #F0F0F2;
 }
 
+body.template-search #post-content .nine {
+    width: 100%;
+}
+
 #post-header .row.text-content .post-title {
   font-size: 24px;
   font-weight: bold;
@@ -2578,6 +2582,7 @@ li.section-about-us a {
 
 #rss-subscription {
     line-height:  normal !important;
+    padding-left: 8px;
 }
 
 body.template-search .row {
