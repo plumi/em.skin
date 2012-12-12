@@ -1002,7 +1002,7 @@ a#featuredVideoTitle, #featuredVideoTitle:link, #featuredVideoTitle:visited {
   background-image: -webkit-linear-gradient(top,#444446 0,#39393b 100%);
   background-image: linear-gradient(to bottom,#444446 0,#39393b 100%);
   width: 186px;
-  height: 329px;
+  height: 326px;
   position: absolute;
   left: -186px;
   top: 0;
@@ -2125,6 +2125,7 @@ a.user {
 
 div.unisubs-videoTab-anchoring {
    width: 200px !important;
+   margin-top: -3px !important;
 }
 
 a#form-help {
@@ -2157,6 +2158,10 @@ div#categorize-text-container {
 body.template-featured_videos_homepage ul#dl-links {
     left: 324px !important;
     width: 201px !important;
+}
+
+div.videobar {
+    margin-top: -3px;
 }
 
 /* Front page featured */
