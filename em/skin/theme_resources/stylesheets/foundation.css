@@ -2640,3 +2640,7 @@ div.sidebar-newsletter {
 .footer-logo {
     padding-right: 35px;
 }
+
+.row #commenting textarea {
+    height: 75px;
+}
