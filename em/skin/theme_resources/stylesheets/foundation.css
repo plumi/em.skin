@@ -2649,4 +2649,7 @@ body.template-video_listing_view li {
     display: list-item;
 }
 
+body.template-video_listing_view ul {
+    list-style: disc inside none;
+}
 
