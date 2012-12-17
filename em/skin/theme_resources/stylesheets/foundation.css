@@ -2649,11 +2649,11 @@ div.sidebar-newsletter {
     height: 95px;
 }
 
-body.template-video_listing_view li {
+body.template-video_listing_view #video-listings li {
     display: list-item;
 }
 
-body.template-video_listing_view ul {
+body.template-video_listing_view #video-listings ul {
     list-style: disc inside none;
 }
 
