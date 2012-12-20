@@ -156,7 +156,16 @@
         permission="cmf.SetOwnProperties"
         for="Products.CMFPlone.interfaces.IPloneSiteRoot"
         layer=".interfaces.IThemeSpecific"
-        />        
+        />
+
+    <browser:page
+      for="*"
+      name="author_listing"
+      class=".authorlisting.AuthorListing"
+      template="templates/authorlist.pt"
+      permission="zope2.View"
+      layer=".interfaces.IThemeSpecific"
+      />        
 
     <browser:page
         for="Products.CMFPlone.interfaces.IPloneSiteRoot"
