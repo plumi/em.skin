@@ -3,7 +3,7 @@
     <ul><li>
             <span i18n:translate="">Subscribe to our Newsletter</span>
             <form method="post" target="_blank" action="http://engagemedia.us1.list-manage.com/subscribe/post?u=d9dee6898a6443ce6f94eb51a&amp;id=017d30dda8">
-                <input id="newsletter-input" class="text-input" name="EMAIL" value="your email" type="text">
+                <input id="newsletter-input" class="text-input" name="EMAIL" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'your email':this.value;" value="your email" type="text">
                 <input id="newsletter-submit" class="button small" value="Go" type="submit">
             </form>
         </li>
