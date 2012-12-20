@@ -2675,3 +2675,8 @@ body.template-video_view #full-description ul {
 #post-comments {
     overflow: hidden;
 }
+
+#creative_commons_overlay {
+    cursor: pointer;
+}
+
