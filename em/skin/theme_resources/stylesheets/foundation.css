@@ -2055,6 +2055,10 @@ div.listingBarBottom {
     width: 231px;
 }
 
+#video-listings div.video {
+    margin-left: 9px;
+}   
+ 
 #fieldset-openid-login .formControls input, #login-form .formControls input {
   margin-left: -40px !important;
   position: relative;
@@ -2309,6 +2313,7 @@ div.portlet-static-blog-feeds img.image-left {
 
 dl.portlet dt a,
 dl.portlet-static-blog-roll dt.portletHeader span,
+dl.portletStaticText dt.portletHeader span,
 dl.portletArchivePortlet dt.portletHeader span {
     float: left;
     font-size: 16px;
@@ -2640,3 +2645,28 @@ div.sidebar-newsletter {
 .footer-logo {
     padding-right: 35px;
 }
+
+.row #commenting textarea {
+    height: 95px;
+}
+
+body.template-video_listing_view #video-listings li {
+    display: list-item;
+}
+
+body.template-video_listing_view #video-listings ul {
+    list-style: disc inside none;
+}
+
+body.template-video_view #full-description li {
+    display: list-item;
+}
+
+body.template-video_view #full-description ul {
+    list-style: disc inside none;
+}
+
+body.template-video_view #full-description ul {
+    list-style: decimal inside none;
+}
+
