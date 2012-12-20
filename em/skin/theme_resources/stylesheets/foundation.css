@@ -2313,6 +2313,7 @@ div.portlet-static-blog-feeds img.image-left {
 
 dl.portlet dt a,
 dl.portlet-static-blog-roll dt.portletHeader span,
+dl.portletStaticText dt.portletHeader span,
 dl.portletArchivePortlet dt.portletHeader span {
     float: left;
     font-size: 16px;
@@ -2663,5 +2664,9 @@ body.template-video_view #full-description li {
 
 body.template-video_view #full-description ul {
     list-style: disc inside none;
+}
+
+body.template-video_view #full-description ul {
+    list-style: decimal inside none;
 }
 
