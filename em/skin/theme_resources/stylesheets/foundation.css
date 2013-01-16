@@ -2286,6 +2286,9 @@ div#video-listings .video span.duration {
        left: 6px;
        right: auto;
    }
+   div.sidebar-newsletter {
+       clear: both;
+   }
 
 }
 
