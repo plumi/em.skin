@@ -253,6 +253,7 @@ div.featured-content a .featured-text {
 .six.columns div.featured-content a .featured-image {
   float: left;
   height: 195px;
+  max-width: 300px;
 }
 
 .six.columns div.featured-content a .featured-text {
