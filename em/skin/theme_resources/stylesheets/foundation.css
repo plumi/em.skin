@@ -370,7 +370,9 @@ input#newsletter-input {
     display: block;
     float: left;
     background: #efeff1;
-    width: 150px;
+    width: 159px;
+    height: 27px;
+    color: #333333;
 }
 
 input#newsletter-submit {
@@ -2691,5 +2693,13 @@ body.template-video_view #full-description ul {
 
 body.template-video_view #full-description ul {
     list-style: decimal inside none;
+}
+
+#post-comments {
+    overflow: hidden;
+}
+
+#creative_commons_overlay {
+    cursor: pointer;
 }
 
