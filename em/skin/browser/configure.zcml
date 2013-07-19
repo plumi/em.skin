@@ -200,5 +200,13 @@
         for="plone.app.collection.interfaces.ICollection"
         layer=".interfaces.IThemeSpecific"
         />
-        
+
+   <browser:page
+       name="register"
+       for="Products.CMFPlone.Portal.PloneSite"
+       class=".forms.EMRegistrationForm"
+       permission="zope.Public"
+       />
+
+
 </configure>

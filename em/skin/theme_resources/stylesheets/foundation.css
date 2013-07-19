@@ -2695,7 +2695,7 @@ body.template-video_view #full-description ul {
     list-style: disc inside none;
 }
 
-body.template-video_view #full-description ul {
+body.template-video_view #full-description ol {
     list-style: decimal inside none;
 }
 
@@ -2705,5 +2705,15 @@ body.template-video_view #full-description ul {
 
 #creative_commons_overlay {
     cursor: pointer;
+}
+
+.search-results dt.contenttype-document img, .search-results dt.contenttype-event img, .search-results dt.contenttype-news-item img {
+    display: none;
+}
+
+/* remove margin from small img on plone file view */
+
+body.template-file_view #content-core img {
+    margin: 0 !important;
 }
 
