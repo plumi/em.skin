@@ -213,6 +213,11 @@ div.row.header div.top-menu {
   background: #f0f0f2;
 }
 
+body.section-recent_comments #mid-container #content #content-core span.documentByLine {
+  display: none;
+}
+
+
   /* Social Networks in News */
 
 div.news div.social-networks {
@@ -1395,6 +1400,11 @@ div.unisub-proxy {
 }
 
  /* Comments */
+
+#content dd {
+  margin: 0 0 1em 1.2em !important;
+}
+
 
 div.comment {
   position: relative;
