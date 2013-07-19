@@ -217,8 +217,17 @@ body.section-recent_comments #mid-container #content #content-core span.document
   display: none;
 }
 
+body.section-recent_comments #mid-container #content #content-core dt img {
+  margin-right: 2px;
+}
+
 
   /* Social Networks in News */
+
+#contact-author img {
+    width: 18px;
+    margin-right: 5px;
+}
 
 div.news div.social-networks {
     padding-top: 10px;
@@ -1400,6 +1409,10 @@ div.unisub-proxy {
 }
 
  /* Comments */
+
+body.section-recent_comments #mid-container #content #content-core span.documentByLine {
+  display: none;
+}
 
 #content dd {
   margin: 0 0 1em 1.2em !important;
