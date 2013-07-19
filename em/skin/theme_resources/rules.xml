@@ -197,6 +197,8 @@
             </div>
         </prepend>
 
+        <copy css:theme="#top-viewlet" css:content="#top-viewlet" />
+
 
         <!-- Featured video -->
         <drop theme="//*[@id='featuredvideo']/.." if-not-content="//video" />

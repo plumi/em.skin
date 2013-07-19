@@ -10,6 +10,20 @@
         name="Engagemedia Skin"
         />
 
+    <browser:page
+      name="em-controlpanel"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      permission="cmf.ManagePortal"
+      class=".controlpanel.EmControlPanelView"
+      />
+
+    <browser:viewlet
+        name="em.skin.browser.topviewlet"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        class=".viewlets.TopViewlet"
+        permission="zope2.View"
+        />
+
     <plone:portlet
         name="em.skin.browser.portlets.projects.ProjectsPortlet"
         view_permission="zope2.View"

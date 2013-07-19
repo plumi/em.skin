@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<object
+    name="portal_controlpanel"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="em.skin">
+
+    <configlet
+        title="Engagemedia settings"
+        action_id="em.skin.settings"
+        appId="em.skin"
+        category="Products"
+        condition_expr=""
+        url_expr="string:${portal_url}/@@em-controlpanel"
+        icon_expr="string:${portal_url}/spinner.gif"
+        visible="True"
+        i18n:attributes="title">
+            <permission>Manage portal</permission>
+    </configlet>
+
+</object>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<object>
+  <order manager="plone.portaltop" skinname="Enagemedia Skin"
+         based-on="Sunburst Theme">
+    <viewlet name="em.skin.browser.topviewlet" insert-before="*" />
+  </order>
+</object>

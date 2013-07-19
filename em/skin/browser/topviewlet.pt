@@ -1,0 +1,34 @@
+<div class="note" id="top-viewlet" tal:condition="view/displayNotification" style="display:none;">
+    <span tal:content="view/notificationText">
+    </span>
+    <a href="#" tal:attributes="href view/notificationLink" tal:content="view/notificationLinkText">link</a>
+    <div></div>
+    <a href="#" class="hide-announcement">Close</a>
+    <script type="text/javascript">
+        function readCookie(name) {
+	    var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	    }
+	    return null;
+        }
+
+        if (!(readCookie('closedAnnouncement'))) {
+            $('div.note').show();
+        }
+
+        console.log(readCookie('closedAnnouncement'));
+
+        $('a.hide-announcement').click( function() { 
+            $('div.note').hide();
+            var now = new Date();
+            var time = now.getTime();
+            time += 7* 24 * 3600 * 1000;
+            now.setTime(time);
+            document.cookie = 'closedAnnouncement=true; expires=' + now.toGMTString() +'; path=/'
+            });
+    </script>
+</div>
