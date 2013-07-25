@@ -228,6 +228,10 @@ body.section-recent_comments #mid-container #content #content-core dt img {
 
   /* Social Networks in News */
 
+.template-video_view #contact-author {
+    margin-top: 10px;
+    margin-left: 3px;
+}
 #contact-author img {
     width: 18px;
     margin-right: 5px;
@@ -2368,12 +2372,22 @@ body.template-publish_video .row .nine {
 
 
 h1#parent-fieldname-title {
-    margin-bottom: 0px !important;
+    margin-bottom: 5px !important;
     line-height: normal !important;
 }
 
 #content h1.documentFirstHeading {
-    margin-top: 5px !important;
+    margin-top: 10px !important;
+}
+
+#plone-document-byline {
+    font-family: "Arimo", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+    font-size: 14px !important;
+    color: black !important;
+}
+
+#content #plone-document-byline .documentAuthor a:link, #content #plone-document-byline .documentAuthor a:visited {
+    boreder-bottom: 0 !important;
 }
 
 dl.portlet dt.portletHeader {
