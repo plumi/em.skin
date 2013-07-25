@@ -34,13 +34,13 @@ input:focus {
   text-shadow: 1px 1px 1px #fff;
   font-size: 16px;
   border-bottom: 1px solid #bfbe78;
-  padding: 12px;
+  padding: 10px;
   margin: 0;
 }
 
 a.hide-announcement {
   float: right;
-  margin-top: -20px;
+  margin-top: -18px;
 }
 
 #upper-container {
@@ -197,6 +197,10 @@ div.row.header div.top-menu {
 .row.header ul.dropdown li a:hover {
   background-color: #555;
   color: #fff;
+}
+
+#portlets-below {
+  display:none;
 }
 
 /* Mid Container ---------------------- */
@@ -1021,6 +1025,10 @@ div.video:hover span.duration {
 
 a#featuredVideoTitle, #featuredVideoTitle:link, #featuredVideoTitle:visited {
   color: #f3f3f5;
+}
+
+#featuredvideo {
+  max-width: 525px;
 }
 
 .video.featured div.description {
