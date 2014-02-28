@@ -2787,8 +2787,44 @@ background: linear-gradient(to bottom, #353A45 0px, #27272F 100%) repeat scroll 
 font-size: 14px;
 }
 
-.em-navbar li{
+.em-navbar li {
+display: inline-block;
+}
+.em-navbar li ul li:hover {
+background: #555;
+}
 
+
+.em-navbar li:hover ul{
+margin: 0px;
+display: block;
+position: absolute !important;
+border: none;
+left: 14.5em;
+z-index: 1999;
+width: 10em;
+background: #27272F;
+border-radius: 3px;
+border-top: 1px solid #555;
+}
+
+
+.em-navbar li ul li{
+display:block;
+border-color: red;
+border-bottom: 1px solid #555;
+}
+.em-navbar .submenu .navTree {
+display: none;
+}
+.em-navbar a.state-published {
+color: #EFEFF1 !important;
+}
+
+.em-navbar li a {
+font-size: 16px;
+color: #EFEFF1;
+font-weight: bold;
 margin-top: 10px;
 margin-bottom: 10px;
 padding-right: 10px;
@@ -2797,13 +2833,7 @@ display: inline-block;
 border-right: 1px solid #EFEFF1;
 
 }
-
-.em-navbar li a {
-font-size: 16px;
-color: #EFEFF1;
-font-weight: bold;
-}
-.em-navbar li:last-child {
+.em-navbar li:last-child, .em-navbar li ul a {
 
 border: none;
 
