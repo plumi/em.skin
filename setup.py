@@ -30,7 +30,6 @@ setup(name='em.skin',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'hexagonit.portletstyle',
           'hexagonit.testing',
           'manuel',
           'plone.app.testing',
