@@ -39,6 +39,7 @@ setup(name='em.skin',
           'unittest2',
           'Products.ContentWellPortlets',
           'zope.i18nmessageid',
+	  'quintagroup.dropdownmenu',
       ],
       entry_points="""
       # -*- Entry points: -*-
