@@ -2800,21 +2800,24 @@ margin: 0px;
 display: block;
 position: absolute !important;
 border: none;
-left: 14.5em;
 z-index: 1999;
-width: 10em;
+width: 15em;
 background: #27272F;
 border-radius: 3px;
 border-top: 1px solid #555;
 }
 
+.em-navbar li ul li a 
+{
+width: 15em;
+}
 
 .em-navbar li ul li{
 display:block;
 border-color: red;
 border-bottom: 1px solid #555;
 }
-.em-navbar .submenu .navTree {
+.em-navbar li ul {
 display: none;
 }
 .em-navbar a.state-published {
@@ -2833,7 +2836,7 @@ display: inline-block;
 border-right: 1px solid #EFEFF1;
 
 }
-.em-navbar li:last-child, .em-navbar li ul a {
+.em-navbar li:last-child a, .em-navbar li ul a {
 
 border: none;
 

@@ -120,7 +120,7 @@
 	<after css:theme-children="#upper-container">
 	<ul class="row no-v-padding em-navbar">
 	<xsl:for-each css:select="#portal-globalnav">
-		<xsl:copy-of select="*"/>
+		<xsl:copy-of select="li"/>
 	</xsl:for-each>
 
 	 </ul>
