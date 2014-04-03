@@ -30,7 +30,6 @@ setup(name='em.skin',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'hexagonit.portletstyle',
           'hexagonit.testing',
           'manuel',
           'plone.app.testing',
@@ -40,6 +39,7 @@ setup(name='em.skin',
           'unittest2',
           'Products.ContentWellPortlets',
           'zope.i18nmessageid',
+	  'quintagroup.dropdownmenu',
       ],
       entry_points="""
       # -*- Entry points: -*-

@@ -117,6 +117,15 @@
         <drop css:content="body.portaltype-news-item div#category" />
 
         <!-- HEADER -->
+	<after css:theme-children="#upper-container">
+	<ul class="row no-v-padding em-navbar">
+	<xsl:for-each css:select="#portal-globalnav">
+		<xsl:copy-of select="li"/>
+	</xsl:for-each>
+
+	 </ul>
+	</after>
+
         <!-- Copy search box -->
         <copy css:content="#portal-searchbox" css:theme="div.search" />
 

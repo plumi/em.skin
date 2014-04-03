@@ -48,7 +48,7 @@ a.hide-announcement {
 }
 
 #upper-container div.row.header {
-  border-bottom: 2px solid #aaa;
+  border-bottom: 2px solid #353A45;
   background: url(images/Engage_Header.gif) top left no-repeat;
 }
 
@@ -58,7 +58,7 @@ div.row.header, div.twelve.columns.header {
 
 div.row.header .main-title p {
   position: relative;
-  top: 80px;
+  top: 75px;
   left: 94px;
   font-size: 13px;
   padding: 2px;
@@ -2779,3 +2779,65 @@ body.template-file_view #content-core img {
     margin: 0 !important;
 }
 
+/* navbar */
+
+.em-navbar {
+
+background: linear-gradient(to bottom, #353A45 0px, #27272F 100%) repeat scroll 0% 0% transparent;
+font-size: 14px;
+}
+
+.em-navbar li {
+display: inline-block;
+}
+.em-navbar li ul li:hover {
+background: #555;
+}
+
+
+.em-navbar li:hover ul{
+margin: 0px;
+display: block;
+position: absolute !important;
+border: none;
+z-index: 1999;
+width: 15em;
+background: #27272F;
+border-radius: 3px;
+border-top: 1px solid #555;
+}
+
+.em-navbar li ul li a 
+{
+width: 15em;
+}
+
+.em-navbar li ul li{
+display:block;
+border-color: red;
+border-bottom: 1px solid #555;
+}
+.em-navbar li ul {
+display: none;
+}
+.em-navbar a.state-published {
+color: #EFEFF1 !important;
+}
+
+.em-navbar li a {
+font-size: 14px;
+color: #EFEFF1;
+margin-top: 10px;
+font-weight: bold;
+margin-bottom: 10px;
+padding-right: 10px;
+padding-left: 10px;
+display: inline-block;
+border-right: 1px solid #EFEFF1;
+
+}
+.em-navbar li:last-child a, .em-navbar li ul a {
+
+border: none;
+
+}
