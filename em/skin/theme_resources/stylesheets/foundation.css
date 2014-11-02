@@ -4284,6 +4284,10 @@ div.row.header div.menu{
   margin-top:0 !important;
 }
 
+.row.header ul.dropdown{
+  top:100%;
+}
+
 #personaltools-join,
 #personaltools-login{
   font-size: 15px;
@@ -4337,6 +4341,18 @@ div.row.header input#searchGadget{
 #featured-left.featured-content > a .featured-text{
   padding-left:0 !important;
   padding-top:3px !important;
+}
+
+#video-core,
+.video #video-core,
+.video > #video-core,
+#player-videoview{
+  width:100% !important;
+}
+
+#video-infos,
+#video-info #video-infos{
+  width:auto !important;
 }
 
 @media only screen and (max-width: 991px) {
@@ -4507,4 +4523,22 @@ div.row.header input#searchGadget{
     padding:2px 5px !important;
     font-size: 13px !important;
   }
+}
+
+#user-menu.header-menu-item a.user{
+  padding-right:30px;
+}
+
+#user-menu ul.dropdown {
+  min-width: 120px !important;
+  top: 100% !important;
+}
+
+#user-menu ul.dropdown li{
+  display: inline-block;
+}
+
+#user-menu ul.dropdown li a{
+  display: inline-block;
+  width: 100%;
 }
