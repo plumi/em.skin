@@ -4573,3 +4573,21 @@ div.video .wrapper-image a.featured-video-image{
   display: inline-block;
   width: 100%;
 }
+
+.footer li.portletItem{
+  display: inline-block;
+  background: none;
+  width:100%;
+  padding:0;
+  margin:0 !important;
+}
+
+.footer li.portletItem a{
+  padding: 13px 0 14px 1px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.footer li:first-child.portletItem a{
+  padding-top: 2px;
+}
