@@ -156,6 +156,9 @@
         <!-- copy language selector -->
         <copy css:content-children="ul#portal-languageselector" css:theme="ul#language-menu" />
 
+        <!-- mobile header link -->
+        <copy attributes="href title" css:content="a#portal-logo" css:theme="a.mobile-header" />
+
         <!-- logo -->
         <copy attributes="href title" css:content="a#portal-logo" css:theme="a.main-logo-link" />
         <copy attributes="href title" css:content="a#portal-logo" css:theme="a.main-title" />

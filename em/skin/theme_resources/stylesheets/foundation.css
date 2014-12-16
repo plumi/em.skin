@@ -7,15 +7,18 @@
 }
 
 html {
-    font-size:62.5%
+    font-size:62.5%;
+    font-size: 16px;
 }
 
 body {
     background:#fff;
 /*font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif; */
     font-family:"Arimo","Helvetica Neue","HelveticaNeue",Helvetica,Arial,"Lucida Grande",sans-serif!important;
+    
     font-size:14px;
-    font-size:1.4rem;
+    font-size:0.875rem;
+
     line-height:1.3;
     color:#222;
     position:relative;
@@ -37,7 +40,10 @@ input:focus {
     color:#333;
     background:#faf9c5;
     text-shadow:1px 1px 1px #fff;
+    
     font-size:16px;
+    font-size:1rem;
+
     border-bottom:1px solid #bfbe78;
     padding:10px;
     margin:0
@@ -64,7 +70,10 @@ div.row.header .main-title p {
     position:relative;
     top:75px;
     left:94px;
+    
     font-size:13px;
+    font-size:0.8125rem;
+
     padding:2px;
     color:#fff;
     font-weight:700;
@@ -78,7 +87,10 @@ div.row.header div.search {
 
 div.row.header input#searchGadget {
     border:none;
+    
     font-size:14px;
+    font-size:0.875rem;
+
     color:#333;
     background-color:rgba(255,255,255,0.82);
     padding:6px 6px 5px;
@@ -106,7 +118,10 @@ div.row.header div.menu {
     float:right;
     list-style:none;
     margin-left:12px;
+    
     font-size:16px;
+    font-size:1rem;
+
     color:#333
 }
 
@@ -197,7 +212,9 @@ div.row.header div.top-menu {
     padding:8px 14px;
     color:#efeff1;
     font-weight:700;
-    font-size:12px
+    
+    font-size:12px;
+    font-size:0.75rem;
 }
 
 .row.header ul.dropdown li:first-child a,
@@ -362,7 +379,10 @@ div.featured-filmmaker a .featured-text h5 {
 }
 
 #lower-container div.three.columns.engage h5 {
+    
     font-size:20px;
+    font-size:1.25rem;
+
     border-bottom:none
 }
 
@@ -386,7 +406,9 @@ div.row.footer + div.row.footer {
 
 #lower-container .columns ul {
     list-style:none;
-    font-size:11px
+    
+    font-size:11px;
+    font-size:0.6875rem;
 }
 
 #lower-container .columns ul li {
@@ -444,7 +466,9 @@ div#copyright-text {
 
 div#copyright-citation {
     text-align:center;
+    
     font-size:85%;
+
     padding-top:1em;
     display:inline
 }
@@ -490,12 +514,15 @@ div#copyright-citation {
 
 #lower-container .colophon {
     margin:10px 0;
-    font-size:12px
+    
+    font-size:12px;
+    font-size:0.75rem;
 }
 
 #lower-container .colophon a {
     color:#333;
-    font-size:12px
+    font-size:12px;
+    font-size:0.75rem;
 }
 
 #lower-container .colophon span.plumi-logo {
@@ -548,17 +575,21 @@ p a,p a:visited {
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,th,td {
     margin:0;
     padding:0;
-    font-size:14px
+    font-size:14px;
+    font-size:0.875rem;
 }
 
 p {
     font-size:14px;
     line-height:1.4;
-    margin-bottom:17px
+    margin-bottom:17px;
+    font-size:1.0625rem;
 }
 
 p.lead {
     font-size:17.5px;
+    font-size:1.09375rem;
+
     line-height:1.6;
     margin-bottom:17px
 }
@@ -581,29 +612,36 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 body h1 {
-    font-size:48px
+    font-size:48px;
+    font-size:3rem;
+
 }
 
 body h2 {
-    font-size:22px
+    font-size:22px;
+    font-size:1.375rem;
 }
 
 body h3 {
-    font-size:20px
+    font-size:20px;
+    font-size:1.25rem;
 }
 
 body h4 {
     font-size:14px;
-    line-height:1.3
+    font-size:0.875rem;
+    line-height:1.3;
 }
 
 body h5 {
     font-size:14px;
+    font-size:0.875rem;
     line-height:1.3
 }
 
 body h6 {
     font-size:14px;
+    font-size:0.875rem;
     font-weight:400
 }
 
@@ -659,6 +697,7 @@ div.column-title,div.row-title {
     overflow:auto;
     display:block;
     font-size:18px;
+    font-size:1.125rem;
     font-weight:400;
     margin:0;
     color:#efeff2
@@ -701,7 +740,8 @@ div.column-title h4,div.row-title h4 {
     margin:0;
     padding:8px 10px;
     float:left;
-    font-size:16px
+    font-size:16px;
+    font-size:1rem;
 }
 
 div.row-title h4 {
@@ -775,6 +815,7 @@ div.sidebar ul li h5 {
     color:#222;
     font-weight:700;
     font-size:12px;
+    font-size:0.75rem;
     padding:4px 10px 10px
 }
 
@@ -783,6 +824,7 @@ div.sidebar ul li p.date {
     margin:0;
     color:#333;
     font-size:12px;
+    font-size:0.75rem;
     padding:10px 10px 0;
     border:0;
     text-align:left
@@ -811,6 +853,7 @@ div.sidebar div.column-more a:hover {
 /* Lists ---------------------- */
 ul,ol {
     font-size:14px;
+    font-size:0.875rem;
     line-height:inherit;
     margin-bottom:17px;
     list-style-position:inside
@@ -840,6 +883,7 @@ ul,ol {
     text-align:center;
     font-weight:700;
     font-size:12px;
+    font-size:0.75rem;
     white-space:nowrap;
     word-wrap:normal;
     cursor:pointer;
@@ -863,7 +907,8 @@ ul,ol {
 
 .button.large {
     padding:9px 11px;
-    font-size:14px
+    font-size:14px;
+    font-size:0.875rem;
 }
 
 .button.small {
@@ -893,6 +938,7 @@ ul,ol {
 .header-button a {
     display:block;
     font-size:16px;
+    font-size:1rem;
     padding:6px 26px;
     color:#333
 }
@@ -1019,12 +1065,14 @@ div.load-more a.loading {
     text-shadow:#111 0 1px;
     float:left;
     font-size:13px;
+    font-size:0.8125rem;
     color:#f3f3f5
 }
 
 .video div.under a {
     color:#efeff1;
     font-size:13px;
+    font-size:0.8125rem;
     height:32px;
     display:block;
     overflow:hidden
@@ -1042,7 +1090,8 @@ div.load-more a.loading {
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
     border-radius:3px;
-    font-size:12px
+    font-size:12px;
+    font-size:0.75rem;
 }
 
 div.video:hover span.duration {
@@ -1148,6 +1197,7 @@ a#featuredVideoTitle,#featuredVideoTitle:link,#featuredVideoTitle:visited {
     color:#efeff1;
     margin-bottom:5px;
     font-size:13px;
+    font-size:0.8125rem;
     line-height:16px
 }
 
@@ -1190,6 +1240,7 @@ div.sidebar-section div.wrapper-image div.rollover {
 
 div.video div.rollover,div.video div.rollover p {
     font-size:12px;
+    font-size:0.75rem;
     margin-bottom:0
 }
 
@@ -1205,7 +1256,8 @@ div.video span.country {
     display:block;
     font-weight:700;
     margin-top:.5em;
-    font-size:13px
+    font-size:13px;
+    font-size:0.8125rem;
 }
 
 div.featured span.country a {
@@ -1581,6 +1633,15 @@ img {
 
 /* Tablet & Mobile Grid Overrides ---------------------- */
 @media only screen and (max-width: 985px) {
+
+html {
+    font-size: 18px;
+}
+
+/*div.row.header div.top-menu {
+    top:8px
+}*/
+
 body {
     -webkit-text-size-adjust:none;
     -ms-text-size-adjust:none;
@@ -1980,6 +2041,7 @@ dl.portalMessage.info dt {
     background:linear-gradient(#343436,#242426);
     color:#efeff1;
     font-size:14px;
+    font-size:0.875rem;
     font-weight:400
 }
 
@@ -1987,6 +2049,7 @@ dl.portalMessage.info dd {
     padding:6px 8px 5px;
     font-weight:700;
     font-size:14px;
+    font-size:0.875rem;
     border-bottom:2px solid #95957C
 }
 
@@ -2063,6 +2126,7 @@ div.comment button.reply-to-comment-button {
     text-align:center;
     font-weight:700;
     font-size:12px;
+    font-size:0.75rem;
     white-space:nowrap;
     word-wrap:normal;
     cursor:pointer;
@@ -2117,6 +2181,7 @@ div#commenting p {
     padding:8px 10px;
     width:100%;
     font-size:16px;
+    font-size:1rem;
     font-weight:700;
     -moz-box-shadow:0 1px 4px rgba(0,0,0,0.17);
     -ms-box-shadow:0 1px 4px rgba(0,0,0,0.17);
@@ -2287,6 +2352,7 @@ input.searchPage {
     background:#f6f6f7;
     padding:8px;
     font-size:16px;
+    font-size:1rem;
     border:1px solid #ddd;
     width:100%
 }
@@ -2396,6 +2462,7 @@ body.template-search #post-content .nine {
 
 #post-header .row.text-content .post-title {
     font-size:24px;
+    font-size:1.5rem;
     font-weight:700;
     line-height:28px
 }
@@ -2425,6 +2492,7 @@ body.template-author h2 {
     background:#f3f3f5;
     color:#333;
     font-size:24px;
+    font-size:1.5rem;
     font-weight:700;
     margin:0 8px;
     -moz-box-shadow:0 1px 4px rgba(0,0,0,0.17);
@@ -2510,6 +2578,7 @@ body.template-author h2 {
     padding:4px 14px;
     font-weight:700;
     font-size:14px;
+    font-size:0.875rem;
     -moz-border-radius:0;
     -webkit-border-radius:0;
     border-radius:0
@@ -2535,6 +2604,7 @@ fieldset#fieldset-default.formPanel input[type="text"],fieldset#fieldset-default
     padding:.5em;
     background:#f8f8fa;
     font-size:14px;
+    font-size:0.875rem;
     border:1px solid #bbb;
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
@@ -2543,6 +2613,7 @@ fieldset#fieldset-default.formPanel input[type="text"],fieldset#fieldset-default
 
 fieldset#fieldset-default.formPanel input.date-widget[type="text"] {
     font-size:12px;
+    font-size:0.75rem;
     padding:.2em .5em
 }
 
@@ -2579,6 +2650,7 @@ div.formControls input[type="submit"],.reply input[type="submit"] {
     text-align:center;
     font-weight:700;
     font-size:12px;
+    font-size:0.75rem;
     white-space:nowrap;
     word-wrap:normal;
     cursor:pointer;
@@ -2634,7 +2706,8 @@ div.formControls input[type="submit"]:active {
 }
 
 #mid-container h1 {
-    font-size:26px
+    font-size:26px;
+    font-size:1.625rem;
 }
 
 div#LSResult {
@@ -2652,14 +2725,22 @@ div.unisubs-videoTab a span.unisubs-tabTextShare {
     display:none!important
 }
 
-ul#dl-links {
-    left:414px!important;
-    width:110px!important
+.videobar ul#dl-links {
+    /*left:414px!important;*/
+    /*width:110px!important*/
+    width:202px !important;
+    z-index: 2147483634 !important;
 }
 
-div#share-box {
+.videobar div#share-box {
     width:330px!important;
-    height:60px!important
+    min-height:90px !important;
+    height: auto !important;
+    z-index: 2147483634 !important;
+}
+
+.videobar div#share-box textarea{
+    min-height: 90px;
 }
 
 div.LSBox {
@@ -2667,7 +2748,7 @@ div.LSBox {
 }
 
 .content div.listingBar {
-    font-size:100%
+    font-size:100%;
 }
 
 div.listingBarBottom {
@@ -2692,6 +2773,7 @@ div.listingBarBottom {
     position:relative;
     left:50%;
     font-size:16px;
+    font-size:1rem;
     padding:5px 14px
 }
 
@@ -2732,6 +2814,7 @@ div.listingBarBottom {
     padding:.5em;
     background:#f8f8fa;
     font-size:16px;
+    font-size:1rem;
     border:1px solid #bbb;
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
@@ -2945,10 +3028,6 @@ div.download {
     display:none
 }
 
-div.unisubs-videoTab {
-    display:none!important
-}
-
 div.video div.rollover,div.video div.rollover p {
     max-width:215px
 }
@@ -3037,7 +3116,10 @@ h1#parent-fieldname-title {
 
 #plone-document-byline {
     font-family:"Arimo","Helvetica Neue","HelveticaNeue",Helvetica,Arial,"Lucida Grande",sans-serif!important;
-    font-size:14px!important;
+    
+    font-size:14px !important;
+    font-size:0.875rem !important;
+
     color:#000!important;
     margin-bottom:s10px;
 }
@@ -3061,12 +3143,14 @@ div.portlet-static-blog-feeds img.image-left {
 dl.portlet dt a,dl.portlet-static-blog-roll dt.portletHeader span,dl.portletStaticText dt.portletHeader span,dl.portletArchivePortlet dt.portletHeader span {
     float:left;
     font-size:16px;
+    font-size:1rem;
     margin:0;
     padding:8px 10px
 }
 
 dl.portletArchivePortlet dt.portletHeader {
     font-size:16px;
+    font-size:1rem;
     line-height:35px
 }
 
@@ -3107,6 +3191,7 @@ dl.portlet dd.portletItem a:link {
     color:#205C90;
     text-decoration:none;
     font-size:12px;
+    font-size:0.75rem;
     font-weight:700;
     border:none
 }
@@ -3174,6 +3259,7 @@ div.tileItem div.documentByLine {
 
 div.rollover .featuredItemDetailsPosted {
     font-size:12px;
+    font-size:0.75rem;
     float:left;
     margin-top:5px
 }
@@ -3189,6 +3275,7 @@ div.rollover .featuredItemDetailsPosted {
     color:#EFEFF1;
     margin-bottom:0;
     font-size:13px;
+    font-size:0.8125rem;
     line-height:15px
 }
 
@@ -3247,9 +3334,11 @@ li.section-about-us ul {
 }
 
 div.footer dl.portlet dd.portletItem a:link {
-    font-size:14px!important;
-    color:#205C90!important;
-    font-weight:400!important
+    font-size:14px !important;
+    font-size:0.875rem !important;
+
+    color:#205C90 !important;
+    font-weight:400 !important
 }
 
 span.posted h4 {
@@ -3262,6 +3351,7 @@ ul.news li span.posted,ul.events li span.posted {
 
 ul.news li span.posted.posted-date,ul.events li span.posted.posted-date {
     font-size:12px;
+    font-size:0.75rem;
     margin-top:-5px;
     padding-bottom:12px
 }
@@ -3323,6 +3413,7 @@ form.kssattr-formname-register {
 div.FooterPortletManager1 dt.portletHeader a.tile {
     padding-bottom:.4em;
     font-size:14px;
+    font-size:0.875rem;
     line-height:1.3
 }
 
@@ -3335,7 +3426,8 @@ body.template-usergroup-userprefs .row .nine {
 }
 
 li.section-about-us a {
-    font-size:14px!important;
+    font-size:14px !important;
+    font-size:0.875rem !important;
     line-height:1.3;
     font-weight:700!important
 }
@@ -3442,6 +3534,7 @@ body.template-file_view #content-core img {
 /* navbar */
 .em-navbar {
     font-size:14px;
+    font-size:0.875rem;
 
     /* TODO: Remove */
     /*background:linear-gradient(to bottom,#353A45 0px, #27272F 100%) repeat scroll 0 0 transparent;*/
@@ -3455,6 +3548,7 @@ body.template-file_view #content-core img {
     background: linear-gradient(to bottom,  #353a45 0%,#27272f 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#353a45', endColorstr='#27272f',GradientType=0 ); /* IE6-9 */
 
+    z-index: 3147483622;
 }
 
 .em-navbar li {
@@ -3497,6 +3591,7 @@ body.template-file_view #content-core img {
 
 .em-navbar li a {
     font-size:14px;
+    font-size:0.875rem;
     color:#EFEFF1;
     margin-top:10px;
     font-weight:700;
@@ -3535,11 +3630,12 @@ html {
 }
 
 .featuredItem {
-    overflow:hidden
+    /*overflow:hidden*/
 }
 
 #top-menu ul {
     font-size:15px;
+    font-size:0.9375rem;
     margin-bottom:2px!important;
     margin-top:2px
 }
@@ -3552,7 +3648,8 @@ html {
 #user-menu.header-menu-item {
     margin-top:2px!important;
     margin-bottom:3px!important;
-    font-size:15px
+    font-size:15px;
+    font-size:0.9375rem;
 }
 
 div.row.header div.menu {
@@ -3658,7 +3755,7 @@ div.column-title .column-title-icon {
 
 div#copyright-text,div#copyright-citation {
     display:inline-block;
-    margin-top:3px
+    margin-top:3px;
 }
 
 div#copyright-citation {
@@ -3695,7 +3792,7 @@ div#copyright-citation {
 ul.video-list li.video-item a .rollover p {
     margin-bottom:0;
     padding-top:2px;
-    font-size:95%
+    font-size:95%;
 }
 
 /* ===== SINGLE IMAGE PAGE ===== */
@@ -3829,7 +3926,7 @@ ul.news li span.posted,ul.events li span.posted {
 
 /* ===== 'SEND TO' PAGE ===== */
 #content legend, {
-    font-size:105%!important;
+    font-size:105% !important;
     margin-bottom:3px
 }
 
@@ -3839,6 +3936,7 @@ ul.news li span.posted,ul.events li span.posted {
 
 #content .field {
     font-size:15px;
+    font-size:0.9375rem;
     margin-top:10px;
     margin-bottom:20px;
     max-width:100%!important
@@ -3846,12 +3944,14 @@ ul.news li span.posted,ul.events li span.posted {
 
 .fieldRequired {
     font-size:12px;
+    font-size:0.75rem;
     line-height:1em
 }
 
 .formHelp {
     margin:3px 0 5px!important;
-    font-size:13px
+    font-size:13px;
+    font-size:0.81215rem;
 }
 
 .row #commenting {
@@ -3900,7 +4000,8 @@ ul.news li span.posted,ul.events li span.posted {
 }
 
 .row #commenting label,.row .discussion label {
-    font-size:15px
+    font-size:15px;
+    font-size:0.9375rem;
 }
 
 #sendto_form {
@@ -3965,7 +4066,8 @@ body.template-search .search-results.additions {
 
 body.template-search .search-img img {
     height:auto!important;
-    max-height:100%!important
+    max-height:100%!important;
+    margin-left:5px;
 }
 
 .clips-holder.search {
@@ -3976,16 +4078,19 @@ body.template-search .search-img img {
 body.template-search #content dd {
     margin:0!important;
     font-size:15px;
-    padding-right:200px;
+    font-size:0.9375rem;
+    /*padding-right:200px;*/
     line-height:1.6em
 }
 
 body.template-search .contenttype-plumivideo a {
-    font-size:16px!important
+    font-size:16px !important;
+    font-size:1rem;
 }
 
 body.template-search em.documentAuthor {
-    font-size:12px!important;
+    font-size:12px !important;
+    font-size:0.75rem;
     padding-bottom:6px
 }
 
@@ -4038,6 +4143,7 @@ body.template-search em.documentAuthor {
 
 .listingBar > span.current,.listingBar > span > a,.listingBar span.next > a,.listingBar > a {
     font-size:14px;
+    font-size:0.875rem;
     padding:6px 9px;
     margin-top:10px
 }
@@ -4079,6 +4185,7 @@ body.template-search em.documentAuthor {
 
 .summary.url {
     font-size:20px;
+    font-size:1.25rem;
     line-height:1em
 }
 
@@ -4109,6 +4216,11 @@ div.tileItem div.documentByLine {
 
 /* ================================ MEDIA QUERIES / ADAPTIVE APPEARANCE ================================ */
 @media only screen and (max-width: 991px) {
+
+    div.unisubs-videoTab-anchoring {
+        margin-top: 3px !important;
+    }
+
 a.featured-video-image img {
     max-height:191px
 }
@@ -4166,39 +4278,48 @@ div.row.header div.menu .header-menu-item {
 
 /* ===== FONTS ===== */
 div.column-title h4,div.row-title h4 {
-    font-size:18px
+    font-size:18px;
+    font-size:1.125rem;
 }
 
 .video div.under a {
-    font-size:16px
+    font-size:16px;
+    font-size:1rem;
 }
 
 div.featured-content a .featured-text h5 {
-    font-size:16px
+    font-size:16px;
+    font-size:1rem;
 }
 
 .video div.description p,.video div.description div.video-meta {
-    font-size:16px
+    font-size:16px;
+    font-size:1rem;
 }
 
 .featuredVideo-date {
-    font-size:13px
+    font-size:13px;
+    font-size:0.8125rem;
 }
 
 div.video span.country {
-    font-size:13px
+    font-size:13px;
+    font-size:0.8125rem;
 }
 
 div.video div.rollover p a {
-    font-size:15px
+    font-size:15px;
+    font-size:0.9375rem;
 }
 
 .rollover .country {
-    font-size:14px
+    font-size:14px;
+    font-size:0.875rem;
 }
 
 .description > h3 {
-    font-size:24px
+    font-size:24px;
+    font-size:1.5rem;
 }
 
 .video div.description p,.video div.description div.video-meta {
@@ -4206,15 +4327,18 @@ div.video div.rollover p a {
 }
 
 .video span.duration {
-    font-size:14px
+    font-size:14px;
+    font-size:0.875rem;
 }
 
 .portletItem {
-    font-size:15px
+    font-size:15px;
+    font-size:0.9375rem;
 }
 
 #lower-container div.three.columns.engage h5 {
-    font-size:22px
+    font-size:22px;
+    font-size:1.375rem;
 }
 
 #lower-container .colophon {
@@ -4223,27 +4347,32 @@ div.video div.rollover p a {
 }
 
 .row.footer {
-    padding:1em 15px
+    padding:1em 15px;
 }
 
 #all-videos {
-    font-size:15px
+    font-size:15px;
+    font-size:0.9375rem;
 }
 
 .news.list li span.posted,.news.list li span.content,.news.list li span.readmore {
-    font-size:15px
+    font-size:15px;
+    font-size:0.9375rem;
 }
 
 .news.list li span.posted h4 a {
-    font-size:18px
+    font-size:18px;
+    font-size:1.125rem;
 }
 
 ul.news li span.posted.posted-date,ul.events li span.posted.posted-date {
-    font-size:13px
+    font-size:13px;
+    font-size:0.8125rem;
 }
 
 dl.portlet a:link,.document-action-sendto {
-    font-size:15px!important
+    font-size:15px !important;
+    font-size:0.9375rem !important;
 }
 
 dl.portlet.portletStaticText a {
@@ -4259,7 +4388,8 @@ dl.portlet.portletStaticText a {
 
 .portlet-static-blog-feeds a {
     font-size:15px;
-    line-height:1em
+    font-size:0.9375rem;
+    line-height:1em;
 }
 
 div.portlet-static-blog-feeds img.image-left {
@@ -4268,21 +4398,24 @@ div.portlet-static-blog-feeds img.image-left {
 
 dl.portlet a:link .portletItemDetails {
     font-size:.95em;
-    margin-top:5px
+    margin-top:5px;
 }
 
 .featuredItemTitle {
-    font-size:15px!important;
-    line-height:1.4em
+    font-size:15px !important;
+    font-size:0.9375rem !important;
+    line-height:1.4em;
 }
 
 ul.video-list li.video-item a .rollover {
-    font-size:15px!important;
+    font-size:15px !important;
+    font-size:0.9375rem !important;
     line-height:1.4em
 }
 
 div#copyright-text {
-    font-size:14px
+    font-size:14px;
+    font-size:0.875rem;
 }
 
 div#copyright-citation {
@@ -4290,22 +4423,24 @@ div#copyright-citation {
 }
 
 #contact-author {
-    font-size:14px
+    font-size:14px;
+    font-size:0.875rem;
 }
 
 .documentDescription {
     font-size:15px;
+    font-size:0.9375rem;
     line-height:1.6em
 }
 
 #content .discreet,#sidebar .discreet {
-    font-size:100%!important
+    font-size:100% !important;
 }
 
 .documentActions ul li {
     font-size:inherit;
-    line-height:1.6em!important;
-    margin-bottom:5px!important
+    line-height:1.6em !important;
+    margin-bottom:5px !important;
 }
 
 /* ===== HOME PAGE ===== */
@@ -4533,7 +4668,8 @@ div.featured-content a .featured-image {
     width:100%!important;
     height:auto;
     padding-bottom:12px;
-    border-top:1px solid #777
+    border-top:1px solid #777;
+    z-index: 2147483624 !important;
 }
 
 .featuredItem {
@@ -4573,7 +4709,8 @@ div.featured-content a .featured-image {
 
 .discreet.videocount {
     margin:10px 12px 20px;
-    font-size:15px
+    font-size:15px;
+    font-size:0.9375rem;
 }
 
 #contact-author {
@@ -4639,6 +4776,7 @@ body.template-search #content dd {
 #featured-left.featured-content > a {
     padding:10px 10px 20px;
     font-size:15px;
+    font-size:0.9375rem;
     line-height:1.5em
 }
 
@@ -4649,7 +4787,8 @@ body.template-search #content dd {
 
 #featured-left.featured-content > a > h5 {
     width:100%;
-    font-size:18px
+    font-size:18px;
+    font-size:1.125rem;
 }
 
 div.sidebar div.column-more a,dd.portletFooter a {
@@ -4657,61 +4796,26 @@ div.sidebar div.column-more a,dd.portletFooter a {
 }
 
 div.featured-content a .featured-text {
-    font-size:16px
-}
+    font-size:16px;
+    font-size:1rem;
 }
 
-
-.mobile-visible{
-    display: none;
+body.template-search .search-img img {
+    margin-left:0 !important;
 }
+
+}
+
 
 @media only screen and (max-width: 767px) {
 
-#upper-container div.row.header,
-#upper-container div.row.header .columns.header{
-    padding-left:0;
-    padding-right:0;
-}
-
-div.row.header div.menu{
-    padding-left:16px !important;
-    padding-right:16px !important;
-}
-
-#upper-container div.row.header{
-    background: none;
-}
-
-.mobile-hidden{
-    display:none !important;
-}
-
-.mobile-visible{
-    display:block;
-}
-
-a.mobile-header{
-    /*min-height: 114px;*/
-    min-height: 0;
-    height: auto;
-    margin-top:40px;
-    color: #fff !important;
-    padding:1em 16px;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 1em;
-    background-color: #048197;
-}
-
-
-
-
-
-
+div.unisubs-videoTab-anchoring {
+        width:150px!important;
+        min-width:150px!important
+    }
 
 a.featured-video-image img {
-    max-height:1000em
+    max-height:1000em;
 }
 
 .main-title {
@@ -4796,7 +4900,49 @@ div.portletWrapper,.video-content .sidebar .sidebar-section {
 }
 }
 
+
+.mobile-visible{
+    display: none;
+}
+
 @media only screen and (max-width: 639px) {
+
+#upper-container div.row.header,
+#upper-container div.row.header .columns.header{
+    padding-left:0;
+    padding-right:0;
+}
+
+div.row.header div.menu{
+    padding-left:16px !important;
+    padding-right:16px !important;
+}
+
+#upper-container div.row.header{
+    background: none;
+}
+
+.mobile-hidden{
+    display:none !important;
+}
+
+.mobile-visible{
+    display:block;
+}
+
+a.mobile-header{
+    min-height: 0;
+    height: auto;
+    margin-top:40px;
+    color: #fff !important;
+    padding:1em 16px;
+    font-weight: bold;
+    font-size: 26px;
+    font-size:1.625rem;
+    line-height: 1em;
+    background-color: #048197;
+}
+
 div.row.header div.menu {
     right:auto;
     width:100%;
@@ -4824,7 +4970,8 @@ div.row.header input#searchGadget {
 }
 
 .summary.url {
-    font-size:18px!important
+    font-size:18px !important;
+    font-size:1.125rem;
 }
 
 /* ===== HOME PAGE ===== */
@@ -4880,6 +5027,11 @@ div.portletWrapper,.video-content .sidebar .sidebar-section {
 }
 
 @media only screen and (max-width: 479px) {
+
+    div.unisubs-videoTab {
+        display:none !important;
+    }
+
 /* ===== AUTHOR PAGE ===== */
 .author-image-container {
     position:relative;
@@ -4938,6 +5090,7 @@ div.row.header div.menu {
 
 #personaltools-join,#personaltools-login {
     font-size:15px;
+    font-size:0.9375rem;
     padding:1px 0;
     display:inline-block
 }
@@ -4971,7 +5124,8 @@ div.row.header input#searchGadget {
     float:left;
     padding:2px 7px!important;
     line-height:1.4em;
-    font-size:14px!important;
+    font-size:14px !important;
+    font-size:0.875rem !important;
     border-right:1px solid #ddd!important;
     border-top:0 solid #ddd!important;
     border-bottom:0 solid #ddd!important;
@@ -5119,7 +5273,8 @@ div.row.header div.top-menu {
     float:left;
     padding:2px 7px!important;
     line-height:1.4em;
-    font-size:14px!important;
+    font-size:13px !important;
+    font-size:0.8125em !important;
     border:1px solid #ddd!important;
     border-width:0 1px 0 0!important
 }
@@ -5170,9 +5325,6 @@ div.row.header .main-title p {
 }
 
 @media only screen and (max-width: 479px) {
-div.row.header div.top-menu {
-    top:9px
-}
 
 #language-menu.header-menu-item {
     margin-right:5px!important
@@ -5184,7 +5336,8 @@ div.row.header div.top-menu {
 
 #language-menu.header-menu-item li a,#user-menu.header-menu-item a {
     padding:2px 5px!important;
-    font-size:13px!important
+    font-size:12px !important;
+    font-size:0.75rem !important;
 }
 }
 
@@ -5226,3 +5379,12 @@ div.row.header div.top-menu {
 .footer li:first-child.portletItem a {
     padding-top:2px
 }
+
+/* ===== // Media player ===== */
+
+.mejs-layers div:nth-child(2){
+    /*z-index: -1;*/
+    background: none;
+}
+
+/* ===== Media player // ===== */
