@@ -126,7 +126,7 @@
 	<xsl:for-each css:select="#portal-globalnav">
 		<xsl:copy-of select="li"/>
 	</xsl:for-each>
-
+    
 	 </ul>
 	</after>
 
