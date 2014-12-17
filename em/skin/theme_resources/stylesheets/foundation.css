@@ -2487,6 +2487,21 @@ body.template-author h2 {
 }
 
 /* Video Upload Form */
+
+#loading-indicator, #videoaddmode-form {
+  margin-bottom: 60px
+}
+#videoaddmode-form {
+  text-align: center;
+}
+.button.addModeSelector {
+  width: auto;
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  font-size: 150%;
+}
+
 .template-publish_video #mid-container .documentFirstHeading {
     padding:16px 12px;
     background:#f3f3f5;
