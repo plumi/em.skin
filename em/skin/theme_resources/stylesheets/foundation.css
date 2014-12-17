@@ -3563,7 +3563,7 @@ body.template-file_view #content-core img {
     background: linear-gradient(to bottom,  #353a45 0%,#27272f 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#353a45', endColorstr='#27272f',GradientType=0 ); /* IE6-9 */
 
-    z-index: 3147483622;
+    z-index: 1000;
 }
 
 .em-navbar li {
@@ -4950,7 +4950,7 @@ a.mobile-header{
     height: auto;
     margin-top:40px;
     color: #fff !important;
-    padding:1em 16px;
+    padding: 0.5em 16px;
     font-weight: bold;
     font-size: 26px;
     font-size:1.625rem;
