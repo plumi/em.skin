@@ -16,7 +16,11 @@
     <!-- ALL PAGES -->
     <rules>
         <!-- Drop the viewport meta tag from Plone -->
-        <drop css:content="meta[name=viewport]"/>
+        <!-- <drop css:content="meta[name=viewport]"/> -->
+
+        <replace content="/html/head/meta[@name='viewport']">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0" />
+        </replace>
 
         <!-- Copy all meta tags -->
         <before content="/html/head/meta" css:theme="#css" />
@@ -79,7 +83,7 @@
         </prepend>
 
         <!-- add categorize warning to the bottom of the publish form -->
-        <append css:if-content="body.template-publish_video" css:theme="#mid-container">
+        <!-- <append css:if-content="body.template-publish_video" css:theme="#mid-container">
             <div id="categorize-text-container">
                 <span class="categorize-test">HAVE YOU CATEGORISED YOUR VIDEO? Choose the Categorise tab above to make it easier for people to find your video, before clicking Save Changes.</span>
             <script>
@@ -88,7 +92,7 @@
                 });}
             </script>
             </div>
-        </append>
+        </append> -->
 
         <!--drop content licensing on pages other than the video page -->
         <drop css:content="#copyright-citation" css:if-not-content="body.template-video_view" />
@@ -122,7 +126,7 @@
 	<xsl:for-each css:select="#portal-globalnav">
 		<xsl:copy-of select="li"/>
 	</xsl:for-each>
-
+    
 	 </ul>
 	</after>
 
@@ -151,6 +155,9 @@
 
         <!-- copy language selector -->
         <copy css:content-children="ul#portal-languageselector" css:theme="ul#language-menu" />
+
+        <!-- mobile header link -->
+        <copy attributes="href title" css:content="a#portal-logo" css:theme="a.mobile-header" />
 
         <!-- logo -->
         <copy attributes="href title" css:content="a#portal-logo" css:theme="a.main-logo-link" />
