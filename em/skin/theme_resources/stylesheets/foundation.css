@@ -569,6 +569,10 @@ p {
     font-size:1.0625rem
 }
 
+ul, ol, li{
+	font-size: 1.0625rem;
+}
+
 p.lead {
     font-size:17.5px;
     font-size:1.09375rem;
@@ -2578,6 +2582,7 @@ body.template-author h2 {
     -moz-border-radius:0;
     -webkit-border-radius:0;
     border-radius:0
+
 }
 
 #content #content-core div.row ul.formTabs li.formTab {
@@ -5632,4 +5637,50 @@ div.row.header .main-title p {
     ul.video-list li.video-item div.duration {
         font-size:10px!important
     }
+}
+
+#content-core{
+	margin-top:-5px;
+}
+
+#upper-container div.row.header{
+	z-index: 9999;
+}
+
+.listingBar span.previous{
+	margin-right:5px;
+}
+
+.videobar div#share-box{
+	max-width:100% !important;
+}
+
+div#embed-links-container{
+	width:36%;
+}
+
+div.embed-box{
+	width: 61%;
+	margin-right:5px;
+}
+
+div.embed-box textarea{
+	max-width:100% !important;
+}
+
+@media only screen and (max-width: 640px) {
+
+	div.listingBar{
+		position:relative;
+		padding-bottom:40px;
+	}
+
+	div.listingBar .next{
+		float:none;
+		position:absolute;
+		bottom:0;
+		left:10px;
+		margin-left:0;
+		margin-right:0;
+	}
 }
