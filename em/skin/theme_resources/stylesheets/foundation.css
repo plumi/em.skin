@@ -55,8 +55,7 @@ a.hide-announcement {
 
 #upper-container div.row.header {
     border-bottom:2px solid #353A45;
-    background:url(images/Engage_Header.gif) top left no-repeat;
-    z-index:1005;
+    background:url(images/Engage_Header.gif) top left no-repeat
 }
 
 div.row.header,div.twelve.columns.header {
@@ -2754,8 +2753,8 @@ div.formControls input[type="submit"]:active {
 
 div#LSResult {
     z-index:1000;
-    margin-top:-22px;
-    margin-right:0;
+    margin-top:-25px;
+    margin-right:8px;
     background-color:transparent!important
 }
 
@@ -3817,7 +3816,7 @@ ul.video-list li.video-item a .rollover p {
 .newsImageContainer {
     margin:0!important;
     float:none!important;
-    text-align:left;
+    text-align:center
 }
 
 .newsImageContainer a {
@@ -5017,12 +5016,8 @@ div.tileItem div.documentByLine {
     }
 
     .em-navbar,
-    div.row.header div.menu > .search{
+    div.row.header div.menu{
         display:none;
-    }
-
-    div.row.header div.menu > .search{
-        margin-bottom:-10px;
     }
 
     ul.em-navbar{
@@ -5482,8 +5477,7 @@ div.video .wrapper-image a.featured-video-image {
 @media only screen and (max-width: 639px) {
 
     div.row.header input#searchGadget {
-        /*padding:12px 6px 11px 16px;*/
-        padding: 8px 6px 8px 16px;
+        padding:12px 6px 11px 16px
     }
 
     .header-button a {
@@ -5494,7 +5488,7 @@ div.video .wrapper-image a.featured-video-image {
         float:none!important;
         width:100%;
         margin:0 !important;
-        padding:12px 0 0px;
+        padding:9px 0 0px;
         right:auto;
         overflow: visible !important;
     }
@@ -5643,16 +5637,6 @@ div.row.header .main-title p {
     ul.video-list li.video-item div.duration {
         font-size:10px!important
     }
-
-    .videobar div#share-box,
-    .embed-links-container,
-    div.embed-box{
-        width:100% !important;
-    }
-
-    div.embed-box{
-        margin:1em 0 2.2em;
-    }
 }
 
 #content-core{
@@ -5684,22 +5668,6 @@ div.embed-box textarea{
 	max-width:100% !important;
 }
 
-.template-publish_video #portal-column-content{
-    padding-bottom: 30px;
-}
-
-.template-publish_video #mid-container{
-    position: relative;
-}
-
-.template-publish_video #mid-container a#form-help{
-    position: absolute;
-    top:58px;
-    left: 84%;
-    top:4%;
-    margin-left:0;
-}
-
 @media only screen and (max-width: 640px) {
 
 	div.listingBar{
@@ -5715,16 +5683,4 @@ div.embed-box textarea{
 		margin-left:0;
 		margin-right:0;
 	}
-
-    .template-publish_video #mid-container a#form-help{
-        top:3.6%;
-        left: 80%;
-    }
-}
-
-@media only screen and (max-width: 450px) {
-    .template-publish_video #mid-container a#form-help{
-        top:14px;
-        left: 65%;
-    }
 }
