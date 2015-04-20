@@ -415,17 +415,25 @@
 
             jQuery(this).removeClass('active');
 
-            jQuery('div.row.header div.menu').css('display', 'none');
+            jQuery('.em-navbar').css('display', 'none');
+
+            jQuery('div.row.header div.menu').css('display', 'block');
+            jQuery('div.row.header div.menu > .header-menu-item').css('display', 'block');
+
+            jQuery('div.row.header div.menu > .search').css('display', 'none');                
         }
         else{
+
+            jQuery(this).addClass('active');
 
             jQuery('.nav-toggle').removeClass('active');
 
             jQuery('.em-navbar').css('display', 'none');
 
-            jQuery(this).addClass('active');
-
             jQuery('div.row.header div.menu').css('display', 'block');
+            jQuery('div.row.header div.menu > .header-menu-item').css('display', 'none');
+
+            jQuery('div.row.header div.menu > .search').css('display', 'block');
         }
 
         setTimeout(function(){
@@ -445,18 +453,19 @@
         if( jQuery(this).hasClass( 'active' ) ){
 
             jQuery(this).removeClass('active');
-
             jQuery('.em-navbar').css('display', 'none');
+
+            jQuery('div.row.header div.menu').css('display', 'block');
+            jQuery('div.row.header div.menu > .header-menu-item').css('display', 'block');
         }
         else{
 
-            jQuery('.search-toggle').removeClass('active');
-
-            jQuery('div.row.header div.menu').css('display', 'none');
-
             jQuery(this).addClass('active');
-
             jQuery('.em-navbar').css('display', 'block');
+
+            jQuery('.search-toggle').removeClass('active');
+            jQuery('div.row.header div.menu').css('display', 'none');
+            jQuery('div.row.header div.menu > .search').css('display', 'none');
         }
 
         setTimeout(function(){
@@ -466,7 +475,6 @@
 
                 jQuery('.unisubs-videoTab').attr('style', 'visibility: visible !important; left: 16px !important; top: '+t.top +'px !important;');
             }
-
         }, 10);
     });
 
@@ -497,8 +505,8 @@
 
                     jQuery('.unisubs-videoTab').attr('style', 'visibility: visible !important; left: 16px !important; top: '+t.top +'px !important;');
                 }
-
             }, 10);
+
         // }
     });
 
