@@ -369,10 +369,13 @@
 
     function resizePlayer(){
         if ($(window).width() < 650 ) {
-            mejs.players[0].setPlayerSize($(window).width()-25,($(window).width()-25)/1.75);
-            mejs.players[0].setControlsSize();
-            $('div.videobar').width($(window).width()-25);
-            try{ mejs.players[0].setVideoSize($(window).width()-25,($(window).width()-25)/1.75); } catch(err) {}
+            
+            if(  mejs.players[0] !== undefined ){
+                mejs.players[0].setPlayerSize($(window).width()-25,($(window).width()-25)/1.75);
+                mejs.players[0].setControlsSize();
+                $('div.videobar').width($(window).width()-25);
+                try{ mejs.players[0].setVideoSize($(window).width()-25,($(window).width()-25)/1.75); } catch(err) {}
+            }
         } else {
             $('div.videobar').attr('style','');
         }
