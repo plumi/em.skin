@@ -290,7 +290,7 @@
                             </div>
                             <xsl:copy-of css:select="a.featured-video-image"/>
                         </div>
-                        <xsl:copy-of css:select=".featured-video-duration span" />
+                        <span class="duration"><xsl:copy-of css:select=".featured-video-duration span" /></span>
                     </div>
                 </xsl:for-each>
                 <div class="six columns centered load-more">
@@ -380,7 +380,7 @@
                         </div>
                         <xsl:copy-of css:select="a.featured-video-image"/>
                     </div>
-                    <xsl:copy-of css:select=".featured-video-duration span" />
+                    <span class="duration"><xsl:copy-of css:select=".featured-video-duration span" /></span>
                 </div>
             </xsl:for-each>
             <div class="listingBarBottom"><xsl:copy-of select="//div[@class='listingBar'][1]" /></div>
@@ -468,7 +468,9 @@
                             </div>
                             <xsl:copy-of css:select="a.featured-video-image"/>
                         </div>
-                        <xsl:copy-of css:select=".featured-video-duration span" />
+                        <span class="duration">
+                            <xsl:copy-of css:select=".featured-video-duration span" />
+                        </span>
                 </div>
             </xsl:for-each>
             <div class="foo" style="clear:both"></div>
