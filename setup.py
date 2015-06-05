@@ -6,12 +6,13 @@ import os
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
+version = '1.1-externalvideo'
 
 long_description = (
     read('em', 'skin', 'docs', 'index.rst'))
 
 setup(name='em.skin',
-      version='1.0',
+      version=version,
       description="Plumi theme & customizations for engagemedia.org",
       long_description=long_description,
       # Get more strings from
