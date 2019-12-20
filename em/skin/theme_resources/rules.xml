@@ -5,7 +5,7 @@
 
     <!-- Apply theme to normal Plone pages -->
     <theme href="index.html" css:if-content="body.template-featured_videos_homepage #visual-portal-wrapper" />
-    <theme href="video.html" css:if-content="body.template-video_view #visual-portal-wrapper" />
+    <theme href="video.html" css:if-content="body.template-video_view #visual-portal-wrapper, body.template-external_video_view #visual-portal-wrapper" />
 
     <theme href="list.html" css:if-content="body.template-video_listing_view #visual-portal-wrapper" />
     <theme href="author.html" css:if-content="body.template-author #visual-portal-wrapper" />
@@ -16,7 +16,11 @@
     <!-- ALL PAGES -->
     <rules>
         <!-- Drop the viewport meta tag from Plone -->
-        <drop css:content="meta[name=viewport]"/>
+        <!-- <drop css:content="meta[name=viewport]"/> -->
+
+        <replace content="/html/head/meta[@name='viewport']">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0" />
+        </replace>
 
         <!-- Copy all meta tags -->
         <before content="/html/head/meta" css:theme="#css" />
@@ -79,7 +83,7 @@
         </prepend>
 
         <!-- add categorize warning to the bottom of the publish form -->
-        <append css:if-content="body.template-publish_video" css:theme="#mid-container">
+        <!-- <append css:if-content="body.template-publish_video" css:theme="#mid-container">
             <div id="categorize-text-container">
                 <span class="categorize-test">HAVE YOU CATEGORISED YOUR VIDEO? Choose the Categorise tab above to make it easier for people to find your video, before clicking Save Changes.</span>
             <script>
@@ -88,12 +92,12 @@
                 });}
             </script>
             </div>
-        </append>
+        </append> -->
 
         <!--drop content licensing on pages other than the video page -->
-        <drop css:content="#copyright-citation" css:if-not-content="body.template-video_view" />
-        <drop css:content="#copyright-button" css:if-not-content="body.template-video_view" />
-        <drop css:content="#copyright-text" css:if-not-content="body.template-video_view" />
+        <drop css:content="#copyright-citation" css:if-not-content="body.template-video_view, body.template-external_video_view" />
+        <drop css:content="#copyright-button" css:if-not-content="body.template-video_view, body.template-external_video_view" />
+        <drop css:content="#copyright-text" css:if-not-content="body.template-video_view, body.template-external_video_view" />
 
         <!--drop documentByLine on taxonomy pages -->
         <drop css:content=".documentByLine" if-path="taxonomy" />
@@ -122,9 +126,10 @@
 	<xsl:for-each css:select="#portal-globalnav">
 		<xsl:copy-of select="li"/>
 	</xsl:for-each>
-
+    
 	 </ul>
 	</after>
+        <copy css:theme="#top-viewlet" css:content="#top-viewlet" />
 
         <!-- Copy search box -->
         <copy css:content="#portal-searchbox" css:theme="div.search" />
@@ -151,6 +156,9 @@
 
         <!-- copy language selector -->
         <copy css:content-children="ul#portal-languageselector" css:theme="ul#language-menu" />
+
+        <!-- mobile header link -->
+        <copy attributes="href title" css:content="a#portal-logo" css:theme="a.mobile-header" />
 
         <!-- logo -->
         <copy attributes="href title" css:content="a#portal-logo" css:theme="a.main-logo-link" />
@@ -206,12 +214,11 @@
             </div>
         </prepend>
 
-        <copy css:theme="#top-viewlet" css:content="#top-viewlet" />
 
 
         <!-- Featured video -->
-        <drop theme="//*[@id='featuredvideo']/.." if-not-content="//video" />
-        <replace theme="//*[@id='featuredvideo']/div[1]" content="//video/.."/>
+        <drop theme="//*[@id='featuredvideo']/.." if-not-content="//div[@class='amara-embed']" />
+        <replace theme="//*[@id='featuredvideo']/div[1]" content="//div[@class='amara-embed']/.."/>
         <copy theme="//div[@id='featuredvideo']//div[1]/a" content="//div[@id='featured-front-page']//div[2]/span[1]/a" />
         <copy theme="//div[@id='featuredvideo']//h3" css:content="#featuredVideoTitle" />
         <replace theme="//div[@id='featuredvideo'][1]//p">
@@ -294,7 +301,7 @@
     </rules>
 
     <!-- VIDEO VIEW PAGE -->
-    <rules css:if-content="body.template-video_view">
+    <rules css:if-content="body.template-video_view, body.template-external_video_view">
 
         <prepend css:theme="div.video-content">
             <div class="row no-v-padding">
@@ -302,6 +309,9 @@
                 <xsl:copy-of css:select="dl.portalMessage" />
             </div>
         </prepend>
+
+        <copy css:theme="#top-viewlet" css:content="#top-viewlet" />
+
         <append css:theme="#video-title" css:content="span.documentAuthor" />
         <append css:theme="#video-title" css:content="span.documentModified" />
         <append css:theme="#video-title" css:content="span.contentHistory" />
@@ -349,6 +359,8 @@
             </div>
         </prepend>
 
+        <copy css:theme="#top-viewlet" css:content="#top-viewlet" />
+
         <!-- video listing -->
         <copy css:theme="#mid-container div.full h4" css:content-children="div#content div h1.documentFirstHeading" />
         <replace css:theme="#mid-container #video-listings">
@@ -390,6 +402,8 @@
                 <xsl:copy-of css:select="dl.portalMessage" />
             </div>
         </prepend>
+
+        <copy css:theme="#top-viewlet" css:content="#top-viewlet" />
 
 
         <copy css:theme="#mid-container div#video-title h1" css:content-children="#region-content div h1.documentFirstHeading" />

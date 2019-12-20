@@ -32,10 +32,19 @@
     
 </head>
 <body>
+    <div id="top-viewlet">a
+    </div>
+
         <div id="upper-container">
         <div class="row no-v-padding header">
             <div class="twelve columns header">
-                <a class="five columns main-title">
+
+                <a class="mobile-header mobile-visible">EngageMedia</a>
+
+                <span class="search-toggle mobile-visible"><img src="stylesheets/images/search-icon.png" alt="" /></span>
+                <span class="nav-toggle mobile-visible"><img src="stylesheets/images/menu-icon.png" alt="" /></span>
+
+                <a class="five columns main-title mobile-hidden">
                     <p>Social justice and environmental video from the Asia Pacific</p>
                 </a>
                 <div class="top-menu">
@@ -143,5 +152,110 @@
     </div>
     <span id="javascript_at_bottom"></span>      
     <span id="javascript_inline"></span>
+
+    <script type="text/javascript">
+        
+        jQuery('.search-toggle').bind('click', function(){
+
+            if( jQuery(this).hasClass( 'active' ) ){
+
+                jQuery(this).removeClass('active');
+
+                jQuery('.em-navbar').css('display', 'none');
+
+                jQuery('div.row.header div.menu').css('display', 'block');
+                jQuery('div.row.header div.menu > .header-menu-item').css('display', 'block');
+
+                jQuery('div.row.header div.menu > .search').css('display', 'none');                
+            }
+            else{
+
+                jQuery(this).addClass('active');
+
+                jQuery('.nav-toggle').removeClass('active');
+
+                jQuery('.em-navbar').css('display', 'none');
+
+                jQuery('div.row.header div.menu').css('display', 'block');
+                jQuery('div.row.header div.menu > .header-menu-item').css('display', 'none');
+
+                jQuery('div.row.header div.menu > .search').css('display', 'block');
+            }
+
+            setTimeout(function(){
+
+                if( jQuery('.unisubs-videoTab').length && jQuery('.videobar').length ){
+
+                    var t = jQuery('.videobar').offset();
+
+                    jQuery('.unisubs-videoTab').attr('style', 'visibility: visible !important; left: 16px !important; top: '+t.top +'px !important;');
+                }
+
+            }, 10);
+        });
+
+        jQuery('.nav-toggle').bind('click', function(){
+
+            if( jQuery(this).hasClass( 'active' ) ){
+
+                jQuery(this).removeClass('active');
+                jQuery('.em-navbar').css('display', 'none');
+
+                jQuery('div.row.header div.menu').css('display', 'block');
+                jQuery('div.row.header div.menu > .header-menu-item').css('display', 'block');
+            }
+            else{
+
+                jQuery(this).addClass('active');
+                jQuery('.em-navbar').css('display', 'block');
+
+                jQuery('.search-toggle').removeClass('active');
+                jQuery('div.row.header div.menu').css('display', 'none');
+                jQuery('div.row.header div.menu > .search').css('display', 'none');
+            }
+
+            setTimeout(function(){
+
+                if( jQuery('.unisubs-videoTab').length && jQuery('.videobar').length ){
+                    var t = jQuery('.videobar').offset();
+
+                    jQuery('.unisubs-videoTab').attr('style', 'visibility: visible !important; left: 16px !important; top: '+t.top +'px !important;');
+                }
+            }, 10);
+        });
+
+        jQuery("ul.em-navbar li a").live('click', function(){
+
+            // if( jQuery(window).width() < 640 ){
+
+                if( jQuery(this).parent('li').find(' > ul').length ){
+
+                    if( jQuery(this).parent('li').hasClass('active') ){
+
+                        jQuery(this).parent('li').removeClass('active');
+                    }
+                    else{
+
+                        jQuery("ul.em-navbar > li").removeClass('active');
+
+                        jQuery(this).parent('li').addClass('active');
+                    }
+
+                    return false;
+                }
+
+                setTimeout(function(){
+
+                    if( jQuery('.unisubs-videoTab').length && jQuery('.videobar').length ){
+                        var t = jQuery('.videobar').offset();
+
+                        jQuery('.unisubs-videoTab').attr('style', 'visibility: visible !important; left: 16px !important; top: '+t.top +'px !important;');
+                    }
+                }, 10);
+
+            // }
+        });
+
+    </script>
 </body>
 </html>
