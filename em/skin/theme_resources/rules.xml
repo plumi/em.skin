@@ -217,8 +217,8 @@
 
 
         <!-- Featured video -->
-        <drop theme="//*[@id='featuredvideo']/.." if-not-content="//video" />
-        <replace theme="//*[@id='featuredvideo']/div[1]" content="//video/.."/>
+        <drop theme="//*[@id='featuredvideo']/.." if-not-content="//div[@class='amara-embed']" />
+        <replace theme="//*[@id='featuredvideo']/div[1]" content="//div[@class='amara-embed']/.."/>
         <copy theme="//div[@id='featuredvideo']//div[1]/a" content="//div[@id='featured-front-page']//div[2]/span[1]/a" />
         <copy theme="//div[@id='featuredvideo']//h3" css:content="#featuredVideoTitle" />
         <replace theme="//div[@id='featuredvideo'][1]//p">
